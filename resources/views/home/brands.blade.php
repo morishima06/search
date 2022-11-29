@@ -277,10 +277,21 @@
     </style>
 
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+    @if(app('env')=='local')
     <script src="{{ asset('/js/accordion/accordion.js') }}"></script>
     <script src="{{ asset('/js/input/disabled.js') }}"></script>
     <script src="{{ asset('/js/input/submit.js') }}"></script>
     <script src="{{ asset('/js/slide/responsive_slide.js') }}"></script>
+    @endif
+
+    @if(app('env')=='production')
+    <script src="{{ secure_asset('/js/accordion/accordion.js') }}"></script>
+    <script src="{{ secure_asset('/js/input/disabled.js') }}"></script>
+    <script src="{{ secure_asset('/js/input/submit.js') }}"></script>
+    <script src="{{ secure_asset('/js/slide/responsive_slide.js') }}"></script>
+    @endif
+
+
 
     </body>
 </html>

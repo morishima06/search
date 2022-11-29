@@ -8,11 +8,19 @@
     <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.min.css" />
+
+@if(app('env')=='local')
 <link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
-
-
 <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
 <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
+@endif
+
+@if(app('env')=='production')
+<link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
+<link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
+<script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
+
+@endif
 
 
 
@@ -30,9 +38,9 @@
                     <div class="swiper-wrapper ">
                         <!-- Slides -->
                         <div class="swiper-slide flex justify-center "><img src="../{{$product[0]->image_path1}}" alt="" class="w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
-                        <div class="swiper-slide  <?php if($product[0]->image_path2 == null){ echo "hidden";}?>"><img src="../{{$product[0]->image_path2}}" alt="" class="w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
-                        <div class="swiper-slide  <?php if($product[0]->image_path3 == null){ echo "hidden";}?>"><img src="../{{$product[0]->image_path3}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
-                        <div class="swiper-slide  <?php if($product[0]->image_path4 == null){ echo "hidden";}?>"><img src="../{{$product[0]->image_path4}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
+                        <div class="swiper-slide  <?php if($product[0]->image_path2 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path2)}}" alt="" class="w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
+                        <div class="swiper-slide  <?php if($product[0]->image_path3 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path3)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
+                        <div class="swiper-slide  <?php if($product[0]->image_path4 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path4)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
                     </div>
                 <!-- 必要に応じてナビボタン -->
                     <div class="swiper-button-prev "></div>
@@ -43,10 +51,10 @@
                 <!-- Additional required wrapper -->
                     <div class="swiper-wrapper      ">
                         <!-- Slides -->
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="../{{$product[0]->image_path1}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="../{{$product[0]->image_path2}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path3 == null){ echo "hidden";}?> "><img src="../{{$product[0]->image_path3}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path4 == null){ echo "hidden";}?> "><img src="../{{$product[0]->image_path4}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path1)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path2)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path3 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path3)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path4 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path4)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
                     </div>
             </div>
         </div>
@@ -68,8 +76,13 @@
     </div>
         @include('layouts.footer')
 
-
+        @if(app('env')=='local')
         <script src="{{ asset('/js/swiper/double_config.js') }}"></script>
+        @endif
+
+        @if(app('env')=='production')
+        <script src="{{ asset('/js/swiper/double_config.js') }}"></script>
+        @endif
 
     
 </body>

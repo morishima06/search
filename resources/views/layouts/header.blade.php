@@ -123,6 +123,12 @@
 </header>
 <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
 
+@if(app('env')=='local')
 <script src="{{ asset('/js/header/header.js') }}"></script>
+@endif
+
+@if(app('env')=='production')
+<script src="{{ asset('/js/header/header.js') }}"></script>
+@endif
 
 

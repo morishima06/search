@@ -8,7 +8,13 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <script src="https://cdn.tailwindcss.com"></script>
+        @if(app('env')=='local')
         <script src="{{ asset('/js/app.js') }}"></script>
+        @endif
+
+        @if(app('env')=='production')
+        <script src="{{ asset('/js/app.js') }}"></script>
+        @endif
 
         <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
 

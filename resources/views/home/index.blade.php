@@ -30,8 +30,16 @@
                 padding:0;
             }
         </style>
+        @if(app('env')=='local')
         <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
         <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
+        @endif
+
+        @if(app('env')=='production')
+        <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
+        <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
+
+        @endif
 
     </head>
     <body class="antialiased b-40">
@@ -48,19 +56,19 @@
                     <div class="swiper-wrapper w-full">
                     <!-- スライド -->
                         <div class="swiper-slide  w-full h-full px-3 ">
-                                <a href="{{route('category', ['category' => 'wear' ])}}" class="w-56 h-96 bg-slate-400"> <img src="image/apparel.jpg" class=" h-96 object-cover" alt=""></a>
+                                <a href="{{route('category', ['category' => 'wear' ])}}" class="w-56 h-96 bg-slate-400"> <img src="{{ asset('image/apparel.jpg')}}" class=" h-96 object-cover" alt=""></a>
                                 <h2 class="  text-white font-semibold bg-black mt-2  inline-block leading-none p-1 "> ウエア</h2>
                         </div>
                         <div class="swiper-slide   w-full h-full px-3 ">
-                                <a href="{{route('category', ['category' => 'shoes'])}}" class="w-56 h-96 bg-slate-400"> <img src="image/shoes.jpg" class=" h-96 object-cover" alt=""></a>
+                                <a href="{{route('category', ['category' => 'shoes'])}}" class="w-56 h-96 bg-slate-400"> <img src="{{ asset('image/shoes.jpg')}}" class=" h-96 object-cover" alt=""></a>
                                 <h2 class=" text-white font-semibold bg-black mt-2  inline-block leading-none p-1 "> シューズ</h2>
                         </div>
                         <div class="swiper-slide   w-full h-96 px-3">
-                                <a href="{{route('category', ['category' => 'accessories'])}}" class="w-56 h-96 bg-slate-400"> <img src="image/accessories.jpg" class=" h-96 object-cover" alt=""></a>
+                                <a href="{{route('category', ['category' => 'accessories'])}}" class="w-56 h-96 bg-slate-400"> <img src="{{ asset('image/accessories.jpg')}}" class=" h-96 object-cover" alt=""></a>
                                 <h2 class=" text-white font-semibold bg-black mt-2  inline-block leading-none p-1 "> アクセサリー</h2>
                         </div>
                         <div class="swiper-slide   w-full h-96 px-3">
-                            <a  href="{{route('category', ['category' => 'lifestyle'])}}" class="w-56 h-96 bg-slate-400"> <img src="image/lifestyle.jpg" class=" h-96 object-cover" alt=""></a>
+                            <a  href="{{route('category', ['category' => 'lifestyle'])}}" class="w-56 h-96 bg-slate-400"> <img src="{{ asset('image/lifestyle.jpg')}}" class=" h-96 object-cover" alt=""></a>
                             <h2 class=" text-white font-semibold bg-black mt-2  inline-block leading-none p-1 ">ライフスタイル</h2>
                         </div>
                     </div>
@@ -193,6 +201,12 @@
     @include('layouts.footer')
 
     </body>
-
+    @if(app('env')=='local')
     <script src="{{ asset('/js/swiper/single_config.js') }}"></script>
+    @endif
+
+    @if(app('env')=='production')
+    <script src="{{ asset('/js/swiper/single_config.js') }}"></script>
+    @endif
+
 

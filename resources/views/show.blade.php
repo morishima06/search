@@ -17,7 +17,7 @@
                    
                 <tr class="h-24 border-y hover:bg-slate-100 cursor-pointer "  onclick="location.href='{{route('show_edit', ['id' => $product->id]   )}}' ">
                         
-                    <td class="w-24 h24"><img src="{{$product->image_path1}}" alt="" ></td>
+                    <td class="w-24 h24"><img src="{{asset($product->image_path1)}}" alt="" ></td>
                     <td class="w-24 text-center">
                         {{$product->product_name}} 
                     </td >
