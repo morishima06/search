@@ -41,7 +41,6 @@
     <section class="pt-24 px-4 ">
 
             <h1 class="w-full text-lg text-black font-bold border-b pb mb-5  border-black">カテゴリー</h1>
-
             <!-- スライダーのコンテナ -->
 
                 <div class="swiper  ">
@@ -67,12 +66,7 @@
                     </div>
                     <div class="swiper-button-prev pl-3 pb-8 md:pb-0 "></div>
                     <div class="swiper-button-next pr-3  pb-8 md:pb-0 "></div>
-
-
                 </div>
-
-
-            
 
             <div class="flex justify-center items-center mt-6 sm:mt-16 mb-10 ">
                 <h2 class=" border-black border   text-sm font-semibold"><a  href="{{route('category', ['category' => 'all'])}}" class="p-2 inline-block w-full h-wull" href="">全てのカテゴリーの商品</a> </h2>
@@ -108,7 +102,6 @@
                         <ul>
                             <li class="text-xs font-bold"><a href="{{route('brands',['brand' => ''])}}">EAST PACK</a></li>
                         </ul>
-
                     </div>
 
                     <div class="w-1/2">
@@ -135,8 +128,6 @@
                             <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MAISON KITUNE'])}}">MAISON KITUNE</a></li>
                             <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MONCLER'])}}">MONCLER</a></li>
                         </ul>
-
-
                     </div>
                 </div>
 
