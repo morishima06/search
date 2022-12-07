@@ -22,7 +22,7 @@
             @endif
         </div>
 
-        <div class="hidden sm:flex-1 sm:flex sm:my-4 sm:w-full ">
+        <div class="hidden sm:flex-1 sm:flex sm:mt-4 sm:w-full ">
             <div class="flex items-center">
                 <p class="text-sm text-gray-700 leading-5 mr-3 ">
                     <!-- {!! __('Showing') !!} -->

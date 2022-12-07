@@ -1,28 +1,28 @@
 
 <x-app-layout>
-<div class="w-4/5  ">
+<div class="md:w-4/5 w-full  ">
         <form action="{{route('show_edit_check')}}" method="post" enctype="multipart/form-data" >
         @foreach($products as  $product)
                 @csrf
             <h3 class="text-2xl  font-semibold bg-white text-slate-700 pb-12 h-10 pl-7 " >出品内容</h3>
-            <div class="flex">
-
-            <div class="bg-slate-100  rounded border mr-7 mt-7 ml-7" >
+            <div class="bg-slate-100  rounded border md:mr-7 mt-3  md:ml-7" >
                 <h4 class="text-xl pt-8 ml-7 text-slate-700 ">商品画像</h4>
 
-                    <!-- uploderフレーム -->
-                    <div class="flex justify-evenly rounded bg-slate-100    ">
-                        <!-- 画像upload1 -->
-                        <div class="relative my-8 aspect-square	 w-1/4 ml-7 mr-3  ">
 
-                            <div id="" class="removeImg  absolute  right-0  w-8 h-8 <?php if(!$product->image_path1){ echo 'hidden';} ?> ">
+                    <!-- uploderフレーム -->
+                    <div class="flex rounded bg-slate-100   overflow-scroll w-full ">
+                        <!-- 画像upload1 -->
+                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-7 mr-2  border border-gray-300  ">
+
+                            <div id="" class="removeImg  absolute  right-0 mr-2 <?php if(!$product->image_path1){ echo 'hidden';} ?>">
                                 <i class=" cursor-pointer fa-solid fa-xmark " ></i>
                             </div>
+                            
                             <!-- ドラッグ&ドロップエリア + プレヴューエリア-->
-                            <div id=""   class="preview border border-gray-300  bg-white  w-full h-full" >
+                            <div id=""   class="preview   bg-white w-full h-full overflow-hidden object-fill ">
 
-                                <div id="" class="inputArea w-fill h-full  <?php if($product->image_path1){ echo 'hidden';} ?> ">
-                                    <p>
+                                <div id="" class="inputArea w-full h-full <?php if($product->image_path1){ echo 'hidden';} ?> ">
+                                    <p class="text-xs  md:text-sm">
                                         ここにファイルをドロップしてください<br>またはdrug&drop
                                         <button><i class="fa-solid fa-camera"></i></button>
                                         <label for="uploadfile" class="bg-blue-200"> 
@@ -30,26 +30,28 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="previewBox">
-                                    @if($product->image_path1)
+                                <div class="previewBox  w-full h-full">
+                                @if($product->image_path1)
                                     <img src="{{asset($product->image_path1)}}" alt="">
                                     @endif
+
                                 </div>
                             </div>
                         </div>
+
+
                         <!-- 画像upload2 -->
-                        <div class="relative my-8  aspect-square w-1/4 mx-3  ">
+                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-2 mr-2  border border-gray-300  ">
 
-
-                            <div id="" class="removeImg  absolute  right-0  w-8 h-8 <?php if(!$product->image_path2){ echo 'hidden';} ?> "  >
+                            <div id="" class="removeImg  absolute  right-0 mr-2 <?php if(!$product->image_path2){ echo 'hidden';} ?>">
                                 <i class=" cursor-pointer fa-solid fa-xmark " ></i>
                             </div>
-
+                            
                             <!-- ドラッグ&ドロップエリア + プレヴューエリア-->
-                            <div id=""   class="preview border border-gray-300 w-full h-full  bg-white   " >
+                            <div id=""   class="preview   bg-white w-full h-full overflow-hidden object-fill ">
 
                                 <div id="" class="inputArea w-full h-full <?php if($product->image_path2){ echo 'hidden';} ?>">
-                                    <p>
+                                    <p class="text-xs  md:text-sm">
                                         ここにファイルをドロップしてください<br>またはdrug&drop
                                         <button><i class="fa-solid fa-camera"></i></button>
                                         <label for="uploadfile" class="bg-blue-200"> 
@@ -57,77 +59,70 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="previewBox">
+                                <div class="previewBox  w-full h-full">
                                 @if($product->image_path2)
-
                                     <img src="{{asset($product->image_path2)}}" alt="">
-                                @endif
+                                    @endif
+
                                 </div>
                             </div>
                         </div>
-                        <!-- 画像upload3 -->
-                        <div class="relative  my-8 aspect-square w-1/4 mx-3 ">
-                        
 
-                            <div id="" class="removeImg  absolute  right-0  w-8 h-8 <?php if(!$product->image_path3){ echo 'hidden';} ?>">
+                        <!-- 画像upload3 -->
+                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-2 mr-2  border border-gray-300  ">
+
+                            <div id="" class="removeImg  absolute  right-0 mr-2 <?php if(!$product->image_path3){ echo 'hidden';} ?>">
                                 <i class=" cursor-pointer fa-solid fa-xmark " ></i>
                             </div>
+                            
                             <!-- ドラッグ&ドロップエリア + プレヴューエリア-->
-                            <div id=""   class="preview border border-gray-300  bg-white  w-full h-full ">
+                            <div id=""   class="preview   bg-white w-full h-full overflow-hidden object-fill ">
 
-                                <div id="" class="inputArea w-fill h-full <?php if($product->image_path3){ echo 'hidden';} ?>">
-                                    <p>
+                                <div id="" class="inputArea w-full h-full <?php if($product->image_path3){ echo 'hidden';} ?>">
+                                    <p class="text-xs  md:text-sm">
                                         ここにファイルをドロップしてください<br>またはdrug&drop
                                         <button><i class="fa-solid fa-camera"></i></button>
                                         <label for="uploadfile" class="bg-blue-200"> 
-                                            <input type="file" id="uploadfile" name="uploadfile3"   class="uploadfile hidden">
+                                            <input type="file" id="uploadfile" name="uploadfile3"  class="uploadfile hidden">
                                         </label>
-
                                     </p>
-                                
                                 </div>
-                                <div class="previewBox">
+                                <div class="previewBox  w-full h-full">
                                 @if($product->image_path3)
-
                                     <img src="{{asset($product->image_path3)}}" alt="">
-                                @endif
+                                    @endif
                                 </div>
                             </div>
                         </div>
-
-                        
-                    
-
-
 
                         <!-- 画像upload4 -->
-                        <div class="relative  my-8  w-1/4 ml-3 mr-7 ">
-                        
+                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-2 md:mr-8  border border-gray-300  ">
 
-                            <div id="" class="removeImg  absolute  right-0  w-8 h-8 <?php if(!$product->image_path4){ echo 'hidden';} ?> ">
+                            <div id="" class="removeImg  absolute  right-0 mr-2 <?php if(!$product->image_path4){ echo 'hidden';} ?>">
                                 <i class=" cursor-pointer fa-solid fa-xmark " ></i>
                             </div>
+                            
                             <!-- ドラッグ&ドロップエリア + プレヴューエリア-->
-                            <div id=""   class="preview border border-gray-300  bg-white  w-full h-full  ">
+                            <div id=""   class="preview   bg-white w-full h-full overflow-hidden object-fill ">
 
-                                <div id="" class="inputArea w-fill h-full <?php if($product->image_path4){ echo 'hidden';} ?>">
-                                    <p>
+                                <div id="" class="inputArea w-full h-full <?php if($product->image_path4){ echo 'hidden';} ?>">
+                                    <p class="text-xs  md:text-sm">
                                         ここにファイルをドロップしてください<br>またはdrug&drop
                                         <button><i class="fa-solid fa-camera"></i></button>
                                         <label for="uploadfile" class="bg-blue-200"> 
-                                            <input type="file" id="uploadfile" name="uploadfile4"    class="uploadfile hidden">
+                                            <input type="file" id="uploadfile" name="uploadfile4"  class="uploadfile hidden">
                                         </label>
-
                                     </p>
-                                
                                 </div>
-                                <div class="previewBox">
+                                <div class="previewBox  w-full h-full">
+                                @if($product->image_path4)
                                     <img src="{{asset($product->image_path4)}}" alt="">
+                                    @endif
+
                                 </div>
                             </div>
                         </div>
 
-                        
                     </div>
 
                     @if ($errors->first('uploadfile1')) 

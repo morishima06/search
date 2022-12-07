@@ -32,7 +32,9 @@
                                 <p class="text-sm mt-4 mb-3 ml-3 flex items-center justify-center w-32 h-12  text-white bg-black"><a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
                                     ログアウト
                                 </a></p>
-                            </form>                      
+
+                            </form>
+                            <p class="text-sm mt-4 mb-3 mx-3  flex items-center justify-center  w-32 h-12 border-black border  text-black bg-white "><a href="{{ route('dashboard') }}" class="text-sm ">アカウント情報</a></p>
                             @else
                             <p class="text-sm mt-4 mb-3 mx-3  flex items-center justify-center  w-32 h-12   text-white bg-black "><a href="{{ route('login') }}" class="text-sm ">ログイン</a></p>
 
@@ -63,15 +65,12 @@
 
                         <div class="ml-3">
                             <h2 class="mt-3 mb-2 font-semibold">その他</h2>
-                            <p class="mb-1   hover:text-gray-500 {{ request()->route()->named('dashboard*') ? 'font-bold	' : '' }}"><a class="" href="{{ route('dashboard') }}">アプリ</a></p>
-                            <p class="mb-1   hover:text-gray-500 {{ request()->route()->named('upload*') ? 'font-bold	' : '' }}"><a href="{{ route('upload') }}">お問い合わせ</a></p>
-                            <p class="mb-1   hover:text-gray-500  {{ request()->route()->named('show*') ? 'font-bold	' : '' }}"><a href="{{ route('show') }}">当サイトについて</a></p>
-                            <p class="mb-1   hover:text-gray-500  {{ request()->route()->named('edit*') ? 'font-bold	' : '' }}"><a href="{{ route('edit') }}">メルマガ登録</a></p>
+                            <p class="mb-1 ">SEARCHについて</p>
+                            <p class="mb-1 "> 利用規約</p>
+                            <p class="mb-1  ">プライバシーポリシー</p>
+                            <p class="mb-1  ">お問い合わせ</p>
+                            <p class="text-xs">copyright2022 無断転載を禁止します。</p>
 
-                        </div>
-                        <div class="ml-3">
-                            <p>2022 LIMITED.無断転載を禁止します。</p>
-                            <p>利用規約プライバシーポリシーGDPR</p>
                         </div>
 
                     </div>

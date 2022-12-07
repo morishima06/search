@@ -29,15 +29,15 @@
 </head>
 <body class="">
     @include('layouts.header')
-    <div class="sm:flex sm:justify-center pt-28 mb-12 ">
+    <div class="sm:flex sm:justify-center pt-28 mb-12 mx-2">
         <!-- Slider main container -->
         <div class=" ">
-            <div class="">
-                <div class="swiper mySwiper2  w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+            <div class=" flex justify-center">
+                <div class="swiper mySwiper2   aspect-square  sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper ">
+                    <div class="swiper-wrapper  ">
                         <!-- Slides -->
-                        <div class="swiper-slide flex justify-center "><img src="../{{$product[0]->image_path1}}" alt="" class="w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
+                        <div class="swiper-slide flex justify-center "><img src="../{{$product[0]->image_path1}}" alt="" class=" mx-2  sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
                         <div class="swiper-slide  <?php if($product[0]->image_path2 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path2)}}" alt="" class="w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
                         <div class="swiper-slide  <?php if($product[0]->image_path3 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path3)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
                         <div class="swiper-slide  <?php if($product[0]->image_path4 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path4)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
@@ -47,14 +47,14 @@
                     <div class="swiper-button-next "></div>
                 </div>
             </div>
-            <div class="swiper mySwiper w-full h-full sm:w-80 lg:w-96 flex justify-center">
+            <div class="swiper mySwiper w-full  sm:w-80 lg:w-96 flex justify-center">
                 <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper      ">
+                    <div class="swiper-wrapper   sm:h-20  lg:h-24 ">
                         <!-- Slides -->
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path1)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path2)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path3 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path3)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2   <?php if($product[0]->image_path4 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path4)}}" alt="" class="w-full h-full sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path1)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 <?php if($product[0]->image_path2 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path2)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 <?php if($product[0]->image_path3 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path3)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 <?php if($product[0]->image_path4 == null){ echo "hidden";}?> "><img src="{{asset($product[0]->image_path4)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
                     </div>
             </div>
         </div>

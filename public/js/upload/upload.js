@@ -112,7 +112,7 @@ array["lifestyle"]= [
         reader.onload = function(event) {
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
-        img.setAttribute("class", "previewImage");
+        img.setAttribute("class", "previewImage  w-full h-full");
         previewBox[i].appendChild(img);
         }
         reader.readAsDataURL(files);
@@ -154,7 +154,8 @@ array["lifestyle"]= [
         reader.onload = function(event) {
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
-        img.setAttribute("class", "previewImage");
+        img.setAttribute("class", "previewImage  w-full h-full ");
+
         previewBox[i].appendChild(img);
         }
         reader.readAsDataURL(files);

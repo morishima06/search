@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="w-full md:w-4/5 pl-3">
+    <div class="w-full md:w-4/5 px-3">
     <h3 class="text-2xl mb-6 font-semibold text-slate-700">アカウント詳細</h3>
 
     <form action="{{route('edit_check')}}" method="post" enctype="multipart/form-data">
@@ -7,17 +7,15 @@
         <div class="">
         @foreach($userdetails as $userdetail)
 
+            <div class="md:flex border-y md:border-slate-300   ">
 
-            <div class="flex border-y border-slate-300 mr-4  ">
-
-                <div class="flex items-center bg-slate-100">
-                    <h3 class="w-60 pl-3 flex items-center   ">ユーザー名</h3>
+                <div class="flex items-center  md:bg-slate-100">
+                    <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium  flex items-center mt-1 md:mt-0">ユーザー名</h3>
                 </div>
-                <div class="flex items-center">
-                    <div class="ml-3 my-2">
+                <div class="flex items-center w-full">
+                    <div class=" my-2  md:ml-3 w-full">
                 
-                    <input type="text" class=" h-8  border-slate-300 rounded-sm focus:border-none " id="user_name" name="user_name" value="{{$auth->user_name}}">
-                    <!-- <p class="text-orange-400  text-xs font-semibold">*必須項目です</p> -->
+                    <input type="text" class=" w-full  md:w-60 h-8  border-slate-300 rounded-sm focus:border-none " id="user_name" name="user_name" value="{{$auth->user_name}}">
                     @if ($errors->first('user_name')) 
                         <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('user_name')}}</p>
                     @endif
@@ -27,14 +25,14 @@
 
             
 
-            <div class="flex border-b border-slate-300 mr-4 ">
+            <div class="md:flex border-b border-slate-300  ">
 
-                <div class="flex items-center bg-slate-100  ">
-                    <h3 class="w-60 pl-3  flex items-center bg-slate-100">email(ID名)</h3>
+                <div class="flex items-center md:bg-slate-100  ">
+                    <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">email(ID名)</h3>
                 </div>
-                <div class="flex items-center ">
-                    <div class=" my-2 ml-3">
-                        <input type="text" class=" h-8   border-slate-300 rounded-sm focus:border-none " id="email" name="email" value="{{$auth->email}}" >
+                <div class="flex items-center w-full ">
+                    <div class=" my-2 md:ml-3 w-full">
+                        <input type="text" class=" h-8 w-full md:w-60  border-slate-300 rounded-sm focus:border-none " id="email" name="email" value="{{$auth->email}}" >
                         @if ($errors->first('email')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('email')}}</p>
                         @endif
@@ -44,58 +42,68 @@
                 </div>
             </div>
 
-            <div class="flex border-b border-slate-300 mr-4 h-12">
-                <h3 class="w-60 pl-3  flex items-center bg-slate-100">パスワード</h3>
-                <input type="text" class=" h-8 ml-3 mt-2 border-slate-300 rounded-sm focus:border-none " name="password" value="{{$auth->password}}">
+            <div class="md:flex border-b border-slate-300 w-full">
+            <div class="flex items-center md:bg-slate-100  ">
+                    <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">パスワード</h3>
+                </div>
+                <div class="flex items-center w-full ">
+                    <div class=" my-2 md:ml-3 w-full">
+                        <input type="text" class=" h-8 w-full md:w-60  border-slate-300 rounded-sm focus:border-none " id="email" name="email" value="{{$auth->password}}" >
+                        @if ($errors->first('email')) 
+                            <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('email')}}</p>
+                        @endif
+                    </div>
+                   
+
+                </div>
+
 
             </div>
-            <div class="flex border-b border-slate-300 mr-4 ">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">氏名</h4>
+            <div class="md:flex border-b border-slate-300  ">
+                <div class="">
+                    <h4 class="md:pl-3 sm:w-60   h-full font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">氏名</h4>
+                </div>
                 
-                <div class=" ">
-
+                <div class="w-full ">
                     <div class="lg:flex  my-2   ">
-                        <div class="flex ">
-                            <label for="NmaeSei" class="block ml-3 lg:mb-0 mb-1 leading-8 w-12" >姓</label>
-                            <div class="ml-3">
+                        <div class="flex w-full md:w-auto">
+                            <label for="NmaeSei" class="block md:ml-3 lg:mb-0 mb-1 leading-8 w-16 ">姓</label>
+                            <div class="ml-2 w-full">
                                 @if ($errors->first('NameSei')) 
                                 <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('NameSei')}}</p>
                                 @endif
-                                <input type="text" class=" h-8  d border-slate-300 rounded-sm focus:border-none " id="NameSei" name="NameSei" value="{{$userdetail->NameSei}}">
+                                <input type="text" class="w-48 h-8  d border-slate-300 rounded-sm focus:border-none " id="NameSei" name="NameSei" value="{{$userdetail->NameSei}}">
                             </div>
-
-                           
                         </div>
                         <div class="flex ">
-                            <label for="NameMei" class="block ml-3 leading-8 w-12 ">名</label>
-                            <div class="ml-3">
+                            <label for="NameMei" class="block md:ml-3 leading-8 w-16 ">名</label>
+                            <div class="ml-2 w-full">
                                 @if ($errors->first('NameMei')) 
                                 <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('NameMei')}}</p>
                                 @endif
-                                <input type="text" class=" h-8  d border-slate-300 rounded-sm focus:border-none " id="NameMei" name="NameMei" value="{{$userdetail->NameMei}}">
+                                <input type="text" class="w-48 h-8  border-slate-300 rounded-sm focus:border-none " id="NameMei" name="NameMei" value="{{$userdetail->NameMei}}">
                             </div>
-
                         </div>
                     </div>
 
 
                     <div class=" lg:flex my-2 ">
                         <div class="flex ">
-                            <label for="NameSeiKana" class="block leading-8  w-12 ml-3 lg:mb-0 mb-1">姓カナ</label>
-                            <div class="ml-3">
+                            <label for="NameSeiKana" class="block leading-8  w-16 md:ml-3 lg:mb-0 mb-1">姓カナ</label>
+                            <div class="ml-2 w-full">
                                 @if ($errors->first('NameSeiKana')) 
                                     <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('NameSeiKana')}}</p>
                                 @endif
-                                <input type="text" class=" h-8  d border-slate-300 rounded-sm focus:border-none " id="NameSeiKana" name="NameSeiKana" value="{{$userdetail->NameSeiKana}}">
+                                <input type="text" class=" w-48 h-8 border-slate-300 rounded-sm focus:border-none " id="NameSeiKana" name="NameSeiKana" value="{{$userdetail->NameSeiKana}}">
                             </div>
                         </div>
                         <div class="flex ">
-                            <label for="NameMeiKana" class="block leading-8 ml-3  w-12">名カナ</label>
-                            <div class="ml-3">
+                            <label for="NameMeiKana" class="block leading-8 md:ml-3  w-16">名カナ</label>
+                            <div class="ml-2 w-full">
                                 @if ($errors->first('NameMeiKana')) 
                                 <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('NameMeiKana')}}</p>
                                 @endif
-                                <input type="text" class=" h-8  d border-slate-300 rounded-sm focus:border-none " id="NameMeiKana" name="NameMeiKana" value="{{$userdetail->NameMeiKana}}">
+                                <input type="text" class="w-48 h-8 border-slate-300 rounded-sm focus:border-none " id="NameMeiKana" name="NameMeiKana" value="{{$userdetail->NameMeiKana}}">
                             </div>
 
                         </div>
@@ -108,10 +116,10 @@
             </div>
             
             
-            <div class="flex border-b border-slate-300 mr-4 ">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">生年月日</h4>
+            <div class="md:flex border-b border-slate-300  ">
+                <h4 class="md:pl-3 sm:w-60   font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">生年月日</h4>
                 <div class="">
-                    <div class="ml-3 my-2">
+                    <div class="md:ml-3 my-2">
                         @if ($errors->first('birthdayY')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('birthdayY')}}</p>
                         @endif
@@ -128,51 +136,54 @@
                     
                     <input type="text" id="birthdayY" maxlength="4" class=" h-8  border-slate-300 rounded-sm focus:border-none " placeholder="" size="4" maxlength="4" name="birthdayY" value="{{$userdetail->birthdayY}}">
                     <label for="birthdayY" maxlength="2" class=" h-8  ml-1 ">年</label>
-                    <input type="text" class=" h-8 ml-3  border-slate-300 rounded-sm focus:border-none " placeholder="" size="2" maxlength="2" name="birthdayM" value="{{$userdetail->birthdayM}}">
+                    <input type="text" class=" h-8 md:ml-3  border-slate-300 rounded-sm focus:border-none " placeholder="" size="2" maxlength="2" name="birthdayM" value="{{$userdetail->birthdayM}}">
                     <label for="birthdayM" class=" h-8  ml-1 ">月</label>
 
-                    <input type="text" maxlength="2" class=" h-8 ml-3  border-slate-300 rounded-sm focus:border-none " placeholder="" size="2" maxlength="2" name="birthdayD" value="{{$userdetail->birthdayD}}">
+                    <input type="text" maxlength="2" class=" h-8 md:ml-3  border-slate-300 rounded-sm focus:border-none " placeholder="" size="2" maxlength="2" name="birthdayD" value="{{$userdetail->birthdayD}}">
                     <label for="birthdayD" class=" h-8  ml-1 ">日</label>
                     </div>
                 </div>
 
             </div>
-            <div class="flex border-b border-slate-300 mr-4 h-12">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">性別</h4>
-                <select name="sex" class="w-60 my-2 ml-3 border border-gray-300 rounded-sm focus:border-none ">
+
+            <div class="md:flex border-b border-slate-300 ">
+                <h4 class="md:pl-3 sm:w-60   font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">性別</h4>
+                <div class="flex items-center ">
+                    <div class="md:ml-3 my-2 w-full">
+                        <select name="sex" class="inline-block w-full md:w-60  my-2  border border-gray-300 rounded-sm focus:border-none ">
                             <option value="" <?php if($userdetail->sex == ""){echo 'selected="selected"';}?>>選択してください</option>
                             <option value="男性" <?php if($userdetail->sex == "男性"){echo 'selected="selected"';}?>>男性</option>
                             <option value="女性" <?php if($userdetail->sex == "女性"){echo 'selected="selected"';}?>>女性</option>
                             <option value="その他" <?php if($userdetail->sex == "その他"){echo 'selected="selected"';}?>>その他</option>
-                </select>
+                        </select>
+                    </div>
+                 </div>
             </div>
 
-            
-
-            <div class="flex border-b border-slate-300 mr-4 ">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">郵便番号</h4>
-                <div class="ml-3 my-2 ">
+            <div class="md:flex border-b border-slate-300">
+                <h4 class="md:pl-3 sm:w-60 font-semibold  md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">郵便番号</h4>
+                <div class="md:ml-3 my-2 ">
                     <div >
                         @if ($errors->first('zip')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('zip')}}</p>
                         @endif
                     </div>
                     <div class="lg:flex">   
-                        <input type="text" maxlength="7" class=" h-8  border-slate-300 rounded-sm focus:border-none " name="zip" class="zip"  placeholder="例:1234567" value="{{$userdetail->zip}}">
-                        <button type="button"  class="ajaxzip3 block border-black border-2 rounded-sm px-4 h-8 lg:mt-0 mt-1  ml-0 lg:ml-2" href="#">郵便番号から住所を取得</button>
+                        <input type="text" maxlength="7" class=" h-8  border-slate-300 rounded-sm focus:border-none " name="zip" class="zip w-full md:w-60"  placeholder="例:1234567" value="{{$userdetail->zip}}">
+                        <button type="button"  class="ajaxzip3 block border-black border-2 rounded-sm px-4 h-8 w-full md:w-60 lg:mt-0 mt-1  ml-0 lg:ml-2" href="#">郵便番号から住所を取得</button>
                     </div>
                 </div>
             </div>
 
-            <div class="flex border-b border-slate-300 mr-4 ">
+            <div class="md:flex border-b border-slate-300 ">
             
-                <h4 class="w-60 pl-3  flex items-center  bg-slate-100">都道府県</h4>
-                <div class="ml-3 my-2">
+                <h4 class="md:pl-3 sm:w-60   font-semibold md:font-medium flex items-center  md:bg-slate-100 mt-1 md:mt-0">都道府県</h4>
+                <div class="md:ml-3 my-2  ">
                 @if ($errors->first('pref')) 
                     <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('pref')}}</p>
                 @endif
                 
-                    <select name="pref" class="pref  px-2 border-slate-300" >   
+                    <select name="pref" class="w-full md:w-60 pref px-2 border-slate-300" >   
                         <option value=""  <?php if($userdetail->pref == ""){echo 'selected="selected"';}?>>選択してください</option>
                         <option value="1" <?php if($userdetail->pref == "1"){echo 'selected="selected"';}?>>北海道</option>
                         <option value="2"  <?php if($userdetail->pref == "2"){echo 'selected="selected"';}?>>青森県</option>
@@ -225,27 +236,52 @@
                 </div>
             </div>
 
-            <div class="flex border-b border-slate-300 mr-4 h-12">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">市区町村</h4>
-                
-                <input type="text" class=" h-8 ml-3 mt-2 border-slate-300 rounded-sm focus:border-none " name="addr1" class="addr1" value="{{$userdetail->addr1}}">
-
-            </div>
             
-            <div class="flex border-b border-slate-300 mr-4 h-12">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">町名</h4>
-                <input type="text" class=" h-8 ml-3 mt-2 border-slate-300 rounded-sm focus:border-none " name="addr2" class="addr2" value="{{$userdetail->addr2}}">
+            <div class="md:flex border-b md:border-slate-300   ">
+                <div class="flex items-center  md:bg-slate-100">
+                    <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium  flex items-center mt-1 md:mt-0">市区町村</h3>
+                </div>
+                <div class="flex items-center w-full">
+                    <div class="md:ml-3 my-2 w-full">
+                    <input type="text" class=" w-full  md:w-60 h-8  border-slate-300 rounded-sm focus:border-none "  name="addr1" value="{{$userdetail->addr1}}">
+                    </div>
+                </div>
             </div>
 
-            <div class="flex border-b border-slate-300 mr-4 h-12">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">番地</h4>
-                <input type="text" class=" h-8 ml-3 mt-2 border-slate-300 rounded-sm focus:border-none " name="addr3" class="addr3" value="{{$userdetail->addr3}}">
+            <div class="md:flex border-b md:border-slate-300   ">
+                <div class="flex items-center  md:bg-slate-100">
+                    <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium  flex items-center mt-1 md:mt-0">町名</h3>
+                </div>
+                <div class="flex items-center w-full">
+                    <div class="md:ml-3 my-2 w-full">
+                    <input type="text" class=" w-full  md:w-60 h-8  border-slate-300 rounded-sm focus:border-none "  name="addr2" value="{{$userdetail->addr2}}">
+                    </div>
+                </div>
             </div>
 
-            <div class="flex border-b border-slate-300 mr-4 h-12">
-                <h4 class="w-60 pl-3  flex items-center bg-slate-100">マンション名・部屋番号</h4>
-                <input type="text" class=" h-8 ml-3 mt-2 border-slate-300 rounded-sm focus:border-none " name="addr4" class="addr4" value="{{$userdetail->addr4}}">
+            <div class="md:flex border-b md:border-slate-300   ">
+                <div class="flex items-center  md:bg-slate-100">
+                    <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium  flex items-center mt-1 md:mt-0">番地</h3>
+                </div>
+                <div class="flex items-center w-full">
+                    <div class="md:ml-3 my-2 w-full">
+                    <input type="text" class=" w-full  md:w-60 h-8  border-slate-300 rounded-sm focus:border-none "  name="addr3" value="{{$userdetail->addr3}}">
+                    </div>
+                </div>
             </div>
+
+            <div class="md:flex border-b md:border-slate-300   ">
+                <div class="flex items-center  md:bg-slate-100">
+                    <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium  flex items-center mt-1 md:mt-0">マンション名・部屋番号</h3>
+                </div>
+                <div class="flex items-center w-full">
+                    <div class="md:ml-3 my-2 w-full">
+                    <input type="text" class=" w-full  md:w-60 h-8  border-slate-300 rounded-sm focus:border-none "  name="addr4" value="{{$userdetail->addr4}}">
+                    </div>
+                </div>
+            </div>
+
+            
             @endforeach
             <div class="flex  justify-center">
                 <button type="submit" class=" bg-slate-500 text-white rounded w-60 h-10 mt-8 mb-16 hover:bg-slate-400 " >変更する</button>    
