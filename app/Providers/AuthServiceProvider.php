@@ -25,6 +25,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        \URL::forceScheme('https');
+
+
     }
 }
