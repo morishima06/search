@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AccountController;
-
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SimpleLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,12 @@ Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/category/{category?}', [HomeController::class, 'category'])->name('category');
 Route::get('/brands/{brand?}/{category?}', [HomeController::class, 'brands'])->name('brands');
 Route::get('/product/{id}', [HomeController::class, 'product'])->name('product');
+//contactページのroute
+Route::get('/contact',[ContactController::class, 'index'])->name('contact');
+Route::post('/contact/confirm',[ContactController::class, 'confirm'])->name('contact_confirm');
+Route::post('/thanks',[ContactController::class, 'send'])->name('send');
 
+Route::get('login/guest', [SimpleLoginController::class,'guestLogin'])->name('login.guest');
 
 // Loginページのroute
 Route::get('/dashboard',[AccountController::class, 'index'])->middleware(['auth'])->name('dashboard');

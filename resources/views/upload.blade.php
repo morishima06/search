@@ -145,7 +145,16 @@
 
                     <div class="ml-8  mt-3 pr-8">
                         <label for="brand_name" class="block text-slate-700">ブランド名</label>
-                        <input type="text" id="brand_name" name="brand_name" class="w-full border h-8 border-gray-300  rounded-lg focus:border-none ">
+                        <input type="text"  id="searchForm" name="brand_name"  placeholder="ブランド名を入力すると候補が出ます" autocomplete="off" class="border h-8 w-full focus:border-none   border-gray-300 rounded-lg">
+                            <ul id="lists" class="hidden border  w-full overflow-hidden   border-gray-300 rounded-lg">
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer" data-set="nike" tabindex="-1">nike</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="adidas" tabindex="-1">adidas</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="new balance" tabindex="-1">new balance</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="lacoste" tabindex="-1">lacoste</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="oamc" tabindex="-1">oamc</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="asicis" tabindex="-1">asicis</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="vans" tabindex="-1">vans</li>
+                        </ul>
                         @if ($errors->first('brand_name')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('brand_name')}}</p>
                         @endif
@@ -183,7 +192,7 @@
                     </div>
 
                     <div class="flex justify-center py-7">
-                    <button type="submit" class="hover:bg-zinc-500 border hover:text-white  border-gray-200 rounded mb-4 bg-white	w-48 h-10">出品する</button>
+                        <button type="submit" class="hover:bg-zinc-500 border hover:text-white  border-gray-200 rounded mb-4 bg-white	w-48 h-10">出品する</button>
                     </div>
 
 

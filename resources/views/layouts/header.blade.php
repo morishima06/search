@@ -19,6 +19,12 @@
                 </div>
             </div>
 
+            <button class="mr-1 ml-3 bg-gray-400 rounded p-1">
+                <a href="{{ route('login.guest') }}" class="text-white">
+                    ゲストログイン
+                </a>
+            </button>
+
             <div class="hamburger_contents fixed  w-full ml-10   z-20 bg-white  top-0  right-0 bottom-0 overflow-y-auto   left-full ">
             <!-- -->
 
