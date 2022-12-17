@@ -28,6 +28,7 @@ Route::get('/contact',[ContactController::class, 'index'])->name('contact');
 Route::post('/contact/confirm',[ContactController::class, 'confirm'])->name('contact_confirm');
 Route::post('/thanks',[ContactController::class, 'send'])->name('send');
 
+//ゲストログイン
 Route::get('login/guest', [SimpleLoginController::class,'guestLogin'])->name('login.guest');
 
 // Loginページのroute
