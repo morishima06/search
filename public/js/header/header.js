@@ -23,5 +23,7 @@ searchHeader.addEventListener('click',()=>{
 
     } else {
     searchContent.style.maxHeight = `0px`;
+    searchHeader.blur();
+
     }
 })
