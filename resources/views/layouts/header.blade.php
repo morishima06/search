@@ -4,10 +4,12 @@
         <a href="{{route('home')}}"><h1 class="title text-4xl ">SEARCH</h1></a>
 
             <!-- 検索ボタン -->
-            <button class="search-header cursor-pointer transition flex  space-x-1  items-center h-14  ml-auto ">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <p>検索</p>
-            </button>
+            <div onclick="">
+                <button type="button" class="search-header cursor-pointer transition flex  space-x-1  items-center h-14  ml-auto ">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>検索</p>
+                </button>
+            </div>
 
             <!-- responsiveハンバーガー -->
             <div class="flex items-center h-10 mr-2 ml-1 md:hidden ">
