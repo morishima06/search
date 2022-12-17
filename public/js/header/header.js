@@ -15,12 +15,14 @@ const searchContent_child =  document.getElementById("search-content-child")
 const searchHeader= document.querySelector(".search-header");
 
 searchHeader.addEventListener('click',()=>{
-    searchContent_child.focus();
     let searchMaxHeight = searchContent.style.maxHeight;
 
     if (searchMaxHeight == "0px" || searchMaxHeight.length == 0) {
     searchContent.style.maxHeight = `${searchContent.scrollHeight+32}px`;
+    searchContent_child.focus();
+
     } else {
     searchContent.style.maxHeight = `0px`;
+    searchContent_child.blur();
     }
 })
