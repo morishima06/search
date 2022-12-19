@@ -57,30 +57,23 @@
                     </div>
 
                     <div class="">
-
-
                         <div class="ml-3">
                             <h2 class="mt-4 mb-2 font-semibold">カテゴリー</h2>
                             <div class="mb-1"><a class=" hover:text-gray-500" href="{{route('category', ['category' => 'wear',])}}"> ウェア</a></div>
                                 <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'shoes',])}}"> シューズ</a></div>
                                 <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'accessories',])}}"> アクセサリー</a></div>
                                 <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'lifestyle',])}}"> ライフスタイル</a></div>
-
-
                         </div>
 
                         <div class="ml-3">
                             <h2 class="mt-3 mb-2 font-semibold">その他</h2>
-                            <p class="mb-1 ">SEARCHについて</p>
-                            <p class="mb-1 "> 利用規約</p>
-                            <p class="mb-1  ">プライバシーポリシー</p>
-                            <p class="mb-1  ">お問い合わせ</p>
+                            <p class="mb-1 line-through">SEARCHについて</p>
+                            <p class="mb-1 line-through"> 利用規約</p>
+                            <p class="mb-1  line-through">プライバシーポリシー</p>
+                            <p class="mb-1 line-through">お問い合わせ</p>
                             <p class="text-xs">copyright2022 無断転載を禁止します。</p>
-
                         </div>
-
                     </div>
-                    
             </div>
 
             <!-- PCアカウント表示 -->
@@ -128,12 +121,7 @@
 </header>
 <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
 
-@if(app('env')=='local')
 <script src="{{ asset('/js/header/header.js') }}"></script>
-@endif
 
-@if(app('env')=='production')
-<script src="{{ asset('/js/header/header.js') }}"></script>
-@endif
 
 
