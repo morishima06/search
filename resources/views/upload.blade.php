@@ -147,13 +147,13 @@
                         <label for="brand_name" class="block text-slate-700">ブランド名</label>
                         <input type="text"  id="searchForm" name="brand_name"  placeholder="ブランド名を入力すると候補が出ます" autocomplete="off" class="border h-8 w-full focus:border-none   border-gray-300 rounded-lg">
                             <ul id="lists" class="hidden border  w-full overflow-hidden   border-gray-300 rounded-lg">
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer" data-set="nike" tabindex="-1">nike</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer" data-set="Nike" tabindex="-1">Nike</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="adidas" tabindex="-1">adidas</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="new balance" tabindex="-1">new balance</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="lacoste" tabindex="-1">lacoste</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="oamc" tabindex="-1">oamc</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="asicis" tabindex="-1">asicis</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="vans" tabindex="-1">vans</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="New Balance" tabindex="-1">New Balance</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Lacoste" tabindex="-1">Lacoste</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OAMC" tabindex="-1">OAMC</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Asicis" tabindex="-1">Asics</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">Vans</li>
                         </ul>
                         @if ($errors->first('brand_name')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('brand_name')}}</p>

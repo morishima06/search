@@ -87,7 +87,7 @@
                         </ul>
                         <span class="inline-block mb-1 text-sm font-bold">E</span>
                         <ul>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => ''])}}">EAST PACK</a></li>
+                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'EAST PACK'])}}">EAST PACK</a></li>
                         </ul>
                     </div>
 

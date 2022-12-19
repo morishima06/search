@@ -196,7 +196,8 @@ array["lifestyle"]= [
         return;
         }
         const val = elm.dataset.set;
-        if (val.includes(keyWord)) {
+        let word = new RegExp(keyWord,"i");
+        if (val.match(word)) {
         elm.classList.remove('hidden');
         lists.classList.remove('hidden')
 
