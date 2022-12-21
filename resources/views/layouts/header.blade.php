@@ -1,7 +1,7 @@
 <header  class="fixed w-full bg-white  pt-3    border-b border-black z-10    ">
     <div class=" flex items-center px-3">
 
-        <a href="{{route('home')}}"><h1 class="title text-4xl ">SEARCH</h1></a>
+        <a href="{{route('home')}}"><h1 class="title text-4xl ml-2">SEARCH</h1></a>
 
             <!-- 検索ボタン -->
             <div class="search-header cursor-pointer transition flex  space-x-1  items-center h-14  ml-auto ">
@@ -15,7 +15,6 @@
                     <span class="absolute top-0 bg-black h-0.5 w-5 inline-block"></span>
                     <span class="absolute top-2 bg-black h-0.5 w-5 inline-block"></span>
                     <span class="absolute top-4 bg-black h-0.5 w-5 inline-block"></span>
-
                 </div>
             </div>
 
@@ -26,7 +25,6 @@
             </button>
 
             <div class="hamburger_contents fixed  w-full ml-10   z-20 bg-white  top-0  right-0 bottom-0 overflow-y-auto   left-full ">
-            <!-- -->
 
                     <div class="border-b border-slate-300">
 
@@ -110,17 +108,13 @@
     <!-- 検索のdropdown -->
      <div class="search-content  pt-0  max-h-0 overflow-hidden mb-2 mx-2">
          <form action="{{route('search')}}" method="get"  >
-            
             <input type="text" id="search-content-child" name="q"  class="w-full border-blue-500 h-9 "  placeholder="検索 ">
          </form>
      </div>
        
-        
-        
 
 </header>
 <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
-
 <script src="{{ asset('/js/header/header.js') }}"></script>
 
 

@@ -9,18 +9,11 @@
 
 <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.min.css" />
 
-@if(app('env')=='local')
-<link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
-<link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
-<script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
-@endif
 
-@if(app('env')=='production')
 <link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
 <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
 <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
 
-@endif
 
 
 
