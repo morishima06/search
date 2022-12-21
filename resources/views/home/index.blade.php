@@ -21,7 +21,7 @@
     </head>
     <body class="antialiased ">
     @include('layouts.header')
-    <section class="pt-24 px-8 ">
+    <section class="pt-24 px-4 ">
             <h1 class="w-full text-lg text-black font-bold border-b pb mb-5  border-black">カテゴリー</h1>
             <!-- スライダーのコンテナ -->
                 <div class="swiper  ">
