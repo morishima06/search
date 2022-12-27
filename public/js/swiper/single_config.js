@@ -1,9 +1,9 @@
 const swiper = new Swiper(".swiper", {
     // ナビボタンが必要なら追加
-	slidesPerView: 3,
+	slidesPerView: 2,
     breakpoints: {
-        // 768px以上の場合
-        768: {
+        // 568px以上の場合
+        568: {
           slidesPerView: 4
         }
       },
