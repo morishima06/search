@@ -1,4 +1,4 @@
-<footer class="mt-4">
+<footer >
         <div class="sm:flex sm:justify-center pl-3 bg-black py-2">
             <div class=" ">
                 <ul class=" sm:flex">

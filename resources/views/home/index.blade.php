@@ -21,16 +21,18 @@
     </head>
     <body class="antialiased ">
     @include('layouts.header')
-    <section class="pt-24 px-4 ">
-            <h1 class="w-full text-lg text-black font-bold border-b pb mb-5  border-black">カテゴリー</h1>
+    <section class="pt-24  ">
+            <div class="px-3">
+            <h1 class="w-full  text-lg text-black font-bold border-b pb mb-5  border-black">カテゴリー</h1>
+            </div>
             <!-- スライダーのコンテナ -->
                 <div class="swiper  ">
                     <!-- 必要に応じたwrapper -->
                     <div class="swiper-wrapper ">
                     <!-- スライド -->
-                        <div class="swiper-slide   h-full   pb-4 px-3 ">
+                        <div class="swiper-slide   h-full   pb-4  px-3 ">
                                 <a href="{{route('category', ['category' => 'wear' ])}}" class=" bg-slate-400"> <img src="{{ asset('image/apparel.jpg')}}" class="h-80 sm:h-96 object-cover" alt=""></a>
-                                <h2 class=" px-1 text-white font-semibold bg-black  inline-block  "> ウエア</h2>
+                                <h2 class=" px-3 text-white font-semibold bg-black  inline-block  "> ウエア</h2>
                         </div>
                         <div class="swiper-slide   w-full  px-3 pb-4 ">
                                 <a href="{{route('category', ['category' => 'shoes'])}}" class=" bg-slate-400"> <img src="{{ asset('image/shoes.jpg')}}" class="h-80 sm:h-96 object-cover w-full " alt=""></a>
@@ -53,105 +55,107 @@
                 <h2 class=" border-black border   text-sm font-semibold"><a  href="{{route('category', ['category' => 'all'])}}" class="p-2 inline-block w-full h-wull" href="">全てのカテゴリーの商品</a> </h2>
             </div>
             
-            <h1 class="w-full text-lg text-black font-bold border-b pb mb-3 mt-12  border-black">ブランド</h1>
-            <h2 class="text-sm  text-slate-600 font-semibold underline underline-offset-4 decoration-1 decoration-slate-600 mb-2"><a  href="{{route('home')}}" class=" inline-block w-full h-wull" href="">全てのブランド</a> </h2>
+            <div class="px-3">
+                <h1 class="w-full text-lg text-black font-bold border-b pb mb-3 mt-12  border-black">ブランド</h1>
+                <h2 class="text-sm  text-slate-600 font-semibold underline underline-offset-4 decoration-1 decoration-slate-600 mb-2"><a  href="{{route('home')}}" class=" inline-block w-full h-wull" href="">全てのブランド</a> </h2>
 
 
-            <div class="flex mb-16">
-                <div class="sm:flex w-1/2 inline-block">
-                    <div class="w-full sm:w-1/2">
-                        <span class="inline-block mb-1 text-sm font-bold">#</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => '1017 ALYX 9SM'])}}">1017 ALYX 9SM</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => '424'])}}">424</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">A</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'APC'])}}">APC</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'ADIDAS'])}}">ADIDAS</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">B</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'BURBERRY'])}}">BURBERRY</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">C</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'C.P COMPANY'])}}">C.P COMPANY</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'CONVERSE'])}}">CONVERSE</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">E</span>
-                        <ul>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'EAST PACK'])}}">EAST PACK</a></li>
-                        </ul>
+                <div class="flex mb-16">
+                    <div class="sm:flex w-1/2 inline-block">
+                        <div class="w-full sm:w-1/2">
+                            <span class="inline-block mb-1 text-sm font-bold">#</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => '1017 ALYX 9SM'])}}">1017 ALYX 9SM</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => '424'])}}">424</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">A</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'APC'])}}">APC</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'ADIDAS'])}}">ADIDAS</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">B</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'BURBERRY'])}}">BURBERRY</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">C</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'C.P COMPANY'])}}">C.P COMPANY</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'CONVERSE'])}}">CONVERSE</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">E</span>
+                            <ul>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'EAST PACK'])}}">EAST PACK</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="w-full sm:w-1/2">
+                            <span class="inline-block mb-1 text-sm font-bold">F</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'FEAR OF GOD'])}}">FEAR OF GOD</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'FOLK'])}}">FOLK</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">H</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'HUMAN MADE'])}}">HUMAN MADE</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">J</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'JIL SANDER'])}}">JIL SANDER</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">L</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'LACOSTE'])}}">LACOSTE</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">M</span>
+                            <ul>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MAISON MALGELA'])}}">MAISON MALGELA</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MAISON KITUNE'])}}">MAISON KITUNE</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MONCLER'])}}">MONCLER</a></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="w-full sm:w-1/2">
-                        <span class="inline-block mb-1 text-sm font-bold">F</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'FEAR OF GOD'])}}">FEAR OF GOD</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'FOLK'])}}">FOLK</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">H</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'HUMAN MADE'])}}">HUMAN MADE</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">J</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'JIL SANDER'])}}">JIL SANDER</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">L</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'LACOSTE'])}}">LACOSTE</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">M</span>
-                        <ul>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MAISON MALGELA'])}}">MAISON MALGELA</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MAISON KITUNE'])}}">MAISON KITUNE</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'MONCLER'])}}">MONCLER</a></li>
-                        </ul>
-                    </div>
-                </div>
+                    <div class="sm:flex w-1/2 inline-block">
+                        <div class="w-full sm:w-1/2">
+                            <span class="inline-block mb-1 text-sm font-bold">N</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NANAMICA'])}}">NANAMICA</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NEIGHBORHOOD'])}}">NEIGHBORHOOD</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NEW BALANCE'])}}">NEW BALANCE</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NIKE'])}}">NIKE</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">O</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'OFF-WHITE'])}}">OFF-WHITE</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'OAMC'])}}">OAMC</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">P</span>
+                            <ul>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'PALM ANGLES'])}}">PALM ANGLES</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'PRADA'])}}">PRADA</a></li>
+                            </ul>
+                        </div>
 
-                <div class="sm:flex w-1/2 inline-block">
-                    <div class="w-full sm:w-1/2">
-                        <span class="inline-block mb-1 text-sm font-bold">N</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NANAMICA'])}}">NANAMICA</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NEIGHBORHOOD'])}}">NEIGHBORHOOD</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NEW BALANCE'])}}">NEW BALANCE</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'NIKE'])}}">NIKE</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">O</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'OFF-WHITE'])}}">OFF-WHITE</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'OAMC'])}}">OAMC</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">P</span>
-                        <ul>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'PALM ANGLES'])}}">PALM ANGLES</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'PRADA'])}}">PRADA</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="w-full sm:w-1/2">
-                        <span class="inline-block mb-1 text-sm font-bold">R</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'RAF SIMONS'])}}">RAF SIMONS</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'RHUDE'])}}">RHUDE</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">S</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'STUSSY'])}}">STUSSY</a></li>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'STONE ILAND'])}}">STONE ILAND</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">U</span>
-                        <ul class="mb-2">
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'UNDER COVER'])}}">UNDER COVER</a></li>
-                        </ul>
-                        <span class="inline-block mb-1 text-sm font-bold">V</span>
-                        <ul>
-                            <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'VANS'])}}">VANS</a></li>
-                        </ul>
+                        <div class="w-full sm:w-1/2">
+                            <span class="inline-block mb-1 text-sm font-bold">R</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'RAF SIMONS'])}}">RAF SIMONS</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'RHUDE'])}}">RHUDE</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">S</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'STUSSY'])}}">STUSSY</a></li>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'STONE ILAND'])}}">STONE ILAND</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">U</span>
+                            <ul class="mb-2">
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'UNDER COVER'])}}">UNDER COVER</a></li>
+                            </ul>
+                            <span class="inline-block mb-1 text-sm font-bold">V</span>
+                            <ul>
+                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'VANS'])}}">VANS</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

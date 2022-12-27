@@ -1,7 +1,7 @@
 <header  class="fixed w-full bg-white  pt-3    border-b border-black z-10    ">
     <div class=" flex items-center px-3">
 
-        <a href="{{route('home')}}"><h1 class="title text-4xl ml-2">SEARCH</h1></a>
+        <a href="{{route('home')}}"><h1 class="title text-4xl">SEARCH</h1></a>
 
             <!-- 検索ボタン -->
             <div class="search-header cursor-pointer transition flex  space-x-1  items-center h-14  ml-auto ">
@@ -18,11 +18,6 @@
                 </div>
             </div>
 
-            <button class="mr-1 ml-3 bg-gray-400 rounded p-1">
-                <a href="{{ route('login.guest') }}" class="text-white">
-                    ゲストログイン
-                </a>
-            </button>
 
             <div class="hamburger_contents fixed  w-full ml-10   z-20 bg-white  top-0  right-0 bottom-0 overflow-y-auto   left-full ">
 
@@ -75,33 +70,41 @@
             </div>
 
             <!-- PCアカウント表示 -->
-            <div class="h-14 flex items-center">
-                <div class="group relative bg-white  text-center   mr-8 hidden md:inline-block">
-                    <i class="fa-solid fa-user px-3"></i>
+            <div class="flex items-center h-14">
+                <div class="group  relative  bg-white  text-center  hidden md:inline-block">
+                    <div class="flex items-center h-10">
+                    <i class="fa-solid fa-user px-3 "></i>
+                    </div>
 
-                    <div class="absolute w-28 bg-white text-black top-8 -left-10 border-black border opacity-0  group-hover:opacity-100 md:items-center md:pt-0">
+                    <div class="absolute w-28 bg-white text-black  -left-10 border-black border opacity-0  group-hover:opacity-100 md:items-center md:pt-0">
                         @if (Route::has('login'))
-                            <div class="hidden text-center  top-0 right-0 py-2 text-xs md:block">
-                @auth
-                    <p class="py-1"><a href="{{ url('/dashboard') }}">アカウント情報</a></p>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <p class="py-1"><a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
-                            ログアウト
-                        </a></p>
-                    </form>                      
-                    @else
-                    <p class="py-1"><a href="{{ route('login') }}" class="text-sm underline">ログイン</a></p>
+                        <div class="hidden text-center  top-0 right-0 py-2 text-xs md:block">
+                            @auth
+                            <p class="py-1"><a href="{{ url('/dashboard') }}">アカウント情報</a></p>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <p class="py-1"><a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                                    ログアウト
+                                </a></p>
+                            </form>                      
+                            @else
+                            <p class="py-1"><a href="{{ route('login') }}" class="text-sm underline">ログイン</a></p>
 
-                    @if (Route::has('register'))
-                    <p class="py-1"><a href="{{ route('register') }}" class=" text-sm underline">新規登録</a></p>
-                    @endif
-                @endauth
-                            </div>
-                        @endif
+                            @if (Route::has('register'))
+                            <p class="py-1"><a href="{{ route('register') }}" class=" text-sm underline">新規登録</a></p>
+                            @endif
+                            @endauth
+                        </div>
+                      @endif
                     </div>
                 </div>
             </div>
+            <button class="mr-1 ml-1 bg-gray-400 rounded px-1">
+                <a href="{{ route('login.guest') }}" class="text-white text-sm">
+                    ゲストログイン
+                </a>
+            </button>
+
             
     </div>
 
@@ -111,6 +114,7 @@
             <input type="text" id="search-content-child" name="q"  class="w-full border-blue-500 h-9 "  placeholder="検索 ">
          </form>
      </div>
+
        
 
 </header>

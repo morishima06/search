@@ -15,7 +15,7 @@ class SimpleLoginController extends Controller
     {
         // id=1 のゲストユーザー情報がDBに存在すれば、ゲストログインする
         if (Auth::loginUsingId(self::GUEST_USER_ID)) {
-            return redirect('/');
+            return redirect('/dashboard');
         }
 
         return redirect('/');

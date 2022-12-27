@@ -3,14 +3,14 @@
     <div class="w-full md:w-4/5  ">
         <form action="{{route('upload_check')}}" method="post" enctype="multipart/form-data" >
                 @csrf
-            <h3 class="text-2xl  font-semibold bg-white text-slate-700 pb-12 h-10 pl-7 " >新規出品</h3>
-            <div class="bg-slate-100  rounded border md:mr-7 mt-3  md:ml-7  " >
-                <h4 class="text-xl pt-8 ml-7 text-slate-700 mb-8">商品画像</h4>
+            <h3 class="text-2xl  font-semibold bg-white text-slate-700 pb-12 h-10   pl-3" >新規出品</h3>
+            <div class="bg-slate-100  rounded border  mt-3  px-3 sm:px-7  " >
+                <h4 class="text-xl pt-8  text-slate-700 mb-8">商品画像</h4>
 
                     <!-- uploderフレーム -->
                     <div class="flex rounded bg-slate-100   overflow-scroll w-full ">
                         <!-- 画像upload1 -->
-                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-7 mr-2  border border-gray-300  ">
+                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto    mr-2  border border-gray-300  ">
 
                             <div id="" class="removeImg hidden absolute  right-0 mr-2">
                                 <i class=" cursor-pointer fa-solid fa-xmark " ></i>
@@ -80,7 +80,7 @@
                         </div>
 
                         <!-- 画像upload4 -->
-                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-2 md:mr-8  border border-gray-300  ">
+                        <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-2 md:  border border-gray-300  ">
 
                             <div id="" class="removeImg hidden absolute  right-0 mr-2">
                                 <i class=" cursor-pointer fa-solid fa-xmark " ></i>
@@ -104,13 +104,13 @@
 
                     </div>
                     @if ($errors->first('uploadfile1')) 
-                         <p class="text-orange-400  ml-8 text-sm font-semibold">※{{$errors->first('uploadfile1')}}</p>
+                         <p class="text-orange-400   text-sm font-semibold">※{{$errors->first('uploadfile1')}}</p>
                     @endif
 
 
 
 
-                    <div class="ml-8 mt-3 mr-8">
+                    <div class=" mt-3 ">
 
                         <label for="product_name" class="text-slate-700">商品名</label>
                         <input type="text"  id="product_name" name="product_name" class="border h-8 w-full focus:border-none   border-gray-300 rounded-lg">
@@ -120,7 +120,7 @@
 
                     </div>
 
-                    <div class=" ml-8  mt-3 mr-8">
+                    <div class="   mt-3 ">
                         <label for="" class="block text-slate-700">カテゴリー</label>
                         <select name="category" id="category" class=" border w-full border-gray-300 h-8 rounded-lg pl-3">
                             <option value="" >選択してください</option>
@@ -143,7 +143,7 @@
 
                     </div>
 
-                    <div class="ml-8  mt-3 pr-8">
+                    <div class="  mt-3 ">
                         <label for="brand_name" class="block text-slate-700">ブランド名</label>
                         <input type="text"  id="searchForm" name="brand_name"  placeholder="ブランド名を入力すると候補が出ます" autocomplete="off" class="border h-8 w-full focus:border-none   border-gray-300 rounded-lg">
                             <ul id="lists" class="hidden border  w-full overflow-hidden   border-gray-300 rounded-lg">
@@ -162,7 +162,7 @@
                     </div>
 
 
-                    <div class="ml-8  mt-3 pr-8">
+                    <div class="  mt-3 ">
                         <label for="color" class="block text-slate-700">カラー</label>
                         <select name="color" id="color" class=" border w-full border-gray-300 h-8 rounded-lg pl-3 focus:border-none">
                             <div><option class="bg-slate-300 text-xl" value="色指定なし">色指定なし</option></div>
@@ -181,7 +181,7 @@
 
                     </div>
 
-                    <div class="ml-8  mt-3 relative mr-8 mb-12 ">
+                    <div class="  mt-3 relative  mb-12 ">
                             <label for="price" class="block text-slate-700 ">価格</label>
                             <span class="absolute top-7 h-6 before:left-4 left-2 z-10">¥</span>
                             <input type="text" id="price" name="price" placeholder="0"  class="absolute w-full pl-8 h-8 border border-gray-300 rounded-lg focus:border-none ">

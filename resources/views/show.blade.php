@@ -1,7 +1,6 @@
 <x-app-layout>
 
- <div class="md:w-4/5 ml-auto mr-auto px-2  pl-2  sm:px-2 ">
-    <div class="">
+ <div class="w-full md:w-4/5  mr-auto mx-3  sm:ml-2  sm:px-2 ">
     <h3 class="text-2xl mb-4 font-semibold text-slate-700">出品一覧</h3>
     <table class="w-full mt-10">
         <tbody >
@@ -12,9 +11,6 @@
             <th class=" pb-1"><p class="text-sm">出品日</p></th>
             @foreach($products as $product)
             
-            
-               
-                   
                 <tr class="h-24 border-y hover:bg-slate-100 cursor-pointer px-1"  onclick="location.href='{{route('show_edit', ['id' => $product->id]   )}}' ">
                         
                     <td class="w-24 h24"><img src="{{asset($product->image_path1)}}" alt="" class="w-24" ></td>
@@ -40,7 +36,6 @@
     </table>
 
     {{ $products->links() }}
-    </div>
     
 
 
