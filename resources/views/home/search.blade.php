@@ -270,7 +270,6 @@
                 <div class="w-full   sm:text-2xl md:text-3xl py-3 sm:py-5 font-bold">
                 <h2 class="">
                     <?php if(!empty($q)){echo "$q"."検索結果" ;}else{echo "検索ワードを入れてください" ;}?></h2>
-
             </div>
 
             <div class="mb-3 sm:mb-0">
@@ -286,17 +285,12 @@
                         <p class="text-xs sm:text-sm line-clamp-1">{{$product->product_name}}</p>
                         <p class="font-bold text-sm sm:text-lg mt-1 sm:mt-2 ">¥{{$product->price}}</p>
                     </div>
-
                 </div>
                 @endforeach
                 @endif
                 </ul>
             </div>
-
             {{ $products->links() }}
-
-
-
             </section>
         @include('layouts.footer')
     

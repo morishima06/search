@@ -47,9 +47,8 @@ class HomeController extends Controller
             $query->where('color',$color);
         }
         $branch = $query;
-        $products = $branch->paginate(6);
+        $products = $branch->paginate(12);
         $group_brands = $branch->groupBy('brand_name')->select('brand_name')->get('brand_name');
-
         $query = Product::query();
         if($category == 'all'){
             $query = $query;
@@ -118,8 +117,7 @@ class HomeController extends Controller
         }
 
         $branch = $query->select('id','product_name','brand_name','price','image_path1');
-        $products = $branch->paginate(6);
-
+        $products = $branch->paginate(12);
         $query = Product::query();
         if($brand){
             $query->where('brand_name',$brand);
@@ -146,10 +144,7 @@ class HomeController extends Controller
 
         $group_colors = $query->groupBy('color')->select('color')->get('color');
 
-
         return view('home/brands',compact('products','q','brand','category','min','max','result','group_colors','color'));
-
-
     }
 
     public function search(Request $request){
@@ -159,11 +154,8 @@ class HomeController extends Controller
 
         }
         
-                
-
         $category = $request->input('category');
         $min = $request->input('min');
-        
         $max = $request->input('max');
         $brand_name = $request->input('brand_name');
         $color = $request->input('color');

@@ -6,16 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.min.css" />
-
-
-<link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
-<link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
-<script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
-
-
-
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
+    <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
+    <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
 
 
     <title>Document</title>
@@ -61,22 +55,11 @@
 
                         <button class="bg-black w-full text-white py-2 ">サイトに飛ぶ</button>
                     </div>
-
                 </div>
-
-
         </div>
     </div>
         @include('layouts.footer')
 
-        @if(app('env')=='local')
         <script src="{{ asset('/js/swiper/double_config.js') }}"></script>
-        @endif
-
-        @if(app('env')=='production')
-        <script src="{{ asset('/js/swiper/double_config.js') }}"></script>
-        @endif
-
-    
 </body>
 </html>
