@@ -191,7 +191,7 @@ class HomeController extends Controller
             $query->where('color',$color);
         }
         $branch = $query->select('id','product_name','brand_name','price','image_path1');
-        $products = $branch->paginate(6);
+        $products = $branch->paginate(12);
         $group_brands = $branch->groupBy('brand_name')->select('brand_name')->get('brand_name');
         $query = Product::query();
         if($q){
