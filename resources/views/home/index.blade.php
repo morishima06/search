@@ -23,26 +23,26 @@
     @include('layouts.header')
     <section class="pt-24  ">
             <div class="px-3">
-            <h1 class="w-full  text-lg text-black font-bold border-b pb mb-5  border-black">カテゴリー</h1>
+            <h1 class="w-full  text-lg text-black font-bold border-b  mb-3  border-black">カテゴリー</h1>
             </div>
             <!-- スライダーのコンテナ -->
                 <div class="swiper  ">
                     <!-- 必要に応じたwrapper -->
                     <div class="swiper-wrapper ">
                     <!-- スライド -->
-                        <div class="swiper-slide   h-full   pb-4  px-3 ">
+                        <div class="swiper-slide   h-full    px-3 ">
                                 <a href="{{route('category', ['category' => 'wear' ])}}" class=" bg-slate-400"> <img src="{{ asset('image/apparel.jpg')}}" class="h-80 sm:h-96 object-cover" alt=""></a>
-                                <h2 class=" px-3 text-white font-semibold bg-black  inline-block  "> ウエア</h2>
+                                <h2 class=" px-1 text-white font-semibold bg-black  inline-block  "> ウエア</h2>
                         </div>
-                        <div class="swiper-slide   w-full  px-3 pb-4 ">
+                        <div class="swiper-slide   w-full  px-3 ">
                                 <a href="{{route('category', ['category' => 'shoes'])}}" class=" bg-slate-400"> <img src="{{ asset('image/shoes.jpg')}}" class="h-80 sm:h-96 object-cover w-full " alt=""></a>
                                 <h2 class="px-1 text-white font-semibold bg-black inline-block  "> シューズ</h2>
                         </div>
-                        <div class="swiper-slide   w-full  px-3 pb-4">
+                        <div class="swiper-slide   w-full  px-3">
                                 <a href="{{route('category', ['category' => 'accessories'])}}" class=" bg-slate-400"> <img src="{{ asset('image/accessories.jpg')}}" class="h-80 sm:h-96 object-cover" alt=""></a>
                                 <h2 class="px-1 text-white font-semibold bg-black inline-block  "> アクセサリー</h2>
                         </div>
-                        <div class="swiper-slide   w-full   px-3 pb-4">
+                        <div class="swiper-slide   w-full   px-3">
                             <a  href="{{route('category', ['category' => 'lifestyle'])}}" class=" bg-slate-400"> <img src="{{ asset('image/lifestyle.jpg')}}" class="h-80 sm:h-96 object-cover" alt=""></a>
                             <h2 class="px-1 text-white font-semibold bg-black  inline-block  ">ライフスタイル</h2>
                         </div>
@@ -51,7 +51,7 @@
                     <div class="swiper-button-next pr-3  pb-8 md:pb-0 "></div>
                 </div>
 
-            <div class="flex justify-center items-center mt-6 sm:mt-16 mb-10 ">
+            <div class="flex justify-center items-center mt-8 sm:mt-10 mb-5 ">
                 <h2 class=" border-black border   text-sm font-semibold"><a  href="{{route('category', ['category' => 'all'])}}" class="p-2 inline-block w-full h-wull" href="">全てのカテゴリーの商品</a> </h2>
             </div>
             

@@ -63,7 +63,7 @@
                             <p class="mb-1 line-through">SEARCHについて</p>
                             <p class="mb-1 line-through"> 利用規約</p>
                             <p class="mb-1  line-through">プライバシーポリシー</p>
-                            <p class="mb-1 line-through">お問い合わせ</p>
+                            <p class="mb-1"><a href="{{route('contact')}}">お問い合わせ</a></p>
                             <p class="text-xs">copyright2022 無断転載を禁止します。</p>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                     <i class="fa-solid fa-user px-3 "></i>
                     </div>
 
-                    <div class="absolute w-28 bg-white text-black  -left-10 border-black border opacity-0  group-hover:opacity-100 md:items-center md:pt-0">
+                    <div class="absolute w-28 bg-white text-black 90 -left-10 border-black border opacity-0  group-hover:opacity-100 md:items-center md:pt-0">
                         @if (Route::has('login'))
                         <div class="hidden text-center  top-0 right-0 py-2 text-xs md:block">
                             @auth
