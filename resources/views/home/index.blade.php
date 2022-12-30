@@ -57,7 +57,7 @@
             
             <div class="px-3">
                 <h1 class="w-full text-lg text-black font-bold border-b pb mb-3 mt-12  border-black">ブランド</h1>
-                <h2 class="text-sm  text-slate-600 font-semibold underline underline-offset-4 decoration-1 decoration-slate-600 mb-2"><a  href="{{route('home')}}" class=" inline-block w-full h-wull" href="">全てのブランド</a> </h2>
+                <h2 class="text-sm  text-slate-600 font-semibold underline underline-offset-4 decoration-1 decoration-slate-600 mb-2"><a  href="{{route('home')}}" class=" inline-block w-full h-wull line-through" href="">全てのブランド</a> </h2>
 
 
                 <div class="flex mb-16">
