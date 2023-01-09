@@ -47,8 +47,8 @@
                             <h2 class="px-1 text-white font-semibold bg-black  inline-block  ">ライフスタイル</h2>
                         </div>
                     </div>
-                    <div class="swiper-button-prev after:bg-[url('./image/left_button.png')] after:bg-no-repeat after:w-12 after:h-12  after:bg-contain w-12 h-12 pl-2 md:pb-0  pb-6"></div>
-                    <div class="swiper-button-next  after:bg-[url('./image/right_button.png')] after:bg-no-repeat after:w-12 after:h-12   after:bg-contain h-12 w-12  pr-2  md:pb-0 pb-6"></div>
+                    <div class="swiper-button-prev after:bg-[url('./image/left_button.png')] after:bg-no-repeat after:w-12 after:h-12  after:bg-contain w-10 h-10   pl-2 pb-1  sm:pt-6"></div>
+                    <div class="swiper-button-next  after:bg-[url('./image/right_button.png')] after:bg-no-repeat after:w-12 after:h-12   after:bg-contain w-10 h-10   pr-2 pb-1  sm:pt-6"></div>
                 </div>
 
             <div class="flex justify-center items-center mt-8 sm:mt-12 mb-5 ">

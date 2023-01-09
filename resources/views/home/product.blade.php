@@ -30,8 +30,8 @@
                         <div class="swiper-slide  <?php if($product[0]->image_path4 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path4)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
                     </div>
                 <!-- 必要に応じてナビボタン -->
-                    <div class="swiper-button-prev after:bg-[url('../image/left_button.png')] after:bg-no-repeat after:w-12 after:h-12  after:bg-contain w-9 h-9 "></div>
-                    <div class="swiper-button-next after:bg-[url('../image/right_button.png')] after:bg-no-repeat after:w-12 after:h-12  after:bg-contain h-9 w-9 "></div>
+                    <div class="swiper-button-prev after:bg-[url('../image/left_button.png')] after:bg-no-repeat after:w-8 after:h-8  after:bg-contain w-8 h-8 pt-4"></div>
+                    <div class="swiper-button-next after:bg-[url('../image/right_button.png')] after:bg-no-repeat after:w-8 after:h-8  after:bg-contain h-8 w-8 pt-4"></div>
                 </div>
             </div>
             <div class="swiper mySwiper w-full  sm:w-80 lg:w-96 flex justify-center">
@@ -46,16 +46,13 @@
             </div>
         </div>
 
-        <div>
         <div class="w-full sm:w-80 flex justify-center sm:ml-4 md:ml-10 mt-2 sm:mt-0 ">
-                    <div class=" w-full">
-                        <h2 class="text-2xl  mx-2 sm:mx-0 font-medium">{{$product[0]->brand_name}}</h2>
-                        <h2 class="text-xl  mx-2 sm:mx-0 font-light"> {{$product[0]->product_name}}</h2>
-                        <h3 class="text-2xl my-3 sm:mx-0 mx-2 font-medium">¥{{$product[0]->price}}</h3>
-
-                        <button class="bg-black w-full text-white py-2 ">サイトに飛ぶ</button>
-                    </div>
-                </div>
+            <div class=" w-full">
+                <h2 class="text-2xl  mx-2 sm:mx-0 font-medium">{{$product[0]->brand_name}}</h2>
+                <h2 class="text-xl  mx-2 sm:mx-0 font-light"> {{$product[0]->product_name}}</h2>
+                <h3 class="text-2xl my-3 sm:mx-0 mx-2 font-medium">¥{{$product[0]->price}}</h3>
+                <button class="bg-black w-full text-white py-2 ">サイトに飛ぶ</button>
+            </div>
         </div>
     </div>
         @include('layouts.footer')
