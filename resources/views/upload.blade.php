@@ -140,12 +140,12 @@
                         <label for="brand_name" class="block text-slate-700">ブランド名</label>
                         <input type="text"  id="searchForm" name="brand_name"  placeholder="ブランド名を入力すると候補が出ます" autocomplete="off" class="border h-8 w-full focus:border-none   border-gray-300 rounded-lg">
                             <ul id="lists" class="hidden border  w-full overflow-hidden   border-gray-300 rounded-lg">
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer" data-set="Nike" tabindex="-1">1017 ALYX 9sm</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="adidas" tabindex="-1">424</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="New Balance" tabindex="-1">APC</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="New Balance" tabindex="-1">ADIDAS</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Lacoste" tabindex="-1">BURBERRY</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OAMC" tabindex="-1">C.PCOMPANY</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer" data-set="1017 ALYX 9SM" tabindex="-1">1017 ALYX 9SM</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="424" tabindex="-1">424</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="APC" tabindex="-1">APC</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="ADIDAS" tabindex="-1">ADIDAS</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="BURBERRY" tabindex="-1">BURBERRY</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="C.PCOMPANY" tabindex="-1">C.PCOMPANY</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="EAST PACK" tabindex="-1">EAST PACK</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="FEAR OF GOD" tabindex="-1">FEAR OF GOD</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="FOLK" tabindex="-1">FOLK</li>
