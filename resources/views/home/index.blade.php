@@ -47,19 +47,18 @@
                             <h2 class="px-1 text-white font-semibold bg-black  inline-block  ">ライフスタイル</h2>
                         </div>
                     </div>
-                    <div class="swiper-button-prev pl-3 pb-8 md:pb-0 "></div>
-                    <div class="swiper-button-next pr-3  pb-8 md:pb-0 "></div>
+                    <div class="swiper-button-prev after:bg-[url('./image/left_button.png')] after:bg-no-repeat after:w-12 after:h-12  after:bg-contain w-12 h-12 pl-2 md:pb-0  pb-6"></div>
+                    <div class="swiper-button-next  after:bg-[url('./image/right_button.png')] after:bg-no-repeat after:w-12 after:h-12   after:bg-contain h-12 w-12  pr-2  md:pb-0 pb-6"></div>
                 </div>
 
-            <div class="flex justify-center items-center mt-8 sm:mt-10 mb-5 ">
-                <h2 class=" border-black border   text-sm font-semibold"><a  href="{{route('category', ['category' => 'all'])}}" class="p-2 inline-block w-full h-wull" href="">全てのカテゴリーの商品</a> </h2>
+            <div class="flex justify-center items-center mt-8 sm:mt-12 mb-5 ">
+                <h2 class=" border-black border   text-sm font-semibold"><a  href="{{route('category', ['category' => 'all'])}}" class="p-2 inline-block w-full h-wull" href="">全てのカテゴリーの商品</a></h2>
             </div>
             
             <div class="px-3">
                 <h1 class="w-full text-lg text-black font-bold border-b pb mb-3 mt-12  border-black">ブランド</h1>
                 <h2 class="text-sm  text-slate-600 font-semibold  mb-2 line-through"><span class="  w-full h-wull border-b border-slate-600 pb-1 " href="">全てのブランド</span> </h2>
-
-
+            
                 <div class="flex mb-16">
                     <div class="sm:flex w-1/2 inline-block">
                         <div class="w-full sm:w-1/2">

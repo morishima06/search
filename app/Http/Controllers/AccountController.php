@@ -15,23 +15,11 @@ class AccountController extends Controller
 
         $auth = Auth::user();
         return view('dashboard', [ 'auth' => $auth ]);
-        
-
-
-
     }
-    
-    
-    
     public function store(Request $request){
-        
-
         // sampleディレクトリに画像を保存
         // $request->file('uploadFile')->store('public/img');
-
         return redirect('/');
-
-
     }
 
     public function upload_check(Request $request){
@@ -121,28 +109,20 @@ class AccountController extends Controller
         ]);
 
         return redirect('/');
-
-
-
     }
 
     public function show(){
 
         $auth = Auth::id();
         $products = Product::where('user_id', $auth)->paginate(6);
-
         return view('show',['products' => $products]);
     }
 
     public function show_edit($id){
         $products =   Product::where('id', $id)->get();
-
         return view('show_edit' ,compact('products','id'));
-
-
     }
     public function show_edit_check(Request $request){
-
           $request->validate([
             'product_name' => 'required',
             'color' => 'required',
@@ -159,20 +139,13 @@ class AccountController extends Controller
          $color = $request->input('color');
          $price = $request->input('price');
          $product = product::find($id);
-
-
-
-
          if($request->file('uploadfile1')){
             $file_name1 = $request->file('uploadfile1')->getClientOriginalName();
             $request->file('uploadfile1')->storeAs('public/image',$file_name1);
             $file_name1 = 'storage/image/' .  $file_name1;
-
-            
     
             }else{
                 $file_name1 = null;
-    
             }
             if($request->file('uploadfile2')){
             $file_name2 = $request->file('uploadfile2')->getClientOriginalName();
@@ -189,7 +162,6 @@ class AccountController extends Controller
                 $request->file('uploadfile3')->storeAs('public/image',$file_name3);
                 $file_name3 = 'storage/image/' .  $file_name3;
     
-    
             }else{
                 $file_name3 = null;
     
@@ -205,8 +177,6 @@ class AccountController extends Controller
             $file_name4 = null;
     
         }
-
-
         $product->product_name = $product_name;
         $product->color = $color;
         $product->price = $price;
@@ -214,21 +184,13 @@ class AccountController extends Controller
         $product->image_path2 =  $file_name2;
         $product->image_path3 =  $file_name3;
         $product->image_path4 =  $file_name4;
-
         $product->save();
 
         return redirect('show');
-
-
-    
- 
     }
-
-
     public function show_delete_confirm($id){
 
         $products =   Product::where('id', $id)->get();
-
         return view('show_delete_confirm' ,['products' => $products]);
 
     }
@@ -238,14 +200,12 @@ class AccountController extends Controller
         $products->delete();
 
         return  redirect(route('show'));
-
     }
 
     public function edit(Request $request){
 
         $auth = Auth::user();
         $userdetails = UserDetail::where('user_id',$auth->id)->get();
-
 
         return view('edit',[
             'userdetails' => $userdetails,
@@ -298,8 +258,6 @@ class AccountController extends Controller
             ->withErrors($validator)
             ->withInput();
         }
-
-
 
         $user_name = $request->input('user_name');
         $email = $request->input('email');

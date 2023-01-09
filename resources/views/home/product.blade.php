@@ -30,8 +30,8 @@
                         <div class="swiper-slide  <?php if($product[0]->image_path4 == null){ echo "hidden";}?>"><img src="{{asset($product[0]->image_path4)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
                     </div>
                 <!-- 必要に応じてナビボタン -->
-                    <div class="swiper-button-prev "></div>
-                    <div class="swiper-button-next "></div>
+                    <div class="swiper-button-prev after:bg-[url('../image/left_button.png')] after:bg-no-repeat after:w-12 after:h-12  after:bg-contain w-9 h-9 "></div>
+                    <div class="swiper-button-next after:bg-[url('../image/right_button.png')] after:bg-no-repeat after:w-12 after:h-12  after:bg-contain h-9 w-9 "></div>
                 </div>
             </div>
             <div class="swiper mySwiper w-full  sm:w-80 lg:w-96 flex justify-center">
