@@ -146,27 +146,27 @@
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="New Balance" tabindex="-1">ADIDAS</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Lacoste" tabindex="-1">BURBERRY</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OAMC" tabindex="-1">C.PCOMPANY</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Asicis" tabindex="-1">EAST PACK</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">FEAR OF GOD</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">FOLK</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">HUMAN MADE</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">JIL SANDER</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">LACOSTE</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">MAISON MALGELA</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">MAISON KITUNE</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">MONCLER</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">NANAMICA</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">NEIGHBORHOOD</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">NIKE</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">OFF-WHITE</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">PALM ANGELES</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">PRADA</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">RAF SIMONS</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">RHUDE</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">STUSSY</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">STONE ILAND</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">UNDER COVER</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">VANS</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="EAST PACK" tabindex="-1">EAST PACK</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="FEAR OF GOD" tabindex="-1">FEAR OF GOD</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="FOLK" tabindex="-1">FOLK</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="HUMAN MADE" tabindex="-1">HUMAN MADE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="JIL SANDER" tabindex="-1">JIL SANDER</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="LACOSTE" tabindex="-1">LACOSTE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="MAISON MALGELA" tabindex="-1">MAISON MALGELA</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="MAISON KITUNE" tabindex="-1">MAISON KITUNE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="MONCLER" tabindex="-1">MONCLER</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="NANAMICA" tabindex="-1">NANAMICA</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="NEIGHBORHOOD" tabindex="-1">NEIGHBORHOOD</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="NIKE" tabindex="-1">NIKE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OFF-WHITE" tabindex="-1">OFF-WHITE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="PALM ANGELES" tabindex="-1">PALM ANGELES</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="PRADA" tabindex="-1">PRADA</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="RAF SIMONS" tabindex="-1">RAF SIMONS</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="RHUDE" tabindex="-1">RHUDE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="STUSSY" tabindex="-1">STUSSY</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="STONE ILAND" tabindex="-1">STONE ILAND</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="UNDER COVER" tabindex="-1">UNDER COVER</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="VANS" tabindex="-1">VANS</li>
                         </ul>
                         @if ($errors->first('brand_name')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('brand_name')}}</p>
