@@ -99,7 +99,8 @@
                     </div>
                 </div>
             </div>
-            <button class="mr-1 ml-1 bg-gray-400 rounded px-1">
+            <!-- ゲストログイン -->
+            <button class="mr-1 ml-1 bg-gray-400 rounded py-0.5 px-1">
                 <a href="{{ route('login.guest') }}" class="text-white text-sm">
                     ゲストログイン
                 </a>
