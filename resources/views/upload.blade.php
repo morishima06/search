@@ -32,7 +32,6 @@
                             </div>
                         </div>
 
-
                         <!-- 画像upload2 -->
                         <div class="relative my-2 aspect-square w-28 h-28 md:w-1/4 md:h-auto   ml-2 mr-2  border border-gray-300  ">
 
@@ -107,9 +106,6 @@
                          <p class="text-orange-400   text-sm font-semibold">※{{$errors->first('uploadfile1')}}</p>
                     @endif
 
-
-
-
                     <div class=" mt-3 ">
 
                         <label for="product_name" class="text-slate-700">商品名</label>
@@ -117,7 +113,6 @@
                         @if ($errors->first('product_name')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('product_name')}}</p>
                         @endif
-
                     </div>
 
                     <div class="   mt-3 ">
@@ -133,34 +128,50 @@
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('category')}}</p>
                         @endif
 
-
                         <select name="category_item" id="category_item" class="hidden border mt-3 w-full border-gray-300 h-8 pl-3 rounded-lg">
                             <option value="">選択してください</option>
                         </select>
                         @if ($errors->first('category_item')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('category_item')}}</p>
                         @endif
-
                     </div>
 
                     <div class="  mt-3 ">
                         <label for="brand_name" class="block text-slate-700">ブランド名</label>
                         <input type="text"  id="searchForm" name="brand_name"  placeholder="ブランド名を入力すると候補が出ます" autocomplete="off" class="border h-8 w-full focus:border-none   border-gray-300 rounded-lg">
                             <ul id="lists" class="hidden border  w-full overflow-hidden   border-gray-300 rounded-lg">
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer" data-set="Nike" tabindex="-1">Nike</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="adidas" tabindex="-1">adidas</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="New Balance" tabindex="-1">New Balance</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Lacoste" tabindex="-1">Lacoste</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OAMC" tabindex="-1">OAMC</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Asicis" tabindex="-1">Asics</li>
-                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">Vans</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer" data-set="Nike" tabindex="-1">1017 ALYX 9sm</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="adidas" tabindex="-1">424</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="New Balance" tabindex="-1">APC</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="New Balance" tabindex="-1">ADIDAS</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Lacoste" tabindex="-1">BURBERRY</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OAMC" tabindex="-1">C.PCOMPANY</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Asicis" tabindex="-1">EAST PACK</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">FEAR OF GOD</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">FOLK</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">HUMAN MADE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">JIL SANDER</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">LACOSTE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">MAISON MALGELA</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">MAISON KITUNE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">MONCLER</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">NANAMICA</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">NEIGHBORHOOD</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">NIKE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">OFF-WHITE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">PALM ANGELES</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">PRADA</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">RAF SIMONS</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">RHUDE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">STUSSY</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">STONE ILAND</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">UNDER COVER</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="Vans" tabindex="-1">VANS</li>
                         </ul>
                         @if ($errors->first('brand_name')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('brand_name')}}</p>
                         @endif
-
                     </div>
-
 
                     <div class="  mt-3 ">
                         <label for="color" class="block text-slate-700">カラー</label>
@@ -178,7 +189,6 @@
                         @if ($errors->first('color')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('color')}}</p>
                         @endif
-
                     </div>
 
                     <div class="  mt-3 relative  mb-12 ">
@@ -188,22 +198,13 @@
                             @if ($errors->first('price')) 
                                 <p class="text-orange-400 mt-8  text-sm font-semibold">※{{$errors->first('price')}}</p>
                             @endif
-
                     </div>
 
                     <div class="flex justify-center py-7">
                         <button type="submit" class="hover:bg-zinc-500 border hover:text-white  border-gray-200 rounded mb-4 bg-white	w-48 h-10">出品する</button>
                     </div>
-
-
-
             </div>
-
-
-
-
         </form>
-
     </div>
 
     <style>
@@ -214,5 +215,4 @@
     </style>
 
 <script src="{{asset('/js/upload/upload.js') }}"></script>
-
 </x-app-layout>
