@@ -157,8 +157,10 @@
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="MONCLER" tabindex="-1">MONCLER</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="NANAMICA" tabindex="-1">NANAMICA</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="NEIGHBORHOOD" tabindex="-1">NEIGHBORHOOD</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="NEW BALANCE" tabindex="-1">NEW BALANCE</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="NIKE" tabindex="-1">NIKE</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OFF-WHITE" tabindex="-1">OFF-WHITE</li>
+                            <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="OAMC" tabindex="-1">OAMC</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="PALM ANGELES" tabindex="-1">PALM ANGELES</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="PRADA" tabindex="-1">PRADA</li>
                             <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="RAF SIMONS" tabindex="-1">RAF SIMONS</li>

@@ -48,11 +48,10 @@
                                 <!-- Content -->
                                 <div class="accordion-content px-5 pt-0  overflow-hidden max-h-0">
                                     <div class="leading-6 font-light  text-justify mb-3">
-                                    <div><a class="select {{ $category == 'wear' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'wear', 'q' => $q,'min' => $min,'max' => $max,'brand' => $brand,'color' => $color ])}}"> ウェア</a></div>
-                                    <div><a class="select {{ $category == 'shoes' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'shoes','q' => $q,'min' => $min, 'max' => $max,'brand' => $brand,'color' => $color])}}"> シューズ</a></div>
-                                    <div><a class="select {{ $category == 'accessories' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'accessories','q' => $q,'min' => $min, 'max' => $max,'brand' => $brand,'color' => $color])}}"> アクセサリー</a></div>
-                                    <div><a class="select {{ $category == 'lifestyle' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'lifestyle','q' => $q,'min' => $min, 'max' => $max,'brand' => $brand,'color' => $color])}}"> ライフスタイル</a></div>
-                                    
+                                        <div><a class="select {{ $category == 'wear' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'wear', 'q' => $q,'min' => $min,'max' => $max,'brand' => $brand,'color' => $color ])}}"> ウェア</a></div>
+                                        <div><a class="select {{ $category == 'shoes' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'shoes','q' => $q,'min' => $min, 'max' => $max,'brand' => $brand,'color' => $color])}}"> シューズ</a></div>
+                                        <div><a class="select {{ $category == 'accessories' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'accessories','q' => $q,'min' => $min, 'max' => $max,'brand' => $brand,'color' => $color])}}"> アクセサリー</a></div>
+                                        <div><a class="select {{ $category == 'lifestyle' ? 'font-bold	' : '' }}" href="{{route('brands', ['category' => 'lifestyle','q' => $q,'min' => $min, 'max' => $max,'brand' => $brand,'color' => $color])}}"> ライフスタイル</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -67,17 +66,13 @@
                                 <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
                                     <div class="w-full">
                                         <div class=" flex leading-6 font-light pl-9 text-justify mb-3">
-
-                                        <div><input type="number" name="min" class="no-spin border-slate-300 h-8 w-full rounded-sm  focus:ring-0 " id="tops" value="{{$min}}" placeholder="円" ></div>
-                                        <div class="mx-1"> <span>-</span></div>
-                                        <div><input type="number" name="max" class="no-spin h-8 border-slate-300 w-full rounded-sm  focus:ring-0 " id="shirt" value="{{$max}}" placeholder="円"></div>
+                                            <div><input type="number" name="min" class="no-spin border-slate-300 h-8 w-full rounded-sm  focus:ring-0 " id="tops" value="{{$min}}" placeholder="円" ></div>
+                                            <div class="mx-1"> <span>-</span></div>
+                                            <div><input type="number" name="max" class="no-spin h-8 border-slate-300 w-full rounded-sm  focus:ring-0 " id="shirt" value="{{$max}}" placeholder="円"></div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
-
                             <!-- accordion4 -->
                             <div class="accordion4 border-slate-300 w-full border-b">
                             <!-- header -->
@@ -92,7 +87,9 @@
                                 <div class="w-full ">
                                             @foreach($group_colors as $group_color)
                                         <div>
-                                            <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if($group_color->color == $color){echo 'checked';}?>  value="{{$group_color->color}}">  
+                                            <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if(isset($color)){if(in_array($group_color->color,$color)){echo 'checked';}
+                                             }
+                                             ?>    value="{{$group_color->color}}">  
                                             <label for="{{$group_color->color}}">{{$group_color->color}}</label>
                                         </div>
                                             @endforeach
@@ -100,10 +97,6 @@
                                         </p>
                                     </div>
                                 </div>
-
-
-                    
-
                             <div class="flex mt-3">
                             <button type="button" class="border-black border rounded-sm w-1/2 py-2 ml-4 mr-4"><a class="inline-block w-full h-full" href="{{route('brands', $brand)}}">クリア</a></button>
                                 <button  type="submit" class="text-white bg-gray-700 rounded-sm w-1/2 py-2 mr-4">検索</button>
@@ -113,12 +106,9 @@
                     </div>
                 </form>
                 </div>
-                
             </nav>
-
             
         <form action="{{route('brands',$brand,$category)}}" method="get" class="selectForm">
-
 
             <!-- accordion section -->
             <div class="   md:w-60  lg:w-full  hidden md:inline-block p-5	">
@@ -154,17 +144,12 @@
                         <!-- Content -->
                         <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                             <p class="leading-6 font-light pl-9 text-justify">
-
-                            
-                                    <div class="w-full flex">
-                                        <div><input type="number" name="min" class="no-spin border-slate-300 h-8 w-full rounded-sm  focus:ring-0 " id="tops" value="{{$min}}" placeholder="円" ></div>
-                                        <div class="mx-1"> <span>-</span></div>
-                                        <div><input type="number" name="max" class="no-spin h-8 border-slate-300 w-full rounded-sm  focus:ring-0 " id="shirt" value="{{$max}}" placeholder="円"></div>
-                                    </div>
-                                    
-                                    <div><button type="submit" class="w-full bg-slate-500 text-sm text-white my-3 py-1 -sm px-2" id="outer"  >検索</button></div>
-
-                
+                                <div class="w-full flex">
+                                    <div><input type="number" name="min" class="no-spin border-slate-300 h-8 w-full rounded-sm  focus:ring-0 " id="tops" value="{{$min}}" placeholder="円" ></div>
+                                    <div class="mx-1"> <span>-</span></div>
+                                    <div><input type="number" name="max" class="no-spin h-8 border-slate-300 w-full rounded-sm  focus:ring-0 " id="shirt" value="{{$max}}" placeholder="円"></div>
+                                </div>
+                                <div><button type="submit" class="w-full bg-slate-500 text-sm text-white my-3 py-1 -sm px-2" id="outer"  >検索</button></div>
                             </p>
                         </div>
                     </div>
@@ -172,45 +157,39 @@
                     <div class="accordion4  border-b border-slate-300  ">
                         <!-- header -->
                         <div class="accordion-header cursor-pointer transition flex   justify-between items-center h-9 my-1 ">
-                        
                             <h3 class="text-slate-500 font-semibold text-1xl">カラー</h3>
                             <i class="fa fa-angle-down arrow_b"  aria-hidden="true"></i>
                         </div>
                         <!-- Content -->
                         <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                             <p class="leading-6 font-light pl-9 text-justify">
-
-
                             <div class="w-full ">
-                                        @foreach($group_colors as $group_color)
-                                    <div>
-                                        <input type="checkbox" id="{{$group_color->color}}" name="color" class="selector ml-2 my-0.5" <?php if($group_color->color == $color){echo 'checked';}?>  value="{{$group_color->color}}">  
-                                        <label for="{{$group_color->color}}">{{$group_color->color}}</label>
-                                    </div>
-
-                                        @endforeach
-                                        
+                                @foreach($group_colors as $group_color)
+                                        <div>
+                                            <input type="checkbox" id="{{$group_color->color}}" name="color[]" class="selector ml-2 my-0.5"
+                                            <?php if(isset($color)){
+                                                if(in_array($group_color->color,$color)){echo 'checked';}
+                                             }
+                                             ?>  
+                                              value="{{$group_color->color}}">  
+                                            <label for="{{$group_color->color}}">{{$group_color->color}}</label>
+                                        </div>
+                                 @endforeach
                             </div>
                             </p>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </form>
 
-
-
-            <!-- section contents -->
+        <!-- section contents -->
         <div class="w-full bg-white  mb-3 sm:mb-0 px-3">
             <div class="w-full  sm:text-2xl md:text-3xl py-3 sm:py-5 font-bold">
             <h2 class="">
-                <?php if(isset($brand)){
-                    echo $brand;
-                    }?>
-            
+                @if(@isset($brand))
+                    {{$brand}}
+                @endif
             </h2>
         </div>
 
@@ -226,19 +205,14 @@
                     <p class="text-xs sm:text-sm line-clamp-1">{{$product->product_name}}</p>
                     <p class="font-bold text-sm sm:text-lg mt-1 sm:mt-2 ">¥{{$product->price}}</p>
                 </div>
-
             </div>
             @endforeach
             </ul>
         </div>
 
         {{ $products->links() }}
-
-
-
         </section>
     @include('layouts.footer')
-
     
     <style>
         *{
@@ -261,22 +235,10 @@
     </style>
 
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
-    @if(app('env')=='local')
     <script src="{{ asset('/js/accordion/accordion.js') }}"></script>
     <script src="{{ asset('/js/input/disabled.js') }}"></script>
     <script src="{{ asset('/js/input/submit.js') }}"></script>
     <script src="{{ asset('/js/slide/responsive_slide.js') }}"></script>
-    @endif
-
-    @if(app('env')=='production')
-    <script src="{{ secure_asset('/js/accordion/accordion.js') }}"></script>
-    <script src="{{ secure_asset('/js/input/disabled.js') }}"></script>
-    <script src="{{ secure_asset('/js/input/submit.js') }}"></script>
-    <script src="{{ secure_asset('/js/slide/responsive_slide.js') }}"></script>
-    @endif
-
-
-
     </body>
 </html>
 

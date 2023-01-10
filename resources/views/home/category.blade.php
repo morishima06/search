@@ -91,7 +91,7 @@
                                             <div class="w-full ">
                                                     @foreach($group_brands as $group_brand)
                                                     <div>
-                                                        <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name" class=" ml-2 my-0.5" <?php if($brand_name == $group_brand->brand_name){echo 'checked';}?>  value="{{$group_brand->brand_name}}">  
+                                                        <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name" class=" ml-2 my-0.5"  <?php if(isset($brand_name)){if(in_array($group_brand->brand_name,$brand_name)){echo 'checked';}}?>   value="{{$group_brand->brand_name}}">  
                                                         <label for="{{$group_brand->brand_name}}">{{$group_brand->brand_name}}</label>
                                                     </div>
                                                     @endforeach
@@ -114,7 +114,7 @@
                                     <div class="w-full ">
                                                 @foreach($group_colors as $group_color)
                                             <div>
-                                                <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if($group_color->color == $color){echo 'checked';}?>  value="{{$group_color->color}}">  
+                                                <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if(isset($color)){if(in_array($group_color->color,$color)){echo 'checked';}}?> value="{{$group_color->color}}">  
                                                 <label for="{{$group_color->color}}">{{$group_color->color}}</label>
                                             </div>
                                                 @endforeach
@@ -187,15 +187,16 @@
                             <!-- Content -->
                             <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                                 <p class="leading-6 font-light pl-9 text-justify">
-
-                                        <div class="w-full ">
-                                            @foreach($group_brands as $group_brand)
-                                            <div>
-                                                <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name" class="selector ml-2 my-0.5" <?php if($brand_name == $group_brand->brand_name){echo 'checked';}?>  value="{{$group_brand->brand_name}}">  
-                                                <label for="{{$group_brand->brand_name}}">{{$group_brand->brand_name}}</label>
-                                            </div>
-                                            @endforeach
+                                    <div class="w-full ">
+                                        @foreach($group_brands as $group_brand)
+                                        <div>
+                                            <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name[]" class="selector ml-2 my-0.5"
+                                             <?php if(isset($brand_name)){if(in_array($group_brand->brand_name,$brand_name)){echo 'checked';}}?>  
+                                             value="{{$group_brand->brand_name}}">  
+                                            <label for="{{$group_brand->brand_name}}">{{$group_brand->brand_name}}</label>
                                         </div>
+                                        @endforeach
+                                    </div>
                                 </p>
                             </div>
                         </div>
@@ -211,13 +212,13 @@
                             <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                                 <p class="leading-6 font-light pl-9 text-justify">
                                 <div class="w-full ">
-                                            @foreach($group_colors as $group_color)
+                                        @foreach($group_colors as $group_color)
                                         <div>
-                                            <input type="checkbox" id="{{$group_color->color}}" name="color" class="selector ml-2 my-0.5" <?php if($group_color->color == $color){echo 'checked';}?>  value="{{$group_color->color}}">  
+                                            <input type="checkbox" id="{{$group_color->color}}" name="color[]" class="selector ml-2 my-0.5" 
+                                            <?php if(isset($color)){if(in_array($group_color->color,$color)){echo 'checked';}}?>  value="{{$group_color->color}}">  
                                             <label for="{{$group_color->color}}">{{$group_color->color}}</label>
                                         </div>
-
-                                            @endforeach
+                                        @endforeach
                                 </div>
                                 </p>
                             </div>
@@ -230,16 +231,20 @@
             <div class="w-full bg-white  mb-3 sm:mb-0 px-3">
                 <div class="w-full   sm:text-2xl md:text-3xl py-3 sm:py-5 font-bold">
                 <h2 class="">
-                    <?php switch($category){
-                        case 'wear': echo 'ウェア';
-                        break;
-                        case 'shoes': echo 'シューズ';
-                        break;
-                        case 'accessories': echo 'アクセサリー';
-                        break;
-                        case 'lifestyle': echo 'ライフスタイル';
-                        break;
-                        }?>
+                    @switch($category)
+                        @case('wear')
+                        ウェア
+                        @break
+                        @case('shoes')
+                        シューズ
+                        @break
+                        @case('accessories')
+                        アクセサリー
+                        @break
+                        @case('lifestyle')
+                        ライフスタイル
+                        @break
+                    @endswitch
                 </h2>
             </div>
 

@@ -51,13 +51,12 @@
                                     @if(!empty($q))    
 
                                         <div class="leading-6 font-light  text-justify mb-3">
-                                        <input type="text" value="<?php if(isset($q)){ echo $q;}?>" name="q" class="" >
-
+                                        <input type="text" value="
+                                        <?php if(isset($q)){ echo $q;}?>" name="q" class="" >
                                             <div><a class="select {{ $category == 'wear' ? 'font-bold	' : '' }}" href="{{route('search', ['category' => 'wear', 'q' => $q,'min' => $min,'max' => $max,'brand_name' => $brand_name,'color' => $color ])}}"> ウェア</a></div>
                                             <div><a class="select {{ $category == 'shoes' ? 'font-bold	' : '' }}" href="{{route('search', ['category' => 'shoes','q' => $q,'min' => $min, 'max' => $max,'brand_name' => $brand_name,'color' => $color])}}"> シューズ</a></div>
                                             <div><a class="select {{ $category == 'accessories' ? 'font-bold	' : '' }}" href="{{route('search', ['category' => 'accessories','q' => $q,'min' => $min, 'max' => $max,'brand_name' => $brand_name,'color' => $color])}}"> アクセサリー</a></div>
                                             <div><a class="select {{ $category == 'lifestyle' ? 'font-bold	' : '' }}" href="{{route('search', ['category' => 'lifestyle','q' => $q,'min' => $min, 'max' => $max,'brand_name' => $brand_name,'color' => $color])}}"> ライフスタイル</a></div>
-                                        
                                         </div>
                                     @endif
                                     </div>
@@ -73,15 +72,12 @@
                                     <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
                                         <div class="w-full">
                                         @if(!empty($q))    
-
                                             <div class=" flex leading-6 font-light pl-9 text-justify mb-3">
-
                                             <div><input type="number" name="min" class="no-spin border-slate-300 h-8 w-full rounded-sm  focus:ring-0 " id="tops" value="{{$min}}" placeholder="円" ></div>
                                             <div class="mx-1"> <span>-</span></div>
                                             <div><input type="number" name="max" class="no-spin h-8 border-slate-300 w-full rounded-sm  focus:ring-0 " id="shirt" value="{{$max}}" placeholder="円"></div>
                                             </div>
                                         @endif
-
                                         </div>
                                     </div>
                                 </div>
@@ -100,13 +96,12 @@
 
                                             <div class="w-full ">
                                             @if(!empty($q))    
-
-                                                    @foreach($group_brands as $group_brand)
-                                                    <div>
-                                                        <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name" class=" ml-2 my-0.5" <?php if($brand_name == $group_brand->brand_name){echo 'checked';}?>  value="{{$group_brand->brand_name}}">  
-                                                        <label for="{{$group_brand->brand_name}}">{{$group_brand->brand_name}}</label>
-                                                    </div>
-                                                    @endforeach
+                                            @foreach($group_brands as $group_brand)
+                                                <div>
+                                                    <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name" class=" ml-2 my-0.5" <?php if($brand_name == $group_brand->brand_name){echo 'checked';}?>  value="{{$group_brand->brand_name}}">  
+                                                    <label for="{{$group_brand->brand_name}}">{{$group_brand->brand_name}}</label>
+                                                </div>
+                                            @endforeach
                                             @endif
                                             </div>
                                         </p>
@@ -126,13 +121,12 @@
                                     <p class="leading-6 font-light pl-9 text-justify">
                                     <div class="w-full ">
                                     @if(!empty($q))    
-
-                                                @foreach($group_colors as $group_color)
-                                            <div>
-                                                <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if($group_color->color == $color){echo 'checked';}?>  value="{{$group_color->color}}">  
-                                                <label for="{{$group_color->color}}">{{$group_color->color}}</label>
-                                            </div>
-                                                @endforeach
+                                    @foreach($group_colors as $group_color)
+                                        <div>
+                                            <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if($group_color->color == $color){echo 'checked';}?>  value="{{$group_color->color}}">  
+                                            <label for="{{$group_color->color}}">{{$group_color->color}}</label>
+                                        </div>
+                                    @endforeach
                                     @endif
                                             </div>
                                             </p>
@@ -143,12 +137,10 @@
                                     <button type="button" class="border-black border rounded-sm w-1/2 py-2 ml-4 mr-4"><a class="inline-block w-full h-full" href="{{route('search', ['q' => $q,])}}">クリア</a></button>
                                     <button  type="submit" class="text-white bg-gray-700 rounded-sm w-1/2 py-2 mr-4">検索</button>
                                 </div>
-
                             </ul>
                         </div>
                     </form>
                     </div>
-                    
                 </nav>
 
             <form action="{{route('search',$category)}}" method="get" class="selectForm" >
@@ -214,20 +206,21 @@
                             <!-- Content -->
                             <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                                 <p class="leading-6 font-light pl-9 text-justify">
-
-                                        <div class="w-full ">
-                                        @if(!empty($q))    
-
-                                            @foreach($group_brands as $group_brand)
+                                    <div class="w-full ">
+                                    @if(!empty($q))    
+                                    @foreach($group_brands as $group_brand)
                                         <div>
-                                            <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name" class="selector ml-2 my-0.5" <?php if($brand_name == $group_brand->brand_name){echo 'checked';}?>  value="{{$group_brand->brand_name}}">  
+                                            <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name[]" class="selector ml-2 my-0.5"
+                                             <?php if(isset($brand_name)){
+                                                if(in_array($group_brand->brand_name,$brand_name)){echo 'checked';}
+                                             }
+                                             ?>  
+                                             value="{{$group_brand->brand_name}}">  
                                             <label for="{{$group_brand->brand_name}}">{{$group_brand->brand_name}}</label>
                                         </div>
-
-                                            @endforeach
-                                        @endif
-                                            
-                                        </div>
+                                    @endforeach
+                                    @endif
+                                    </div>
                                 </p>
                             </div>
                         </div>
@@ -242,34 +235,38 @@
                             <!-- Content -->
                             <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                                 <p class="leading-6 font-light pl-9 text-justify">
-
-
                                         <div class="w-full ">
                                         @if(!empty($q))    
-
-                                            @foreach($group_colors as $group_color)
-                                        <div>
-                                            <input type="checkbox" id="{{$group_color->color}}" name="color" class="selector ml-2 my-0.5" <?php if($group_color->color == $color){echo 'checked';}?>  value="{{$group_color->color}}">  
-                                            <label for="{{$group_color->color}}">{{$group_color->color}}</label>
-                                        </div>
-
-                                            @endforeach
+                                        @foreach($group_colors as $group_color)
+                                            <div>
+                                                <input type="checkbox" id="{{$group_color->color}}" name="color[]" class="selector ml-2 my-0.5"
+                                                <?php if(isset($color)){
+                                                    if(in_array($group_color->color,$color)){echo 'checked';}
+                                                }
+                                                ?>  
+                                                value="{{$group_color->color}}">  
+                                                <label for="{{$group_color->color}}">{{$group_color->color}}</label>
+                                            </div>
+                                        @endforeach
                                         @endif
                                             
                                         </div>
                                 </p>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </form>
             <!-- section contents -->
             <div class="w-full bg-white  mb-3 sm:mb-0 px-3">
                 <div class="w-full   sm:text-2xl md:text-3xl py-3 sm:py-5 font-bold">
-                <h2 class="">
-                    <?php if(!empty($q)){echo "$q"."検索結果" ;}else{echo "検索ワードを入れてください" ;}?></h2>
+                <h2>
+                @if(!@empty($q))
+                    {{$q.'検索結果'}}
+                @else
+                    {{'検索ワードを入れてください'}}
+                @endif
+                </h2>
             </div>
 
             <div class="mb-3 sm:mb-0">

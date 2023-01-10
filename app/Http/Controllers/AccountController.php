@@ -32,7 +32,7 @@ class AccountController extends Controller
             'color' => 'required',
             'price' => 'required',
           ];
-          $message = [
+        $message = [
             'uploadfile1.required' => '画像1枚目はアップロードしてください',
             'product_name.required' => '商品名を入力してください',
             'category.required' => 'カテゴリーを選択してください',
@@ -41,14 +41,12 @@ class AccountController extends Controller
             'color.required' => '色を選択してください',
             'price.required' => '価格を入力してください',
           ];
-          $validator = Validator::make($request->all(), $rulus, $message);
-
-          if ($validator->fails()) {
+        $validator = Validator::make($request->all(), $rulus, $message);
+        if($validator->fails()) {
             return redirect('/upload')
             ->withErrors($validator)
             ->withInput();
         }
-
         $category = $request->input('category');
         $category_item = $request->input('category_item');
         $brand_name = $request->input('brand_name');
@@ -70,10 +68,9 @@ class AccountController extends Controller
         $file_name2 = $request->file('uploadfile2')->getClientOriginalName();
         $request->file('uploadfile2')->storeAs('public/image',$file_name2);
         $file_name2 = 'storage/image/' .  $file_name2;
-    }else{
+        }else{
         $file_name2 = null;
-
-    }
+        }
         if($request->file('uploadfile3')){
             $file_name3 = $request->file('uploadfile3')->getClientOriginalName();
             $request->file('uploadfile3')->storeAs('public/image',$file_name3);
@@ -85,12 +82,10 @@ class AccountController extends Controller
         $file_name4 = $request->file('uploadfile4')->getClientOriginalName();
         $request->file('uploadfile4')->storeAs('public/image',$file_name4);
         $file_name4 = 'storage/image/' .  $file_name4;
-    }else{
+        }else{
         $file_name4 = null;
-    }
+        }
         //image情報をファイルに保存
-        
-        
         $product->create([
             'category' => $category,
             'category_item'=>$category_item,
@@ -100,16 +95,14 @@ class AccountController extends Controller
             'price' => $price,
             'user_id' => $auth,
             //image_pathをDBに保存
-            
             'image_path1'=> $file_name1,
             'image_path2'=> $file_name2,
             'image_path3'=> $file_name3,
             'image_path4'=> $file_name4
-
         ]);
 
-        return redirect('/');
-    }
+        return redirect('/upload');
+        }
 
     public function show(){
 
@@ -151,8 +144,6 @@ class AccountController extends Controller
             $file_name2 = $request->file('uploadfile2')->getClientOriginalName();
             $request->file('uploadfile2')->storeAs('public/image',$file_name2);
             $file_name2 = 'storage/image/' .  $file_name2;
-    
-            
         }else{
             $file_name2 = null;
     
@@ -164,14 +155,12 @@ class AccountController extends Controller
     
             }else{
                 $file_name3 = null;
-    
             }
             if($request->file('uploadfile4')){
     
             $file_name4 = $request->file('uploadfile4')->getClientOriginalName();
             $request->file('uploadfile4')->storeAs('public/image',$file_name4);
             $file_name4 = 'storage/image/' .  $file_name4;
-    
     
         }else{
             $file_name4 = null;
@@ -214,7 +203,6 @@ class AccountController extends Controller
     }
 
     public function edit_check(Request $request){
-
           $rulus = [
             'user_name' => 'required',
             'email' => 'required',
@@ -232,7 +220,6 @@ class AccountController extends Controller
             'addr2' => 'required',
             'addr3' => 'required',
             'addr4' => 'required',
-
           ];
           $message = [
             'user_name.required' => 'ユーザー名を入力してください',
@@ -248,17 +235,14 @@ class AccountController extends Controller
             'zip.numeric' => '整数で入力してください',
             'pref.required' => '都道府県を選んでください',
             'addr1.required' => '市区町村を入力してください',
-            
           ];
 
           $validator = Validator::make($request->all(), $rulus, $message);
-
           if ($validator->fails()) {
             return redirect('/edit')
             ->withErrors($validator)
             ->withInput();
         }
-
         $user_name = $request->input('user_name');
         $email = $request->input('email');
         $NameSei = $request->input('NameSei');
@@ -277,13 +261,10 @@ class AccountController extends Controller
         $addr4 = $request->input('addr4');
 
         $auth_user = Auth::user();
-       
-
         $userdetail = UserDetail::find($auth_user->id);
 
         $auth_user->user_name = $user_name;
         $auth_user->email = $email;
-
         $auth_user->save();
 
         $userdetail->NameSei = $NameSei;
@@ -300,12 +281,7 @@ class AccountController extends Controller
         $userdetail->addr2 = $addr2;
         $userdetail->addr3 = $addr3;
         $userdetail->addr4 = $addr4;
-
         $userdetail->save();
-
         return redirect('edit');
-
-
-
     }
 }
