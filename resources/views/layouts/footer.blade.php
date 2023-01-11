@@ -6,7 +6,6 @@
                     <li class="mr-2 mt-1 font-bold text-sm text-white line-through ">利用規約</li>
                     <li class="mr-2 mt-1 font-bold text-sm text-white line-through">プライバシーポリシー</li>
                     <li class="mr-2 mt-1 font-bold text-sm text-white"><a href="{{route('contact')}}">お問い合わせ</a></li>
-
                 </ul>
             </div>
         </div>
