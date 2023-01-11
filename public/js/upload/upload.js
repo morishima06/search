@@ -38,31 +38,22 @@ array["lifestyle"]= [
 {cd:"home appliances", label:"家電・携帯グッズ"},
 ]
 
-
-
     document.getElementById('category').onchange = ()=>{
         categoryItem = document.getElementById('category_item');
         categoryItem.options.length = 0
         var  changedCategory = category.value  ;
         for(let i=0; i<array[changedCategory].length; i++){
-            var op = document.createElement("option");
-            value = array[changedCategory][i]
-            op.value = value.cd;
-            op.text = value.label;
-            categoryItem.appendChild(op);
-        }
-        
+        var op = document.createElement("option");
+        value = array[changedCategory][i]
+        op.value = value.cd;
+        op.text = value.label;
+        categoryItem.appendChild(op);}
         if(category.value ==""){
         categoryItem.classList.add('hidden');
         }else{
-            categoryItem.classList.remove('hidden');
+        categoryItem.classList.remove('hidden');
         }
-
-
     }
-
-
-
 
     // ドラッグ&ドロップエリアの取得
     var preview = document.getElementsByClassName('preview');
@@ -74,7 +65,6 @@ array["lifestyle"]= [
     var previewBox =  document.getElementsByClassName("previewBox");
     //画像削除ボタンの取得
     var removeImg = document.getElementsByClassName('removeImg');
-
 
     //画像アップロードから削除までのループ
     for(let i=0; i<preview.length; i++){
@@ -100,7 +90,6 @@ array["lifestyle"]= [
 
         // 取得したファイルをinput[type=file]へ
         fileInput[i].files = files;
-
         files = files[0]
 
         var reader = new FileReader();
@@ -112,7 +101,7 @@ array["lifestyle"]= [
         reader.onload = function(event) {
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
-        img.setAttribute("class", "previewImage  w-full h-full");
+        img.setAttribute("class", "previewImage object-cover w-full h-full");
         previewBox[i].appendChild(img);
         }
         reader.readAsDataURL(files);
@@ -154,7 +143,7 @@ array["lifestyle"]= [
         reader.onload = function(event) {
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
-        img.setAttribute("class", "previewImage  w-full h-full ");
+        img.setAttribute("class", "previewImage object-cover  w-full h-full ");
 
         previewBox[i].appendChild(img);
         }
@@ -192,7 +181,6 @@ array["lifestyle"]= [
         if (!keyWord || keyWord === "") {
         elm.classList.add('hidden');
         lists.classList.add('hidden')
-
         return;
         }
         const val = elm.dataset.set;
@@ -200,7 +188,6 @@ array["lifestyle"]= [
         if (val.match(word)) {
         elm.classList.remove('hidden');
         lists.classList.remove('hidden')
-
         } else {
         elm.classList.add('hidden');
         }
@@ -214,8 +201,6 @@ array["lifestyle"]= [
     lists.classList.add('hidden')
         })
     }
-
-
     searchForm.addEventListener('blur',(e)=>{
         if(e.relatedTarget === null){
         lists.classList.add('hidden')

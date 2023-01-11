@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 class AccountController extends Controller
 {
     public function index(Request $request){
-
         $auth = Auth::user();
         return view('dashboard', [ 'auth' => $auth ]);
     }
@@ -21,7 +20,6 @@ class AccountController extends Controller
         // $request->file('uploadFile')->store('public/img');
         return redirect('/');
     }
-
     public function upload_check(Request $request){
         $rulus = [
             'uploadfile1' => 'required',
@@ -136,7 +134,6 @@ class AccountController extends Controller
             $file_name1 = $request->file('uploadfile1')->getClientOriginalName();
             $request->file('uploadfile1')->storeAs('public/image',$file_name1);
             $file_name1 = 'storage/image/' .  $file_name1;
-    
             }else{
                 $file_name1 = null;
             }
@@ -148,23 +145,19 @@ class AccountController extends Controller
             $file_name2 = null;
     
         }
-            if($request->file('uploadfile3')){
-                $file_name3 = $request->file('uploadfile3')->getClientOriginalName();
-                $request->file('uploadfile3')->storeAs('public/image',$file_name3);
-                $file_name3 = 'storage/image/' .  $file_name3;
-    
-            }else{
-                $file_name3 = null;
-            }
-            if($request->file('uploadfile4')){
-    
+        if($request->file('uploadfile3')){
+            $file_name3 = $request->file('uploadfile3')->getClientOriginalName();
+            $request->file('uploadfile3')->storeAs('public/image',$file_name3);
+            $file_name3 = 'storage/image/' .  $file_name3;
+        }else{
+            $file_name3 = null;
+        }
+        if($request->file('uploadfile4')){
             $file_name4 = $request->file('uploadfile4')->getClientOriginalName();
             $request->file('uploadfile4')->storeAs('public/image',$file_name4);
             $file_name4 = 'storage/image/' .  $file_name4;
-    
         }else{
             $file_name4 = null;
-    
         }
         $product->product_name = $product_name;
         $product->color = $color;
@@ -178,21 +171,15 @@ class AccountController extends Controller
         return redirect('show');
     }
     public function show_delete_confirm($id){
-
         $products =   Product::where('id', $id)->get();
         return view('show_delete_confirm' ,['products' => $products]);
-
     }
-
     public function show_delete($id){
         $products = Product::find($id);
         $products->delete();
-
         return  redirect(route('show'));
     }
-
     public function edit(Request $request){
-
         $auth = Auth::user();
         $userdetails = UserDetail::where('user_id',$auth->id)->get();
 
@@ -201,7 +188,6 @@ class AccountController extends Controller
             'auth' => $auth
         ]);
     }
-
     public function edit_check(Request $request){
           $rulus = [
             'user_name' => 'required',
