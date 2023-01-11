@@ -6,7 +6,6 @@
         @csrf
         <div class="">
         @foreach($userdetails as $userdetail)
-
             <div class="md:flex border-y md:border-slate-300   ">
 
                 <div class="flex items-center  md:bg-slate-100">
@@ -14,7 +13,6 @@
                 </div>
                 <div class="flex items-center w-full">
                     <div class=" my-2  md:ml-3 w-full">
-                
                     <input type="text" class=" w-full  md:w-60 h-8  border-slate-300 rounded-sm focus:border-none " id="user_name" name="user_name" value="{{$auth->user_name}}">
                     @if ($errors->first('user_name')) 
                         <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('user_name')}}</p>
@@ -22,8 +20,6 @@
                     </div>
                 </div>
             </div>
-
-            
 
             <div class="md:flex border-b border-slate-300  ">
 
@@ -37,8 +33,6 @@
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('email')}}</p>
                         @endif
                     </div>
-                   
-
                 </div>
             </div>
 
@@ -53,11 +47,7 @@
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('email')}}</p>
                         @endif
                     </div>
-                   
-
                 </div>
-
-
             </div>
             <div class="md:flex border-b border-slate-300  ">
                 <div class="">
@@ -110,11 +100,7 @@
                     </div>
 
                 </div>
-
-
-
             </div>
-            
             
             <div class="md:flex border-b border-slate-300  ">
                 <h4 class="md:pl-3 sm:w-60   font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">生年月日</h4>
@@ -131,19 +117,14 @@
                         @if ($errors->first('birthdayD')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('birthdayD')}}</p>
                         @endif
-                
-
-                    
                     <input type="text" id="birthdayY" maxlength="4" class=" h-8  border-slate-300 rounded-sm focus:border-none " placeholder="" size="4" maxlength="4" name="birthdayY" value="{{$userdetail->birthdayY}}">
                     <label for="birthdayY" maxlength="2" class=" h-8  ml-1 ">年</label>
                     <input type="text" class=" h-8 md:ml-3  border-slate-300 rounded-sm focus:border-none " placeholder="" size="2" maxlength="2" name="birthdayM" value="{{$userdetail->birthdayM}}">
                     <label for="birthdayM" class=" h-8  ml-1 ">月</label>
-
                     <input type="text" maxlength="2" class=" h-8 md:ml-3  border-slate-300 rounded-sm focus:border-none " placeholder="" size="2" maxlength="2" name="birthdayD" value="{{$userdetail->birthdayD}}">
                     <label for="birthdayD" class=" h-8  ml-1 ">日</label>
                     </div>
                 </div>
-
             </div>
 
             <div class="md:flex border-b border-slate-300 ">
@@ -176,13 +157,11 @@
             </div>
 
             <div class="md:flex border-b border-slate-300 ">
-            
                 <h4 class="md:pl-3 sm:w-60   font-semibold md:font-medium flex items-center  md:bg-slate-100 mt-1 md:mt-0">都道府県</h4>
                 <div class="md:ml-3 my-2  ">
                 @if ($errors->first('pref')) 
                     <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('pref')}}</p>
                 @endif
-                
                     <select name="pref" class="w-full md:w-60 pref px-2 border-slate-300" >   
                         <option value=""  <?php if($userdetail->pref == ""){echo 'selected="selected"';}?>>選択してください</option>
                         <option value="1" <?php if($userdetail->pref == "1"){echo 'selected="selected"';}?>>北海道</option>
@@ -235,7 +214,6 @@
                     </select>
                 </div>
             </div>
-
             
             <div class="md:flex border-b md:border-slate-300   ">
                 <div class="flex items-center  md:bg-slate-100">
@@ -281,16 +259,11 @@
                 </div>
             </div>
 
-            
             @endforeach
             <div class="flex  justify-center">
                 <button type="submit" class=" bg-slate-500 text-white rounded w-60 h-10 mt-8 mb-16 hover:bg-slate-400 " >変更する</button>    
             </div>
         </div>
-
-
-        
-
     </form>
 
     </div>

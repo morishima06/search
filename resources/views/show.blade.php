@@ -11,7 +11,7 @@
             <th class=" pb-1"><p class="text-sm">出品日</p></th>
             @foreach($products as $product)
                 <tr class="h-24 border-y hover:bg-slate-100 cursor-pointer px-1"  onclick="location.href='{{route('show_edit', ['id' => $product->id]   )}}' ">
-                    <td class="w-32  px-2"><img src="{{asset($product->image_path1)}}" alt="" class="" ></td>
+                    <td class="w-32  px-2"><img src="{{asset($product->image_path1)}}" alt="" class="h-20 w-full object-cover" ></td>
                     <td class="w-32 px-1 text-center"  >
                        <p class="text-xs sm:text-base ">{{$product->product_name}}</p> 
                     </td >

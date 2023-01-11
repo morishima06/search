@@ -125,7 +125,7 @@
 
                                 <div class="flex mt-3">
                                 <button type="button" class="border-black border rounded-sm w-1/2 py-2 ml-4 mr-4"><a class="inline-block w-full h-full" href="{{route('category', $category)}}">クリア</a></button>
-                                    <button  type="submit" class="text-white bg-gray-700 rounded-sm w-1/2 py-2 mr-4">検索</button>
+                                <input  type="submit" class="text-white bg-gray-700 rounded-sm w-1/2 py-2 mr-4 hover:cursor-pointer" value="検索">
                                 </div>
                             </ul>
                         </div>
@@ -243,6 +243,9 @@
                         @break
                         @case('lifestyle')
                         ライフスタイル
+                        @break
+                        @case('all')
+                        全てのカテゴリーの商品
                         @break
                     @endswitch
                 </h2>
