@@ -20,7 +20,7 @@
         <!-- Slider main container -->
         <div class=" ">
             <div class=" flex justify-center">
-                <div class="swiper mySwiper2   aspect-square  sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                <div class="swiper mySwiper2  w-full aspect-square  sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <!-- Additional required wrapper -->
                     <div class="swiper-wrapper  ">
                         <!-- Slides -->
@@ -48,7 +48,7 @@
 
         <div class="w-full sm:w-80 flex justify-center sm:ml-4 md:ml-10 mt-2 sm:mt-0 ">
             <div class=" w-full">
-                <h2 class="text-2xl  mx-2 sm:mx-0 font-medium">{{$product[0]->brand_name}}</h2>
+                <h2 class="text-2xl  mx-2 sm:mx-0 font-medium ">{{$product[0]->brand_name}}</h2>
                 <h2 class="text-xl  mx-2 sm:mx-0 font-light"> {{$product[0]->product_name}}</h2>
                 <h3 class="text-2xl my-3 sm:mx-0 mx-2 font-medium">¥{{$product[0]->price}}</h3>
                 <button class="bg-black w-full text-white py-2 ">サイトに飛ぶ</button>

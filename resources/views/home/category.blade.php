@@ -258,7 +258,7 @@
                     <li class="">
                         <a href="{{route('product', ['id' => $product->id]  )}}"><img src="{{asset($product->image_path1)}}" class=" aspect-[12/12] p-2 object-fill w-full h-full " alt=""></a>
                     </li>
-                    <div class="w-full pl-2  pb-1">
+                    <div class="w-full px-2  pb-1">
                         <p class="font-semibold	text-sm sm:text-lg">{{$product->brand_name}}</p>
                         <p class="text-xs sm:text-sm line-clamp-1">{{$product->product_name}}</p>
                         <p class="font-bold text-sm sm:text-lg mt-1 sm:mt-2 ">¥{{$product->price}}</p>
