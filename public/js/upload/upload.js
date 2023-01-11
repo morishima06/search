@@ -101,7 +101,7 @@ array["lifestyle"]= [
         reader.onload = function(event) {
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
-        img.setAttribute("class", "previewImage object-cover w-full h-full");
+        img.setAttribute("class", "previewImage h-full");
         previewBox[i].appendChild(img);
         }
         reader.readAsDataURL(files);
@@ -143,7 +143,7 @@ array["lifestyle"]= [
         reader.onload = function(event) {
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
-        img.setAttribute("class", "previewImage object-cover  w-full h-full ");
+        img.setAttribute("class", "previewImage    h-full ");
 
         previewBox[i].appendChild(img);
         }

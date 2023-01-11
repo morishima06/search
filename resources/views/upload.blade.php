@@ -6,7 +6,6 @@
             <h3 class="text-2xl  font-semibold bg-white text-slate-700 pb-12 h-10   pl-3" >新規出品</h3>
             <div class="bg-slate-100  rounded border  mt-3  px-3 sm:px-7  " >
                 <h4 class="text-xl pt-8  text-slate-700 mb-8">商品画像</h4>
-
                     <!-- uploderフレーム -->
                     <div class="flex rounded bg-slate-100   overflow-scroll w-full ">
                         <!-- 画像upload1 -->
@@ -18,7 +17,6 @@
                             
                             <!-- ドラッグ&ドロップエリア + プレヴューエリア-->
                             <div id=""   class="preview   bg-white w-full h-full overflow-hidden object-fill ">
-
                                 <div id="" class="inputArea w-full h-full ">
                                     <p class="text-xs  md:text-sm">
                                         ここにファイルをドロップしてください<br>またはdrug&drop
@@ -28,7 +26,7 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="previewBox  w-full h-full"></div>
+                                <div class="previewBox flex justify-center w-full h-full"></div>
                             </div>
                         </div>
 
