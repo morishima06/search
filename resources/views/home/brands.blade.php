@@ -87,7 +87,7 @@
                                 <div class="w-full ">
                                             @foreach($group_colors as $group_color)
                                         <div>
-                                            <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if(isset($color)){if(in_array($group_color->color,$color)){echo 'checked';}
+                                            <input type="checkbox" id="{{$group_color->color}}" name="color[]" class="ml-2 my-0.5" <?php if(isset($color)){if(in_array($group_color->color,$color)){echo 'checked';}
                                              }
                                              ?>    value="{{$group_color->color}}">  
                                             <label for="{{$group_color->color}}">{{$group_color->color}}</label>

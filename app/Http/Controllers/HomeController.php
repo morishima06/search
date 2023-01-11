@@ -119,19 +119,12 @@ class HomeController extends Controller
                     ->orWhere("product_name", "like", "%".$q."%");
                 });
         }
-        if($q){
-            $query->where(function ($query) use ($q) {
-                $query->where("brand_name", "like", "%".$q."%")
-                    ->orWhere("product_name", "like", "%".$q."%");
-                });
-        }
         if($min){
             $query->where('price', '>=', $min);
         }
         if($max){
             $query->where('price', '<', $max);
         }
-
         if($category){
             $query->where('category',$category);
         }

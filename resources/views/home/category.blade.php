@@ -91,7 +91,7 @@
                                             <div class="w-full ">
                                                     @foreach($group_brands as $group_brand)
                                                     <div>
-                                                        <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name" class=" ml-2 my-0.5"  <?php if(isset($brand_name)){if(in_array($group_brand->brand_name,$brand_name)){echo 'checked';}}?>   value="{{$group_brand->brand_name}}">  
+                                                        <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name[]" class=" ml-2 my-0.5"  <?php if(isset($brand_name)){if(in_array($group_brand->brand_name,$brand_name)){echo 'checked';}}?>   value="{{$group_brand->brand_name}}">  
                                                         <label for="{{$group_brand->brand_name}}">{{$group_brand->brand_name}}</label>
                                                     </div>
                                                     @endforeach
@@ -114,7 +114,7 @@
                                     <div class="w-full ">
                                                 @foreach($group_colors as $group_color)
                                             <div>
-                                                <input type="checkbox" id="{{$group_color->color}}" name="color" class="ml-2 my-0.5" <?php if(isset($color)){if(in_array($group_color->color,$color)){echo 'checked';}}?> value="{{$group_color->color}}">  
+                                                <input type="checkbox" id="{{$group_color->color}}" name="color[]" class="ml-2 my-0.5" <?php if(isset($color)){if(in_array($group_color->color,$color)){echo 'checked';}}?> value="{{$group_color->color}}">  
                                                 <label for="{{$group_color->color}}">{{$group_color->color}}</label>
                                             </div>
                                                 @endforeach
