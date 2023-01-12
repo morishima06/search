@@ -98,17 +98,15 @@ class AccountController extends Controller
             'image_path3'=> $file_name3,
             'image_path4'=> $file_name4
         ]);
-
-        return redirect('/upload');
+        session()->flash('flash_message', '投稿が完了しました');
+        return redirect('/show');
         }
 
     public function show(){
-
         $auth = Auth::id();
         $products = Product::where('user_id', $auth)->paginate(6);
         return view('show',['products' => $products]);
     }
-
     public function show_edit($id){
         $products =   Product::where('id', $id)->get();
         return view('show_edit' ,compact('products','id'));
