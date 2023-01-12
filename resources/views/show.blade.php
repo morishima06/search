@@ -2,13 +2,14 @@
     <!-- フラッシュメッセージ -->
  <div class="w-full md:w-4/5   mx-3  sm:ml-2 sm:mx-0 sm:px-2 ">
     @if (session('flash_message'))
-        <div class="message w-full bg-slate-400 text-white h-12 flex justify-center items-center mb-4 pl-2 rounded-md relative">
-            <div class="close_button  w-12 h-12 absolute top-3 left-0 ml-6 ">
-                <span class="before:inline-block  before:border-l before:rotate-45 before:border-white  before:h-6  absolute"></span>
-                <span class="after:inline-block  after:border-r after:-rotate-45 after:border-white  after:h-6 absolute"></span>
+    <div class="message w-full bg-slate-400 text-white h-12 flex justify-center items-center mb-4  rounded-md relative">
+            <div class="close_button  w-12 h-12 absolute top-0 left-0  cursor-pointer ml-1 ">
+                <span class="inline-block  border-l rotate-45 border-white  h-6 top-3 ml-6 absolute"></span>
+                <span class="inline-block  border-r -rotate-45 border-white  h-6 top-3 ml-6 absolute"></span>
             </div>
              {{'新規出品完了しました'}}
          </div>
+
     @endif
 
     <h3 class="text-2xl mb-4 font-semibold text-slate-700">出品一覧</h3>
