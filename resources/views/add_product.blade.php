@@ -1,7 +1,7 @@
 
 <x-app-layout>
     <div class="w-full md:w-4/5  ">
-        <form action="{{route('upload_check')}}" method="post" enctype="multipart/form-data" >
+        <form action="{{route('add_check')}}" method="post" enctype="multipart/form-data" >
                 @csrf
             <h3 class="text-2xl  font-semibold bg-white text-slate-700 pb-12 h-10   pl-3" >新規出品</h3>
             <div class="bg-slate-100  rounded border  mt-3  px-3 sm:px-7  " >

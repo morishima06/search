@@ -21,7 +21,7 @@
             <th class=" pb-1"><p class="text-sm">価格</p></th>
             <th class=" pb-1"><p class="text-sm">出品日</p></th>
             @foreach($products as $product)
-                <tr class="h-24 border-y hover:bg-slate-100 cursor-pointer px-1"  onclick="location.href='{{route('show_edit', ['id' => $product->id] )}}' ">
+                <tr class="h-24 border-y hover:bg-slate-100 cursor-pointer px-1"  onclick="location.href='{{route('edit_product', ['id' => $product->id] )}}' ">
                     <td class="w-32  px-2"><img src="{{asset($product->image_path1)}}" alt="" class="h-20 w-full object-cover" ></td>
                     <td class="w-32 px-1 text-center"  >
                        <p class="text-xs sm:text-base ">{{$product->product_name}}</p> 
@@ -31,7 +31,7 @@
                     </td>
                     <td class="px-1 text-center"><p class="text-xs sm:text-base">￥{{$product->price}}</p> </td>
                     <td class="px-1 text-center" > <p class="text-xs sm:text-base">{{$product->created_at}}</td></p>
-                      <td ><button class="border-radious"><a href="{{route('show_delete_confirm', ['id' => $product->id])}}" class=" ml-1 sm:ml-2 text-sm sm:text-base text-blue-600  hover:text-blue-400 w-10 " >削除</a></button></td>
+                      <td ><button class="border-radious"><a href="{{route('delete_product_confirm', ['id' => $product->id])}}" class=" ml-1 sm:ml-2 text-sm sm:text-base text-blue-600  hover:text-blue-400 w-10 " >削除</a></button></td>
                 </tr>
             @endforeach
         </tbody>

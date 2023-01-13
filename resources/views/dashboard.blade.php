@@ -12,7 +12,7 @@
                     <hr class=" border-black ">
                     <div class="flex ml-1 sm:ml-4  h-12 sm:h-16 text-base items-center  ">
                         <p class="mt-1  sm:ml-0  md:mt-0 text-[15px] sm:text-[17px]">email: {{$auth->email}}</p>
-                        <button onclick="location.href='{{route('edit')}}'" class="mt-1  md:mt-0 ml-3  bg-slate-500 h-6 md:h-7 px-3 text-xs md:text-sm rounded text-white" >アカウント詳細</button>
+                        <button onclick="location.href='{{route('profile')}}'" class="mt-1  md:mt-0 ml-3  bg-slate-500 h-6 md:h-7 px-3 text-xs md:text-sm rounded text-white" >アカウント詳細</button>
                     </div>
                 </div>
             </div>

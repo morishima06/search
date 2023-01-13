@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SimpleLoginController;
 
@@ -33,15 +35,17 @@ Route::get('login/guest', [SimpleLoginController::class,'guestLogin'])->name('lo
 
 // Loginページのroute
 Route::get('/dashboard',[AccountController::class, 'index'])->middleware(['auth'])->name('dashboard');
-Route::get('/upload', function () { return view('/upload');})->middleware(['auth'])->name('upload');
-Route::post('/upload/check', [AccountController::class, 'upload_check'])->name('upload_check');
-Route::get('/show',[AccountController::class, 'show'] )->middleware(['auth'])->name('show');
-Route::get('/show_edit/{id}',[AccountController::class, 'show_edit'] )->middleware(['auth'])->name('show_edit');
-Route::post('/show_edit_check',[AccountController::class, 'show_edit_check'] )->middleware(['auth'])->name('show_edit_check');
-Route::get('/show_delete_confirm/{id}',[AccountController::class, 'show_delete_confirm'] )->middleware(['auth'])->name('show_delete_confirm');
-Route::post('/delete/{id}',[AccountController::class, 'show_delete'] )->middleware(['auth'])->name('show_delete');
-Route::get('/edit',[AccountController::class, 'edit'] )->middleware(['auth'])->name('edit');
-Route::post('/edit',[AccountController::class, 'edit_check'] )->middleware(['auth'])->name('edit_check');
+Route::get('/product',[ProductController::class, 'index'] )->middleware(['auth'])->name('product');
+
+Route::get('/add_product', function () { return view('/add_product');})->middleware(['auth'])->name('add_product');
+Route::post('/add_product_check', [ProductController::class, 'add_check'])->name('add_check');
+Route::get('/edit_product/{id}',[ProductController::class, 'edit'] )->middleware(['auth'])->name('edit_product');
+Route::put('/edit_product_check',[ProductController::class, 'edit_check'] )->middleware(['auth'])->name('edit_product_check');
+Route::get('/delete_product_confirm/{id}',[ProductController::class, 'delete_confirm'] )->middleware(['auth'])->name('delete_product_confirm');
+Route::delete('/delete_product_check/{id}',[ProductController::class, 'delete_check'] )->middleware(['auth'])->name('delete_product_check');
+
+Route::get('/profile',[ProfileController::class, 'index'] )->middleware(['auth'])->name('profile');
+Route::put('/edit_profile',[ProfileController::class, 'edit'] )->middleware(['auth'])->name('edit_profile');
 
 
 

@@ -2,8 +2,9 @@
     <div class="w-full md:w-4/5 px-3">
     <h3 class="text-2xl mb-6 font-semibold text-slate-700">アカウント詳細</h3>
 
-    <form action="{{route('edit_check')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('edit_profile')}}" method="post" enctype="multipart/form-data">
         @csrf
+        @method('put')
         <div class="">
         @foreach($userdetails as $userdetail)
             <div class="md:flex border-y md:border-slate-300   ">

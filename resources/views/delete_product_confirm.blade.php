@@ -12,8 +12,9 @@
     </div>
 
 <!-- <button class="bg-slate-400 text-slate-100">戻る</button> -->
-<form action="{{route('show_delete', ['id' => $product->id])}}" method="post">
+<form action="{{route('delete_product_check', ['id' => $product->id])}}" method="post">
     @csrf
+    @method('delete')
     <input  type="submit" class="bg-slate-500 text-white h-9 px-2" value="この商品を削除する">
 </form>
 @endforeach
