@@ -29,7 +29,7 @@
                 </div>
                 <div class="flex items-center w-full ">
                     <div class=" my-2 md:ml-3 w-full">
-                        <input type="text" class=" h-8 w-full md:w-60  border-slate-300 rounded-sm focus:border-none " id="email" name="email" value="{{$auth->email}}" >
+                        <p class="ml-1">{{$auth->email}}</p>
                         @if ($errors->first('email')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('email')}}</p>
                         @endif
@@ -37,19 +37,19 @@
                 </div>
             </div>
 
-            <div class="md:flex border-b border-slate-300 w-full">
+            <!-- <div class="md:flex border-b border-slate-300 w-full">
             <div class="flex items-center md:bg-slate-100  ">
                     <h3 class="md:pl-3 sm:w-60  font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">パスワード</h3>
                 </div>
                 <div class="flex items-center w-full ">
                     <div class=" my-2 md:ml-3 w-full">
-                        <input type="text" class=" h-8 w-full md:w-60  border-slate-300 rounded-sm focus:border-none " id="email" name="email" value="{{$auth->password}}" >
+                        <input type="password" class=" h-8 w-full md:w-60  border-slate-300 rounded-sm focus:border-none " id="email" name="email" value="{{$auth->password}}" >
                         @if ($errors->first('email')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('email')}}</p>
                         @endif
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="md:flex border-b border-slate-300  ">
                 <div class="">
                     <h4 class="md:pl-3 sm:w-60   h-full font-semibold md:font-medium flex items-center md:bg-slate-100 mt-1 md:mt-0">氏名</h4>
