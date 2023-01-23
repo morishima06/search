@@ -35,7 +35,7 @@ Route::get('login/guest', [SimpleLoginController::class,'guestLogin'])->name('lo
 
 // Loginページのroute
 Route::get('/dashboard',[AccountController::class, 'index'])->middleware(['auth'])->name('dashboard');
-Route::get('/product',[ProductController::class, 'index'] )->middleware(['auth'])->name('product');
+Route::get('/product',[ProductController::class, 'index'] )->middleware(['auth'])->name('admin_product_show');
 
 Route::get('/add_product', function () { return view('/add_product');})->middleware(['auth'])->name('add_product');
 Route::post('/add_product_check', [ProductController::class, 'add_check'])->name('add_check');
