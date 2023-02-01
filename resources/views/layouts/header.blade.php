@@ -18,9 +18,7 @@
                 </div>
             </div>
 
-
             <div class="hamburger_contents fixed  w-full ml-10   z-20 bg-white  top-0  right-0 bottom-0 overflow-y-auto   left-full ">
-
                     <div class="border-b border-slate-300">
 
                         @if (Route::has('login'))
@@ -53,9 +51,9 @@
                         <div class="ml-3">
                             <h2 class="mt-4 mb-2 font-semibold">カテゴリー</h2>
                             <div class="mb-1"><a class=" hover:text-gray-500" href="{{route('category', ['category' => 'wear',])}}"> ウェア</a></div>
-                                <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'shoes',])}}"> シューズ</a></div>
-                                <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'accessories',])}}"> アクセサリー</a></div>
-                                <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'lifestyle',])}}"> ライフスタイル</a></div>
+                            <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'shoes',])}}"> シューズ</a></div>
+                            <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'accessories',])}}"> アクセサリー</a></div>
+                            <div class="mb-1"><a class="hover:text-gray-500" href="{{route('category', ['category' => 'lifestyle',])}}"> ライフスタイル</a></div>
                         </div>
 
                         <div class="ml-3">
@@ -99,6 +97,19 @@
                     </div>
                 </div>
             </div>
+            <a href="{{route('cart')}}" class="mr-2">
+                <i class="fa-solid fa-cart-shopping relative z-0 mr-2">
+                @if(session('cart') && session('cart') > 0)
+                <?php $total = 0 ?>
+                @foreach(session('cart') as $id => $details)
+                <?php $total += $details['quantity'] ?>
+                @endforeach
+                    <p class="rounded-full w-4 h-4 bg-blue-500 text-white flex justify-center items-center absolute z-2 -top-2 left-3 text-xs">
+                        {{$total}}
+                    </p>
+                @endif
+                </i>
+            </a>
             <!-- ゲストログイン -->
             <button class="mr-1 ml-1 bg-gray-400 rounded py-0.5 px-1">
                 <a href="{{ route('login.guest') }}" class="text-white text-sm">
@@ -106,7 +117,6 @@
                 </a>
             </button>
 
-            
     </div>
 
     <!-- 検索のdropdown -->

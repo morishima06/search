@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\frontend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Facades\Validator;
@@ -157,7 +158,7 @@ class HomeController extends Controller
     }
     public function product($id){
 
-        $product =   Product::where('id', $id)->get();
+        $product =   Product::where('id', $id)->first();
 
         return view('home/product' ,compact('product'));
 

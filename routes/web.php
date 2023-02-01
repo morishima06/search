@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AccountController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\admin\AccountController;
+use App\Http\Controllers\admin\ProductController;
+use App\Http\Controllers\admin\ProfileController;
+use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\SimpleLoginController;
-
+use App\Http\Controllers\frontend\CartController;
+use App\Http\Controllers\frontend\CheckoutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,19 @@ Route::get('/product/{id}', [HomeController::class, 'product'])->name('product')
 Route::get('/contact',[ContactController::class, 'index'])->name('contact');
 Route::post('/contact/confirm',[ContactController::class, 'confirm'])->name('contact_confirm');
 Route::post('/thanks',[ContactController::class, 'send'])->name('send');
+
+//cartのroute
+Route::post('add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
+Route::delete('delete-to-cart', [CartController::class, 'deleteToCart'])->name('deleteToCart');
+Route::get('cart', [CartController::class, 'cart'])->name('cart');
+Route::put('dec-qty', [CartController::class, 'decQty'])->name('dec-qty');
+Route::put('inc-qty', [CartController::class, 'incQty'])->name('inc-qty');
+
+//checkoutのroute
+Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('checkout/pay', [CheckoutController::class, 'pay'])->name('pay');
+Route::get('success', [CheckoutController::class, 'success'])->name('success');
+
 
 //ゲストログイン
 Route::get('login/guest', [SimpleLoginController::class,'guestLogin'])->name('login.guest');

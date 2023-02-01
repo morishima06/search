@@ -48,5 +48,8 @@ class User extends Authenticatable
         $url = url("reset-password/${token}");
         $this->notify(new ResetPasswordNotification($url));
     }
+    public function userdetail(){
+        return $this->hasOne('App\Models\UserDetail','user_id','id');
+    }
 }
 

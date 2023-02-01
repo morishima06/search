@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.min.css" />
+@extends('layouts.front')
 
-    <title>Document</title>
-</head>
-<body>
-@include('layouts.header')
+@section('content')
+
     <form method="POST" action="{{ route('contact_confirm') }}" class="pt-32" >
         @csrf
         @method('POST')
@@ -52,8 +42,5 @@
             </div>
         </div>
     </form>
-    @include('layouts.footer')
 
-    
-</body>
-</html>
+@endsection
