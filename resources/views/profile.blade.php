@@ -29,7 +29,7 @@
                 </div>
                 <div class="flex items-center w-full ">
                     <div class=" my-2 md:ml-3 w-full">
-                        <p class="ml-1">{{$auth->email}}</p>
+                    <input type="text" class=" w-full  md:w-60 h-8  border-slate-300 rounded-sm focus:border-none " readonly id="email" name="email" value="{{$auth->email}}">
                         @if ($errors->first('email')) 
                             <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('email')}}</p>
                         @endif
