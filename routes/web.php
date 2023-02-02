@@ -35,8 +35,8 @@ Route::post('/thanks',[ContactController::class, 'send'])->name('send');
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
 Route::delete('/delete-to-cart', [CartController::class, 'deleteToCart'])->name('deleteToCart');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart');
-Route::put('/dec-qty', [CartController::class, 'decQty'])->name('dec-qty');
-Route::put('/inc-qty', [CartController::class, 'incQty'])->name('inc-qty');
+Route::post('/dec-qty', [CartController::class, 'decQty'])->name('dec-qty');
+Route::post('/inc-qty', [CartController::class, 'incQty'])->name('inc-qty');
 
 //checkoutのroute
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');

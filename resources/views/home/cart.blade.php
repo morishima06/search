@@ -139,7 +139,7 @@
                     }
                     });
                     $.ajax({
-                        method: "put",
+                        method: "POST",
                         url: "/dec-qty",
                         data: {
                             'product_id' : product_id,
@@ -172,7 +172,7 @@
                     }
                     });
                         $.ajax({
-                        method: "put",
+                        method: "POST",
                         url: "/inc-qty",
                         data: {
                             'product_id' : product_id,
