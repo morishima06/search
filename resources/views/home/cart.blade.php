@@ -108,26 +108,26 @@
     <script>
             $(document).ready(function(){
                 $('.delete-btn').click(function(e){
-                        e.preventDefault();
+                    e.preventDefault();
 
-                        var product_id = $(this).closest('.product_data').find('.product_id').val();
+                    var product_id = $(this).closest('.product_data').find('.product_id').val();
 
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    });
-                    $.ajax({
-                        method: "delete",
-                        url: "/delete-to-cart",
-                        data: {
-                            'product_id' : product_id,
-                        },
-                        success: function(response){
-                            window.location.reload();
-                            alert(response.status)
-                        }
-                    })
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    method: "delete",
+                    url: "/delete-to-cart",
+                    data: {
+                        'product_id' : product_id,
+                    },
+                    success: function(response){
+                        window.location.reload();
+                        alert(response.status)
+                    }
+                })
                 })
 
                 $('.dec-qty').click(function(e){
@@ -142,17 +142,23 @@
                     });
                     $.ajax({
                         method: "PUT",
-                        url: "{{route('dec-qty')}}",
+                        url: "/dec-qty.php",
                         data: {
                             'product_id' : product_id,
                         },
                         success: function(response){
                             window.location.reload();
-
                             alert(response.status)
                         }
 
                     })
+                    .done((res)=>{
+                            console.log(res.message)
+                        })
+                        //通信が失敗したとき
+                    .fail((error)=>{
+                            console.log(error.statusText)
+                        })
                     
                 })
 
@@ -169,7 +175,7 @@
                     });
                         $.ajax({
                         method: "PUT",
-                        url: "{{route('inc-qty')}}",
+                        url: "/inc-qty.php",
                         data: {
                             'product_id' : product_id,
                         },
