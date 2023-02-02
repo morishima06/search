@@ -56,7 +56,7 @@ Route::post('/add_product_check', [ProductController::class, 'add_check'])->name
 Route::get('/edit_product/{id}',[ProductController::class, 'edit'] )->middleware(['auth'])->name('edit_product');
 Route::put('/edit_product_check',[ProductController::class, 'edit_check'] )->middleware(['auth'])->name('edit_product_check');
 Route::get('/delete_product_confirm/{id}',[ProductController::class, 'delete_confirm'] )->middleware(['auth'])->name('delete_product_confirm');
-Route::delete('/delete_product_check/{id}',[ProductController::class, 'delete_check'] )->middleware(['auth'])->name('delete_product_check');
+Route::post('/delete_product_check/{id}',[ProductController::class, 'delete_check'] )->middleware(['auth'])->name('delete_product_check');
 
 Route::get('/profile',[ProfileController::class, 'index'] )->middleware(['auth'])->name('profile');
 Route::put('/edit_profile',[ProfileController::class, 'edit'] )->middleware(['auth'])->name('edit_profile');

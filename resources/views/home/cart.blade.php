@@ -118,7 +118,7 @@
                     }
                 });
                 $.ajax({
-                    method: "delete",
+                    method: "post",
                     url: "/delete-to-cart",
                     data: { 'product_id' : product_id, '_method': 'DELETE'},
                     success: function(response){
