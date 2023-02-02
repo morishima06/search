@@ -32,16 +32,16 @@ Route::post('/contact/confirm',[ContactController::class, 'confirm'])->name('con
 Route::post('/thanks',[ContactController::class, 'send'])->name('send');
 
 //cartのroute
-Route::post('add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
-Route::delete('delete-to-cart', [CartController::class, 'deleteToCart'])->name('deleteToCart');
-Route::get('cart', [CartController::class, 'cart'])->name('cart');
-Route::put('dec-qty', [CartController::class, 'decQty'])->name('dec-qty');
-Route::put('inc-qty', [CartController::class, 'incQty'])->name('inc-qty');
+Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
+Route::delete('/delete-to-cart', [CartController::class, 'deleteToCart'])->name('deleteToCart');
+Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+Route::put('/dec-qty', [CartController::class, 'decQty'])->name('dec-qty');
+Route::put('/inc-qty', [CartController::class, 'incQty'])->name('inc-qty');
 
 //checkoutのroute
-Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout');
-Route::post('checkout/pay', [CheckoutController::class, 'pay'])->name('pay');
-Route::get('success', [CheckoutController::class, 'success'])->name('success');
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('/checkout/pay', [CheckoutController::class, 'pay'])->name('pay');
+Route::get('/success', [CheckoutController::class, 'success'])->name('success');
 
 
 //ゲストログイン

@@ -140,17 +140,25 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                     });
-                        $.ajax({
+                    $.ajax({
                         method: "PUT",
                         url: "/dec-qty",
                         data: {
                             'product_id' : product_id,
                         },
                         success: function(response){
-                            window.location.reload();
                             alert(response.status)
                         }
+
                     })
+                    .done((res)=>{
+                            console.log(res.message)
+                        })
+                        //通信が失敗したとき
+                    .fail((error)=>{
+                            console.log(error.statusText)
+                        })
+                    
                 })
 
                 $('.inc-qty').click(function(e){
