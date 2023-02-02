@@ -120,9 +120,7 @@
                 $.ajax({
                     method: "delete",
                     url: "/delete-to-cart",
-                    data: {
-                        'product_id' : product_id,
-                    },
+                    data: { 'product_id' : product_id, '_method': 'DELETE'},
                     success: function(response){
                         window.location.reload();
                         alert(response.status)
@@ -141,7 +139,7 @@
                     }
                     });
                     $.ajax({
-                        method: "PUT",
+                        method: "put",
                         url: "/dec-qty",
                         data: {
                             'product_id' : product_id,
@@ -174,7 +172,7 @@
                     }
                     });
                         $.ajax({
-                        method: "PUT",
+                        method: "put",
                         url: "/inc-qty",
                         data: {
                             'product_id' : product_id,
