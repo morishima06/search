@@ -11,6 +11,7 @@
 
         <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.min.css" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('/css/app.css')}}">
 
         <script src="{{ asset('/js/app.js') }}"></script>
         <!-- Styles -->

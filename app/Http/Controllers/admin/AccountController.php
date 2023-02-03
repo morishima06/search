@@ -15,7 +15,7 @@ class AccountController extends Controller
 {
     public function index(Request $request){
         $auth = Auth::user();
-        return view('dashboard', [ 'auth' => $auth ]);
+        return view('admin.dashboard', [ 'auth' => $auth ]);
     }
 
 }

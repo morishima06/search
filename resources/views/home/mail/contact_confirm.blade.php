@@ -1,8 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
-
-        <div class="pt-28 flex justify-center flex-1">
+        <div class="pt-20 flex justify-center flex-1">
             <div class="">
                 <form method="POST" action="{{ route('send') }}" class="">
                     {{ csrf_field() }}
@@ -13,7 +12,6 @@
                             <th class="w-48 py-2">名前</th>
                             <td>{{ $inputs['name'] }}</td>
                             <input type="hidden" name="name" value="{{ $inputs['name'] }}">
-
                         </tr>
                         <tr class="border-b">
                             <th class="w-48 py-2">メールアドレス</th>

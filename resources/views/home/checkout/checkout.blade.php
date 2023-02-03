@@ -12,7 +12,6 @@
             <div class="flex w-full mt-10 ">
                 <div class="w-2/3 mr-5">
                   <div class="mb-2 ">
-
                     <h2 class="font-extrabold mb-2 text-lg">お届け先</h2>
                     <p>{{$userdetail->NameSei}} {{$userdetail->NameMei}}</p>
                     <p>〒{{$userdetail->zip}}</p>
@@ -90,8 +89,6 @@
                     @csrf
                     <button class="bg-zinc-900 text-white w-40 mt-1 py-1 px-2 mb-3 "> 会計に進む</a></button>
                    </form>
-
-
                 </div>
 
                 <div class="w-1/3 px-2 ">
@@ -140,19 +137,13 @@
       <script>
         $(document).ready(()=>{
           $('.ch-box').click(()=>{
-            
             if(!$('.ch-address').hasClass('hidden')){
               $('.ch-address').addClass('hidden')
             }
             else{
               $('.ch-address').removeClass('hidden')
             }
-
           })
-
-
-
         })
       </script>
-
     @endsection

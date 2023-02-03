@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index(){
         $auth = Auth::id();
         $products = Product::where('user_id', $auth)->paginate(6);
-        return view('product',['products' => $products]);
+        return view('admin.product',['products' => $products]);
     }
 
     public function add_check(Request $request){
@@ -41,7 +41,7 @@ class ProductController extends Controller
           ];
         $validator = Validator::make($request->all(), $rulus, $message);
         if($validator->fails()) {
-            return redirect('/upload')
+            return redirect('/admin.upload')
             ->withErrors($validator)
             ->withInput();
         }
@@ -99,12 +99,12 @@ class ProductController extends Controller
             'image_path4'=> $file_name4
         ]);
         session()->flash('flash_message', '投稿が完了しました');
-        return redirect('/product');
+        return redirect('/admin.product');
         }
 
     public function edit($id){
         $products =   Product::where('id', $id)->get();
-        return view('edit_product' ,compact('products','id'));
+        return view('admin.edit_product' ,compact('products','id'));
     }
     public function edit_check(Request $request){
           $request->validate([
@@ -165,7 +165,7 @@ class ProductController extends Controller
     }
     public function delete_confirm($id){
         $products =   Product::where('id', $id)->get();
-        return view('delete_product_confirm' ,['products' => $products]);
+        return view('admin.delete_product_confirm' ,['products' => $products]);
     }
     public function delete_check($id){
         $products = Product::find($id);

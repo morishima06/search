@@ -16,7 +16,7 @@ class ProfileController extends Controller
         $auth = Auth::user();
         $userdetails = UserDetail::where('user_id',$auth->id)->get();
 
-        return view('profile',[
+        return view('admin.profile',[
             'userdetails' => $userdetails,
             'auth' => $auth
         ]);

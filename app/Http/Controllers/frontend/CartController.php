@@ -15,13 +15,11 @@ class CartController extends Controller
     public function addToCart(Request $request)
     {
         $id = $request->input('product_id');
-
         $product = Product::find($id);
 
         $cart = session()->get('cart');
 
         if(!$cart) {
-
             $cart = [
                     $id => [
                         "product_name" => $product->product_name,
@@ -33,17 +31,13 @@ class CartController extends Controller
             ];
    
             session()->put('cart', $cart);
-   
-            return response()->json(['status' => "Already Added to cart"]);        }
+        }
 
         if(isset($cart[$id])) {
-            
 
             $cart[$id]['quantity']++;
-   
             session()->put('cart', $cart); // this code put product of choose in cart
    
-            return response()->json(['status' => "Already Added to cart"]);   
         }
 
         $cart[$id] = [
@@ -55,8 +49,6 @@ class CartController extends Controller
         ];
    
         session()->put('cart', $cart); // this code put product of choose in cart
-   
-        return response()->json(['status' => "Already Added to cart"]);
     }
 
     public function decQty(Request $request)
@@ -66,14 +58,9 @@ class CartController extends Controller
 
         if(isset($cart[$id])) {
 
-
                 $cart[$id]['quantity']--;
 
                 session()->put('cart',$cart);
-    
-                return response()->json(['status' => "decrment cart"]);   
-
-
         }
         return back();
     }
@@ -84,26 +71,20 @@ class CartController extends Controller
         $cart = session()->get('cart');
 
         $product = Product::find($id);
-
         if(isset($cart[$id])) {
 
             if($cart[$id]['quantity'] >=  $product->qty){
 
                 return response()->json(['status' => 'これ以上は追加できません']);
-
-            }else{
-
-
+            }
+            else
+            {
             $cart[$id]['quantity']++;
-
             session()->put('cart',$cart);
 
-            return response()->json(['status' => "increment cart"]);   
             }
         }
-
     }
-
 
     public function deleteToCart(Request $request)
     {
@@ -114,11 +95,8 @@ class CartController extends Controller
             if(isset($cart[$request->product_id])) {
    
                 unset($cart[$request->product_id]);
-   
                 session()->put('cart', $cart);
-                
             }
-            return response()->json(['status' => $request->product_id."delete to cart"]);   
         }
     }
 

@@ -13,7 +13,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('home/contact');
+        return view('home.mail.contact');
     }
 
     public function confirm(Request $request)
@@ -41,7 +41,7 @@ class ContactController extends Controller
             ->withErrors($validator)
             ->withInput();
         }
-        return view('home/contact_confirm',[
+        return view('home.mail.contact_confirm',[
             'inputs' => $inputs,
         ]);
 
@@ -54,6 +54,6 @@ class ContactController extends Controller
         }
           \Mail::to($inputs['email'])->send(new ContactSendMail($inputs));
         $request->session()->regenerateToken(); //2回メール送信を防ぐため
-        return view('home/thanks');
+        return view('home.mail.thanks');
     }
 }

@@ -56,7 +56,7 @@
                         <!-- 商品削除 -->
                         <td>
                         <div class="flex justify-end">
-                        <button class="delete-btn relative w-7 h-7 " >
+                        <button class="delete-btn relative w-6 h-6 " >
                             <span class="absolute top-1 inline-block border-l border-black h-4 rotate-45"></span>
                             <span class="absolute top-1  inline-block border-l border-black h-4 -rotate-45"></span>
                         </button>
@@ -123,8 +123,14 @@
                     data: { 'product_id' : product_id, '_method': 'DELETE'},
                     success: function(response){
                         window.location.reload();
-                        alert(response.status)
                     }
+                    .done((res)=>{
+                            return
+                        })
+                        //通信が失敗したとき
+                    .fail((error)=>{
+                            alert(error.statusText)
+                        })
                 })
                 })
 
@@ -146,32 +152,28 @@
                         },
                         success: function(response){
                             window.location.reload();
-                            alert(response.status)
                         }
-
                     })
                     .done((res)=>{
-                            console.log(res.message)
+                        return;
                         })
                         //通信が失敗したとき
                     .fail((error)=>{
-                            console.log(error.statusText)
+                            alert(error.statusText)
                         })
-                    
                 })
 
                 $('.inc-qty').click(function(e){
                     e.preventDefault();
 
                     var product_id = $(this).closest('.product_data').find('.product_id').val();
-                    console.log(product_id)
 
                     $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                     });
-                        $.ajax({
+                    $.ajax({
                         method: "POST",
                         url: "/inc-qty",
                         data: {
@@ -179,12 +181,16 @@
                         },
                         success: function(response){
                             window.location.reload();
-                            alert(response.status)
+                            if(response.status){
+                                alert(response.status);
+                            }
                         }
                     })
+                        //通信が失敗したとき
+                    .fail((error)=>{
+                            alert(error.statusText)
+                        })
                 })
-
-
             });
     </script>
 @endsection

@@ -2,23 +2,14 @@
     <div class=" flex items-center px-3">
 
         <a href="{{route('home')}}"><h1 class="title text-4xl">SEARCH</h1></a>
-
+        <div class="ml-auto flex items-center">
             <!-- 検索ボタン -->
-            <div class="search-header cursor-pointer transition flex  space-x-1  items-center h-14  ml-auto ">
+            <div class="search-header cursor-pointer transition flex  space-x-1  items-center h-14 mr-1 ">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <p>検索</p>
             </div>
 
-            <!-- responsiveハンバーガー -->
-            <div class="flex items-center h-10 mr-2 ml-1 md:hidden ">
-                <div class="hamburger relative z-10 w-4  h-4 mx-2">
-                    <span class="absolute top-0 bg-black h-0.5 w-5 inline-block"></span>
-                    <span class="absolute top-2 bg-black h-0.5 w-5 inline-block"></span>
-                    <span class="absolute top-4 bg-black h-0.5 w-5 inline-block"></span>
-                </div>
-            </div>
-
-            <div class="hamburger_contents fixed  w-full ml-10   z-20 bg-white  top-0  right-0 bottom-0 overflow-y-auto   left-full ">
+            <div class="hamburger_contents fixed  w-full ml-10  z-20 bg-white  top-0  right-0 bottom-0 overflow-y-auto left-full ">
                     <div class="border-b border-slate-300">
 
                         @if (Route::has('login'))
@@ -97,7 +88,8 @@
                     </div>
                 </div>
             </div>
-            <a href="{{route('cart')}}" class="mr-2">
+            <!-- カート -->
+            <a href="{{route('cart')}}" class="md:mr-2">
                 <i class="fa-solid fa-cart-shopping relative z-0 mr-2">
                 @if(session('cart') && session('cart') > 0)
                 <?php $total = 0 ?>
@@ -110,13 +102,23 @@
                 @endif
                 </i>
             </a>
+
             <!-- ゲストログイン -->
-            <button class="mr-1 ml-1 bg-gray-400 rounded py-0.5 px-1">
+            <button class="mr-1 ml-1 bg-gray-400 rounded  px-1">
                 <a href="{{ route('login.guest') }}" class="text-white text-sm">
                     ゲストログイン
                 </a>
             </button>
+            <!-- responsiveハンバーガー -->
+            <div class="flex items-center h-10  md:hidden ">
+                <div class="hamburger relative z-10 w-4  h-4 ml-1">
+                    <span class="absolute top-0 bg-black h-0.5 w-5 inline-block"></span>
+                    <span class="absolute top-2 bg-black h-0.5 w-5 inline-block"></span>
+                    <span class="absolute top-4 bg-black h-0.5 w-5 inline-block"></span>
+                </div>
+            </div>
 
+        </div>
     </div>
 
     <!-- 検索のdropdown -->

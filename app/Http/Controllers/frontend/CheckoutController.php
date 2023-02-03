@@ -23,11 +23,11 @@ class CheckoutController extends Controller
             $auth = Auth::user();
             $userdetail = Auth::user()->load('userdetail')->userdetail;
 
-            return view('home.checkout', compact('auth','userdetail'));
+            return view('home.checkout.checkout', compact('auth','userdetail'));
         }
         else
         {
-            return view('home.guestcheckout');
+            return view('home.checkout.guestcheckout');
         }
     }
 
@@ -59,10 +59,12 @@ class CheckoutController extends Controller
           return redirect()->away($session->url);
     }
 
+
+
     public function success(){
         session()->forget('cart');
 
-        return view('home.success');
+        return view('home.checkout.success');
     }
 
 }
