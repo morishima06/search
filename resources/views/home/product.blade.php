@@ -45,40 +45,8 @@
     </div>
 @endsection
 
-
 @section('script')
-
-        <script>
-            $(document).ready(function(){
-                $('.add-btn').click(function(e){
-
-                    var product_id = $(this).closest('.product_data').find('.prod_id').val();
-                    console.log(product_id);
-
-
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                });
-                $.ajax({
-                    method: "POST",
-                    url: "/add-to-cart",
-                    data: {
-                        'product_id' : product_id,
-                    },
-                    success: function(response){
-                        window.location.reload();
-                    }
-                })
-                })
-
-            });
-
-        </script>
-        <script src="{{ asset('/js/swiper/double_config.js') }}"></script>
-
+    <script src="{{ asset('/js/swiper/double_config.js') }}"></script>
 @endsection
-
 
 

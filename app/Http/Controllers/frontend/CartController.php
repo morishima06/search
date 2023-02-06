@@ -31,12 +31,14 @@ class CartController extends Controller
             ];
    
             session()->put('cart', $cart);
+            return;
         }
 
         if(isset($cart[$id])) {
 
             $cart[$id]['quantity']++;
             session()->put('cart', $cart); // this code put product of choose in cart
+            return;
    
         }
 
@@ -47,8 +49,9 @@ class CartController extends Controller
             "price" => $product->price,
             "photo" => $product->image_path1
         ];
-   
         session()->put('cart', $cart); // this code put product of choose in cart
+        return;
+
     }
 
     public function decQty(Request $request)
@@ -82,6 +85,8 @@ class CartController extends Controller
             $cart[$id]['quantity']++;
             session()->put('cart',$cart);
 
+            return;
+
             }
         }
     }
@@ -96,6 +101,7 @@ class CartController extends Controller
    
                 unset($cart[$request->product_id]);
                 session()->put('cart', $cart);
+                return;
             }
         }
     }

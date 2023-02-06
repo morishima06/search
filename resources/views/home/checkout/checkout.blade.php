@@ -133,17 +133,4 @@
         </div>
     </div>
     @endsection
-    @section('script')
-      <script>
-        $(document).ready(()=>{
-          $('.ch-box').click(()=>{
-            if(!$('.ch-address').hasClass('hidden')){
-              $('.ch-address').addClass('hidden')
-            }
-            else{
-              $('.ch-address').removeClass('hidden')
-            }
-          })
-        })
-      </script>
-    @endsection
+
