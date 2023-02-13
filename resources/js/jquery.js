@@ -86,6 +86,7 @@
                         alert(response.status);
                         return;
                     }
+                    window.location.reload();
 
                 }
             })

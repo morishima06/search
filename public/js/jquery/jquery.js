@@ -11118,6 +11118,8 @@ $(document).ready(function () {
           alert(response.status);
           return;
         }
+
+        window.location.reload();
       }
     });
   });
