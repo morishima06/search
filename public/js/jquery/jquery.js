@@ -11114,10 +11114,9 @@ $(document).ready(function () {
         'product_id': product_id
       },
       success: function success(response) {
-        window.location.reload();
-
         if (response.status) {
           alert(response.status);
+          return;
         }
       }
     });
