@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
-<div class ="product_data flex justify-center pt-10 w-full">
+<div class =" flex justify-center pt-10 w-full">
     <div class="md:flex  w-full md:max-w-4xl mx-2">
             <div class="w-full mr-3">
                 <h1 class="text-2xl mb-2 font-bold">ショッピングカート</h1>
@@ -25,7 +25,7 @@
 
                 <?php $total += $details['price'] * $details['quantity'] ?>
 
-                    <tr class="border-y border-slate-400 h-20 md:h-24 w-20 md:w-24">
+                    <tr class="product_data border-y border-slate-400 h-20 md:h-24 w-20 md:w-24">
                         <!-- 商品画像 -->
                         <td class=" py-2 h-20 md:h-24 w-20 md:w-24 ">
                             <div class="h-20 md:h-24 w-20 md:w-24 mr-3">
