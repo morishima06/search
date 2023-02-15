@@ -104,7 +104,7 @@
                          <p class="text-orange-400   text-sm font-semibold">※{{$errors->first('uploadfile1')}}</p>
                     @endif
 
-                    <div class=" mt-3 ">
+                    <div class="mt-3">
 
                         <label for="product_name" class="text-slate-700">商品名</label>
                         <input type="text"  id="product_name" name="product_name" class="border h-8 w-full focus:border-none   border-gray-300 rounded-lg">
@@ -113,9 +113,9 @@
                         @endif
                     </div>
 
-                    <div class="   mt-3 ">
+                    <div class="mt-3">
                         <label for="" class="block text-slate-700">カテゴリー</label>
-                        <select name="category" id="category" class=" border w-full border-gray-300 h-8 rounded-lg pl-3">
+                        <select name="category" id="category" class="border w-full border-gray-300 h-8 py-0 rounded-lg pl-3">
                             <option value="" >選択してください</option>
                             <option value="wear">ウェア</option>
                             <option value="accessories">アクセサリー</option>
@@ -123,10 +123,10 @@
                             <option value="lifestyle">ライフスタイル</option>
                         </select>
                         @if ($errors->first('category')) 
-                            <p class="text-orange-400  text-sm font-semibold">※{{$errors->first('category')}}</p>
+                            <p class="text-orange-400  py-0 font-semibold">※{{$errors->first('category')}}</p>
                         @endif
 
-                        <select name="category_item" id="category_item" class="hidden border mt-3 w-full border-gray-300 h-8 pl-3 rounded-lg">
+                        <select name="category_item" id="category_item" class="py-0 hidden border mt-3 w-full border-gray-300 h-8 pl-3 rounded-lg">
                             <option value="">選択してください</option>
                         </select>
                         @if ($errors->first('category_item')) 
@@ -175,7 +175,7 @@
 
                     <div class="  mt-3 ">
                         <label for="color" class="block text-slate-700">カラー</label>
-                        <select name="color" id="color" class=" border w-full border-gray-300 h-8 rounded-lg pl-3 focus:border-none">
+                        <select name="color" id="color" class=" border py-0 w-full border-gray-300 h-8 rounded-lg pl-3 focus:border-none">
                             <div><option class="bg-slate-300 text-xl" value="色指定なし">色指定なし</option></div>
                             <option value="白色系">ホワイト(白)系</option>
                             <option value="黒色系">ブラック(黒)系</option>
