@@ -59,13 +59,21 @@ class CartController extends Controller
         $id = $request->input('product_id');
         $cart = session()->get('cart');
 
+        $product = Product::find($id);
         if(isset($cart[$id])) {
 
-                $cart[$id]['quantity']--;
+            if($cart[$id]['quantity'] ==  1){
 
-                session()->put('cart',$cart);
+                return back();
+            }
+            else
+            {
+            $cart[$id]['quantity']--;
+            session()->put('cart',$cart);
+
+            return back();
+            }
         }
-        return back();
     }
 
     public function incQty(Request $request)
