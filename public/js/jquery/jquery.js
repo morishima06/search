@@ -11039,6 +11039,7 @@ var __webpack_exports__ = {};
   !*** ./resources/js/jquery.js ***!
   \********************************/
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+// カート処理
 $(document).ready(function () {
   $('.add-btn').click(function (e) {
     e.preventDefault();
@@ -11130,7 +11131,17 @@ $(document).ready(function () {
       $('.ch-address').removeClass('hidden');
     }
   });
+}); // ローディング処理
+
+$(window).on('load', function () {
+  endLoading();
 });
+setTimeout('endLoading()', 100000);
+
+function endLoading() {
+  $('.loading').fadeOut(1500);
+  $('.load-content').fadeIn(2200);
+}
 })();
 
 /******/ })()

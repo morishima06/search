@@ -9,12 +9,21 @@ module.exports = {
     ],
 
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                    },
+                    animation: {
+                        loader: "loader 1.3s linear infinite",
+                      },
+                    keyframes: {
+                        loader: {
+                        "0%": { transform: "rotate(0)"},
+                        "100%": { transform: "rotate(360deg)" },
+                        },
+                    },
+                },
             },
-        },
-    },
 
     plugins: [require('@tailwindcss/forms'),
               require('@tailwindcss/line-clamp'),

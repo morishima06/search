@@ -1,7 +1,14 @@
 @extends('layouts.front')
 
 @section('content')
-    <section class="">
+    <div class="loading w-screen h-screen  bg-white fixed z-40 flex justify-center items-center -mt-20">
+        <div class="w-20 ">
+            <div class="animate-loader border-slate-300 w-12 h-12 border-t border-r m-auto rounded-full"></div>
+            <p class="loading-content text-center text-slate-500 text-sm mt-3 m-auto ">Loading</p>
+        </div>
+    </div>
+
+    <section class="load-content hidden">
             <div class="px-3">
             <h1 class="w-full  text-lg text-black font-bold border-b  mb-3  border-black">カテゴリー</h1>
 

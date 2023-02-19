@@ -8,6 +8,7 @@
         <title>{{ config('app.name', 'search') }}</title>
         <script src="{{ asset('/js/app.js') }}"></script>
         <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
         
 
         <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
