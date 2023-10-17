@@ -148,8 +148,8 @@ class HomeController extends Controller
         if($q){
             $query->where(function ($query) use ($q) {
                 $query->where("brand_name", "like", "%".$q."%")
-                    ->orWhere("product_name", "like", "%".$q."%");
-                });
+                ->orWhere("product_name", "like", "%".$q."%");
+            });
         }
         $group_colors = $query->groupBy('color')->select('color')->get('color');
 
