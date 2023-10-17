@@ -1,6 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
+    <!-- 表示アニmーション -->
     <div class="loading w-screen h-screen  bg-white fixed z-40 flex justify-center items-center -mt-20">
         <div class="w-20 ">
             <div class="animate-loader border-slate-300 w-12 h-12 border-t border-r m-auto rounded-full"></div>
@@ -45,7 +46,7 @@
             
             <div class="px-3">
                 <h1 class="w-full text-lg text-black font-bold border-b pb mb-3 mt-12  border-black">ブランド</h1>
-                <h2 class="text-sm  text-slate-600 font-semibold  mb-2 line-through"><span class="  w-full h-wull border-b border-slate-600 pb-1 " href="">全てのブランド</span> </h2>
+                <!-- <h2 class="text-sm  text-slate-600 font-semibold  mb-2 line-through"><span class="  w-full h-wull border-b border-slate-600 pb-1 " href="">全てのブランド</span> </h2> -->
             
                 <div class="flex mb-16">
                     <div class="sm:flex w-1/2 inline-block">
