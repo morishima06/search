@@ -29,6 +29,7 @@ class ProductController extends Controller
             'brand_name' => 'required',
             'color' => 'required',
             'price' => 'required',
+            'qty' => 'required | min:0'
           ];
         $message = [
             'uploadfile1.required' => '画像1枚目はアップロードしてください',
@@ -38,10 +39,12 @@ class ProductController extends Controller
             'brand_name.required' => 'ブランド名を入力してください',
             'color.required' => '色を選択してください',
             'price.required' => '価格を入力してください',
+            'qty.required' => '数量を入力してください',
+            'qty.max' => '0以上の数量を入力してください',
           ];
         $validator = Validator::make($request->all(), $rulus, $message);
         if($validator->fails()) {
-            return redirect('/admin.upload')
+            return back()
             ->withErrors($validator)
             ->withInput();
         }
@@ -51,6 +54,7 @@ class ProductController extends Controller
         $product_name = $request->input('product_name');
         $price = $request->input('price');
         $color = $request->input('color');
+        $qty = $request->input('qty');
         $product = new Product;
         $auth = Auth::id();
         $upload = $request->file('uploadfile1');
@@ -92,6 +96,7 @@ class ProductController extends Controller
             'color' => $color,
             'price' => $price,
             'user_id' => $auth,
+            'qty' => $qty,
             //image_pathをDBに保存
             'image_path1'=> $file_name1,
             'image_path2'=> $file_name2,
@@ -99,7 +104,7 @@ class ProductController extends Controller
             'image_path4'=> $file_name4
         ]);
         session()->flash('flash_message', '投稿が完了しました');
-        return redirect('/admin.product');
+        return redirect()->route('admin_product_show');
         }
 
     public function edit($id){
