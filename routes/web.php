@@ -61,6 +61,8 @@ Route::post('/delete_product_check/{id}',[ProductController::class, 'delete_chec
 Route::get('/profile',[ProfileController::class, 'index'] )->middleware(['auth'])->name('profile');
 Route::put('/edit_profile',[ProfileController::class, 'edit'] )->middleware(['auth'])->name('edit_profile');
 
+Route::get('/test',[ProductController::class, 'test'] )->name('test');
+
 
 
 

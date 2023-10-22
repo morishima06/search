@@ -189,6 +189,17 @@
                             @endif
                     </div>
 
+                    <div class="mr-8 ml-8 mt-3 mb-12">
+                            <label for="qty" class="block text-slate-700 ">数量</label>
+                            <input type="number" id="qty" name="qty" placeholder="数量を入力してください"  class=" w-full pl-2 h-8 border border-gray-300 rounded-lg focus:border-none" value="{{$product->qty}}">
+                            @if ($errors->first('qty')) 
+                                <p class="text-orange-400 mt-1  text-sm font-semibold">※{{$errors->first('qty')}}</p>
+                            @endif
+                    </div>
+
+
+                    
+
                     <div class="flex justify-center py-7">
                     <button type="submit" class="hover:bg-zinc-500 border hover:text-white  border-gray-200 rounded mb-4 bg-white	w-48 h-10">変更</button>
                     </div>

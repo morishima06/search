@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\UserDetail;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 
 use Illuminate\Http\Request;
@@ -57,12 +58,20 @@ class ProductController extends Controller
         $qty = $request->input('qty');
         $product = new Product;
         $auth = Auth::id();
-        $upload = $request->file('uploadfile1');
-        //imageの名前を取得
         if($request->file('uploadfile1')){
-        $file_name1 = $request->file('uploadfile1')->getClientOriginalName();
-        $request->file('uploadfile1')->storeAs('public/image',$file_name1);
-        $file_name1 = 'storage/image/' .  $file_name1;
+        // // 画像の名前を取得
+        // $file_name1 = $request->file('uploadfile1')->getClientOriginalName();
+        $image = $request->file('uploadfile1');
+        $image_name = $request->file('uploadfile1')->getClientOriginalName();
+
+        // バケットのフォルダへアップロードする
+        $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+        // アップロードした画像のフルパスを取得
+        $file_name1 = Storage::disk('s3')->url($path);
+
+        // 画像データ保存
+        // DB用の画像パスを作成
+        
         }else{
             $file_name1 = null;
         }
@@ -128,8 +137,10 @@ class ProductController extends Controller
          $color = $request->input('color');
          $price = $request->input('price');
          $product = product::find($id);
+
          if($request->file('uploadfile1')){
             $file_name1 = $request->file('uploadfile1')->getClientOriginalName();
+            
             $request->file('uploadfile1')->storeAs('public/image',$file_name1);
             $file_name1 = 'storage/image/' .  $file_name1;
             }else{
@@ -176,6 +187,11 @@ class ProductController extends Controller
         $products = Product::find($id);
         $products->delete();
         return  redirect(route('product'));
+    }
+
+    public function test(){
+        $path = Storage::disk('s3')->url('product/coat.jpg');
+    return view('home/test', compact('path'));
     }
 
 }
