@@ -9,7 +9,7 @@
                 <!-- Additional required wrapper -->
                     <div class="swiper-wrapper  ">
                         <!-- Slides -->
-                        <div class="swiper-slide flex justify-center "><img src="asset{{$product->image_path1}}" alt="" class=" mx-2  sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
+                        <div class="swiper-slide flex justify-center "><img src="{{asset($product->image_path1)}}" alt="" class=" mx-2  sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
                         <div class="swiper-slide  {{ $product->image_path2 == null ? 'hidden':''}}"><img src="{{asset($product->image_path2)}}" alt="" class="w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
                         <div class="swiper-slide  {{ $product->image_path3 == null ? 'hidden':''}}"><img src="{{asset($product->image_path3)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
                         <div class="swiper-slide  {{ $product->image_path4 == null ? 'hidden':''}}"><img src="{{asset($product->image_path4)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
