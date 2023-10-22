@@ -59,40 +59,35 @@ class ProductController extends Controller
         $product = new Product;
         $auth = Auth::id();
         if($request->file('uploadfile1')){
-        // // 画像の名前を取得
-        // $file_name1 = $request->file('uploadfile1')->getClientOriginalName();
         $image = $request->file('uploadfile1');
+        // 画像の名前を取得
         $image_name = $request->file('uploadfile1')->getClientOriginalName();
-
         // バケットのフォルダへアップロードする
         $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
         // アップロードした画像のフルパスを取得
         $file_name1 = Storage::disk('s3')->url($path);
 
-        // 画像データ保存
-        // DB用の画像パスを作成
-        
         }else{
             $file_name1 = null;
         }
         if($request->file('uploadfile2')){
-        $file_name2 = $request->file('uploadfile2')->getClientOriginalName();
-        $request->file('uploadfile2')->storeAs('public/image',$file_name2);
-        $file_name2 = 'storage/image/' .  $file_name2;
-        }else{
+            $image_name = $request->file('uploadfile2')->getClientOriginalName();
+            $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+            $file_name3 = Storage::disk('s3')->url($path);
+            }else{
         $file_name2 = null;
         }
         if($request->file('uploadfile3')){
-            $file_name3 = $request->file('uploadfile3')->getClientOriginalName();
-            $request->file('uploadfile3')->storeAs('public/image',$file_name3);
-            $file_name3 = 'storage/image/' .  $file_name3;
+            $image_name = $request->file('uploadfile3')->getClientOriginalName();
+            $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+            $file_name3 = Storage::disk('s3')->url($path);
         }else{
             $file_name3 = null;
         }
         if($request->file('uploadfile4')){
-        $file_name4 = $request->file('uploadfile4')->getClientOriginalName();
-        $request->file('uploadfile4')->storeAs('public/image',$file_name4);
-        $file_name4 = 'storage/image/' .  $file_name4;
+            $image_name = $request->file('uploadfile4')->getClientOriginalName();
+            $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+            $file_name4 = Storage::disk('s3')->url($path);
         }else{
         $file_name4 = null;
         }
