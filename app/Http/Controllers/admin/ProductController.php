@@ -73,7 +73,7 @@ class ProductController extends Controller
         if($request->file('uploadfile2')){
             $image_name = $request->file('uploadfile2')->getClientOriginalName();
             $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
-            $file_name3 = Storage::disk('s3')->url($path);
+            $file_name2 = Storage::disk('s3')->url($path);
             }else{
         $file_name2 = null;
         }
