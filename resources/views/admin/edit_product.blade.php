@@ -31,7 +31,7 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="previewBox  w-full h-full">
+                                <div class="previewBox flex justify-center w-full h-full">
                                 @if($product->image_path1)
                                     <img src="{{asset($product->image_path1)}}" alt="">
                                     @endif
@@ -163,7 +163,7 @@
 
                     <div class="ml-8  mt-3 pr-8">
                         <label for="color" class="block text-slate-700">カラー</label>
-                        <select name="color" id="color" class=" border w-full border-gray-300 h-8 rounded-lg pl-3 focus:border-none">
+                        <select name="color" id="color" class=" border w-full border-gray-300 h-8 rounded-lg py-0 pl-3 focus:border-none">
                             <div><option class="bg-slate-300 text-xl" value="">色指定なし</option></div>
                             <option value="白色系" <?php if($product->color == "白色系"){echo 'selected="selected"';}?>>ホワイト(白)系</option>
                             <option value="黒色系" <?php if($product->color == "黒色系"){echo 'selected="selected"';}?>>ブラック(黒)系</option>
@@ -183,7 +183,7 @@
                     <div class="ml-8  mt-3 relative mr-8 mb-12 ">
                             <label for="price" class="block text-slate-700 ">価格</label>
                             <span class="absolute top-7 h-6 before:left-4 left-2 z-10">¥</span>
-                            <input type="text" id="price" name="price" placeholder="0"  class="absolute w-full pl-8 h-8 border border-gray-300 rounded-lg focus:border-none"  value="{{$product->price}}">
+                            <input type="text" id="price" name="price" placeholder="0"  class="absolute w-full pl-7 h-8 border border-gray-300 rounded-lg focus:border-none"  value="{{$product->price}}">
                             @if ($errors->first('price')) 
                                 <p class="text-orange-400 mt-8  text-sm font-semibold">※{{$errors->first('price')}}</p>
                             @endif
@@ -228,125 +228,9 @@
     }
     </style>
 
-    <script>
-            // ドラッグ&ドロップエリアの取得
-            var preview = document.getElementsByClassName('preview');
-            // input[type=file]の取得
-            var fileInput = document.getElementsByClassName('uploadfile');
-            //inputタグ含む文字等の取得
-            var inputArea = document.getElementsByClassName('inputArea');
-            //画像表示エリアの取得
-            var previewBox =  document.getElementsByClassName("previewBox");
-            //画像削除ボタンの取得
-            var removeImg = document.getElementsByClassName('removeImg');
+    <script src="{{asset('/js/upload/upload.js') }}"></script>
 
 
-            //画像アップロードから削除までのループ
-            for(let i=0; i<preview.length; i++){
-
-            // ドラッグオーバー時の処理
-            preview[i].addEventListener('dragover', function(e){
-                e.preventDefault();
-                this.classList.add('dragover');
-            });
-
-            // ドラッグアウト時の処理
-            preview[i].addEventListener('dragleave', function(e){
-                e.preventDefault();
-                this.classList.remove('dragover');
-            });
-
-            // ドロップ時の処理
-            preview[i].addEventListener('drop', function(e){
-                e.preventDefault();
-                this.classList.remove('dragover');
-
-                var files = e.dataTransfer.files;
-
-                // 取得したファイルをinput[type=file]へ
-                fileInput[i].files = files;
-
-                files = files[0]
-
-                var reader = new FileReader();
-
-                if(!previewBox[i].innerHTML== ''){
-                    previewBox[i].innerHTML= ''
-                }
-           
-                reader.onload = function(event) {
-                var img = document.createElement("img");
-                img.setAttribute("src", event.target.result);
-                img.setAttribute("class", "previewImage");
-                previewBox[i].appendChild(img);
-                }
-                reader.readAsDataURL(files);
-
-                //削除ボタンの表示
-                if(removeImg[i].classList.contains('hidden')){
-                    removeImg[i].classList.remove('hidden')
-                    inputArea[i].classList.add('hidden')                   
-                }
-            })
-
-            //inputへの発火
-            preview[i].addEventListener('click', function(){
-            if (document.createEvent) {
-                var evt = document.createEvent('MouseEvents');
-                // イベントの初期化
-                evt.initEvent('click', false, true);
-                // イベントを発生させる
-                var elm = document.getElementsByClassName('uploadfile');
-                elm[i].dispatchEvent(evt);
-                }
-                 else {
-                // for IE8
-                document.getElementsByClassName('uploadfile').fireEvent('onclick');
-                }
-            })
-
-            //クリックからの画像プレヴュー
-            fileInput[i].addEventListener('change', function(e){
-
-                files = event.target.files[0];
-
-                if(!previewBox[i].innerHTML== ''){
-                    previewBox[i].innerHTML= ''
-                }
-
-                var reader = new FileReader();                
-           
-                reader.onload = function(event) {
-                var img = document.createElement("img");
-                img.setAttribute("src", event.target.result);
-                img.setAttribute("class", "previewImage");
-                previewBox[i].appendChild(img);
-                }
-                reader.readAsDataURL(files);
-
-                //削除ボタンの表示
-                if(removeImg[i].classList.contains('hidden')){
-                    removeImg[i].classList.remove('hidden')
-                    inputArea[i].classList.add('hidden')                   
-                }
-            })
-
-            ///画像と削除ボタンの削除
-            removeImg[i].addEventListener('click', function(){
-                if(fileInput[i].value != null){
-                    fileInput[i].value = '';
-                }
-                if(!previewBox[i].innerHTML== ''){
-                    previewBox[i].innerHTML= ''
-                }
-                if(!removeImg[i].classList.contains('hidden')){
-                    removeImg[i].classList.add('hidden') 
-                    inputArea[i].classList.remove('hidden')   
-                }
-            })
-        }//forの閉じタグ
-
-    </script>
 
 
 </x-app-layout>

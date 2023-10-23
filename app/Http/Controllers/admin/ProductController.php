@@ -116,16 +116,27 @@ class ProductController extends Controller
         return view('admin.edit_product' ,compact('products','id'));
     }
     public function edit_check(Request $request){
-          $request->validate([
+        $rulus = [
+            'uploadfile1' => 'required',
             'product_name' => 'required',
             'color' => 'required',
             'price' => 'required',
-        ],
-         [
+            'qty' => 'required | min:0'
+          ];
+        $message = [
+            'uploadfile1.required' => '画像1枚目はアップロードしてください',
             'product_name.required' => '商品名を入力してください',
-            'color.required' => 'カラーを選択してください',
+            'category_item.required' => 'カテゴリーを選択してください',
             'price.required' => '価格を入力してください',
-         ]);
+            'qty.required' => '数量を入力してください',
+            'qty.max' => '0以上の数量を入力してください',
+          ];
+        $validator = Validator::make($request->all(), $rulus, $message);
+        if($validator->fails()) {
+            return back()
+            ->withErrors($validator)
+            ->withInput();
+        }
 
          $id = $request->input('id');
          $product_name = $request->input('product_name');
@@ -134,33 +145,40 @@ class ProductController extends Controller
          $product = product::find($id);
 
          if($request->file('uploadfile1')){
-            $file_name1 = $request->file('uploadfile1')->getClientOriginalName();
-            
-            $request->file('uploadfile1')->storeAs('public/image',$file_name1);
-            $file_name1 = 'storage/image/' .  $file_name1;
+            $image = $request->file('uploadfile1');
+            // 画像の名前を取得
+            $image_name = $request->file('uploadfile1')->getClientOriginalName();
+            // バケットのフォルダへアップロードする
+            $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+            // アップロードした画像のフルパスを取得
+            $file_name1 = Storage::disk('s3')->url($path);
+    
             }else{
                 $file_name1 = null;
             }
             if($request->file('uploadfile2')){
-            $file_name2 = $request->file('uploadfile2')->getClientOriginalName();
-            $request->file('uploadfile2')->storeAs('public/image',$file_name2);
-            $file_name2 = 'storage/image/' .  $file_name2;
-        }else{
+                $image = $request->file('uploadfile2');
+                $image_name = $request->file('uploadfile1')->getClientOriginalName();
+                $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+                $file_name2 = Storage::disk('s3')->url($path);
+                }else{
             $file_name2 = null;
     
         }
         if($request->file('uploadfile3')){
-            $file_name3 = $request->file('uploadfile3')->getClientOriginalName();
-            $request->file('uploadfile3')->storeAs('public/image',$file_name3);
-            $file_name3 = 'storage/image/' .  $file_name3;
-        }else{
+            $image = $request->file('uploadfile3');
+            $image_name = $request->file('uploadfile1')->getClientOriginalName();
+            $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+            $file_name3 = Storage::disk('s3')->url($path);
+    }else{
             $file_name3 = null;
         }
         if($request->file('uploadfile4')){
-            $file_name4 = $request->file('uploadfile4')->getClientOriginalName();
-            $request->file('uploadfile4')->storeAs('public/image',$file_name4);
-            $file_name4 = 'storage/image/' .  $file_name4;
-        }else{
+            $image = $request->file('uploadfile4');
+            $image_name = $request->file('uploadfile1')->getClientOriginalName();
+            $path = Storage::disk('s3')->putFileAs('product', $image, $image_name, 'public');
+            $file_name4 = Storage::disk('s3')->url($path);
+    }else{
             $file_name4 = null;
         }
         $product->product_name = $product_name;

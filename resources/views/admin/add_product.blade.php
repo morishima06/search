@@ -194,7 +194,7 @@
                     <div class="  mt-3 relative  mb-12 ">
                             <label for="price" class="block text-slate-700 ">価格</label>
                             <span class="absolute top-7 h-6 before:left-4 left-2 z-10">¥</span>
-                            <input type="text" id="price" name="price" placeholder="0"  class="absolute w-full pl-8 h-8 border border-gray-300 rounded-lg focus:border-none ">
+                            <input type="text" id="price" name="price" placeholder="0"  class="absolute w-full pl-7 h-8 border border-gray-300 rounded-lg focus:border-none ">
                             @if ($errors->first('price')) 
                                 <p class="text-orange-400   text-sm font-semibold">※{{$errors->first('price')}}</p>
                             @endif
