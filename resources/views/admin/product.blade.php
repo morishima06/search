@@ -7,7 +7,7 @@
                 <span class="inline-block  border-l rotate-45 border-white  h-6 top-3 ml-6 absolute"></span>
                 <span class="inline-block  border-r -rotate-45 border-white  h-6 top-3 ml-6 absolute"></span>
             </div>
-             {{'新規出品完了しました'}}
+             {{session('flash_message')}}
          </div>
 
     @endif

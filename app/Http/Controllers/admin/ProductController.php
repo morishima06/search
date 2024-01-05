@@ -107,7 +107,7 @@ class ProductController extends Controller
             'image_path3'=> $file_name3,
             'image_path4'=> $file_name4
         ]);
-        session()->flash('flash_message', '投稿が完了しました');
+        session()->flash('flash_message', '出品が完了しました');
         return redirect()->route('admin_product_show');
         }
 
@@ -119,7 +119,6 @@ class ProductController extends Controller
         $rulus = [
             'uploadfile1' => 'required',
             'product_name' => 'required',
-            'color' => 'required',
             'price' => 'required',
             'qty' => 'required | min:0'
           ];
@@ -189,8 +188,9 @@ class ProductController extends Controller
         $product->image_path3 =  $file_name3;
         $product->image_path4 =  $file_name4;
         $product->save();
+        session()->flash('flash_message', '編集が完了しました');
 
-        return redirect(route('product'));
+        return redirect(route('admin_product_show'));
     }
     public function delete_confirm($id){
         $products =   Product::where('id', $id)->get();
@@ -199,12 +199,9 @@ class ProductController extends Controller
     public function delete_check($id){
         $products = Product::find($id);
         $products->delete();
-        return  redirect(route('product'));
+        session()->flash('flash_message', '商品の削除を完了しました');
+        return  redirect(route('admin_product_show'));
     }
 
-    public function test(){
-        $path = Storage::disk('s3')->url('product/coat.jpg');
-    return view('home/test', compact('path'));
-    }
 
 }

@@ -18,24 +18,22 @@ class CheckoutController extends Controller
     public function index()
     {
 
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             $auth = Auth::user();
             $userdetail = Auth::user()->load('userdetail')->userdetail;
 
-            return view('home.checkout.checkout', compact('auth','userdetail'));
-        }
-        else
-        {
+            return view('home.checkout.checkout', compact('auth', 'userdetail'));
+        } else {
             return view('home.checkout.guestcheckout');
         }
     }
 
-    public function pay(){
+    public function pay()
+    {
 
-         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
 
-         foreach(session('cart') as $id => $details){
+        foreach (session('cart') as $id => $details) {
             $lineItems[] = [
                 'price_data' => [
                     'currency' => 'jpy',
@@ -54,17 +52,17 @@ class CheckoutController extends Controller
             'mode' => 'payment',
             'success_url' => route('success'),
             'cancel_url' => route('cart'),
-          ]);
+        ]);
 
-          return redirect()->away($session->url);
+        return redirect()->away($session->url);
     }
 
 
 
-    public function success(){
+    public function success()
+    {
         session()->forget('cart');
 
         return view('home.checkout.success');
     }
-
 }

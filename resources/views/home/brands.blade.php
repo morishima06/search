@@ -218,8 +218,7 @@
 
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
     <script src="{{ asset('/js/accordion/accordion.js') }}"></script>
-    <script src="{{ asset('/js/input/disabled.js') }}"></script>
-    <script src="{{ asset('/js/input/submit.js') }}"></script>
+    <script src="{{ asset('/js/input/input.js') }}"></script>
     <script src="{{ asset('/js/slide/responsive_slide.js') }}"></script>
     @endsection
 

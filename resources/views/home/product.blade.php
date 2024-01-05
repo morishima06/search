@@ -6,7 +6,7 @@
         <div class=" ">
             <div class=" flex justify-center">
                 <div class="swiper mySwiper2  w-full aspect-square  sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-                <!-- Additional required wrapper -->
+                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper  ">
                         <!-- Slides -->
                         <div class="swiper-slide flex justify-center "><img src="{{asset($product->image_path1)}}" alt="" class=" mx-2  sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
@@ -14,20 +14,20 @@
                         <div class="swiper-slide  {{ $product->image_path3 == null ? 'hidden':''}}"><img src="{{asset($product->image_path3)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
                         <div class="swiper-slide  {{ $product->image_path4 == null ? 'hidden':''}}"><img src="{{asset($product->image_path4)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
                     </div>
-                <!-- 必要に応じてナビボタン -->
+                    <!-- 必要に応じてナビボタン -->
                     <div class="swiper-button-prev after:bg-[url('../image/left_button.png')] after:bg-no-repeat after:w-8 after:h-8  after:bg-contain w-8 h-8 pt-4"></div>
                     <div class="swiper-button-next after:bg-[url('../image/right_button.png')] after:bg-no-repeat after:w-8 after:h-8  after:bg-contain h-8 w-8 pt-4"></div>
                 </div>
             </div>
             <div class="swiper mySwiper w-full  sm:w-80 lg:w-96 flex justify-center">
                 <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper   sm:h-20  lg:h-24 ">
-                        <!-- Slides -->
-                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path1 == null ? 'hidden':''}} "><img src="{{asset($product->image_path1)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path2 == null ? 'hidden':''}} "><img src="{{asset($product->image_path2)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path3 == null ? 'hidden':''}} "><img src="{{asset($product->image_path3)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                        <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path4 == null ? 'hidden':''}} "><img src="{{asset($product->image_path4)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
-                    </div>
+                <div class="swiper-wrapper   sm:h-20  lg:h-24 ">
+                    <!-- Slides -->
+                    <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path1 == null ? 'hidden':''}} "><img src="{{asset($product->image_path1)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                    <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path2 == null ? 'hidden':''}} "><img src="{{asset($product->image_path2)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                    <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path3 == null ? 'hidden':''}} "><img src="{{asset($product->image_path3)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                    <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path4 == null ? 'hidden':''}} "><img src="{{asset($product->image_path4)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                </div>
             </div>
         </div>
 
@@ -43,10 +43,8 @@
             </div>
         </div>
     </div>
-@endsection
+    @endsection
 
-@section('script')
+    @section('script')
     <script src="{{ asset('/js/swiper/double_config.js') }}"></script>
-@endsection
-
-
+    @endsection

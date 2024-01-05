@@ -11,6 +11,8 @@ class ResetPasswordNotification extends Notification
 {
     use Queueable;
 
+    private $url;
+
     /**
      * Create a new notification instance.
      *
@@ -45,6 +47,7 @@ class ResetPasswordNotification extends Notification
                     ->greeting('いつもご利用頂きありがとうございます')
                     ->action('パスワードリセット', $this->url)
                     ->line('こちらからパスワードリセットを行ってください');
+                    
     }
 
     /**

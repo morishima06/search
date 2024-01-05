@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "@tailwindcss/line-clamp": "^0.4.2",
-        "swiper": "^8.4.4",
-        "jquery": "^3.6.3"
+        "jquery": "^3.6.3",
+        "swiper": "^8.4.7"
     }
 }

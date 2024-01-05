@@ -19,27 +19,26 @@ class CartController extends Controller
 
         $cart = session()->get('cart');
 
-        if(!$cart) {
+        if (!$cart) {
             $cart = [
-                    $id => [
-                        "product_name" => $product->product_name,
-                        "brand_name" => $product->brand_name,
-                        "quantity" => 1,
-                        "price" => $product->price,
-                        "photo" => $product->image_path1
-                    ]
+                $id => [
+                    "product_name" => $product->product_name,
+                    "brand_name" => $product->brand_name,
+                    "quantity" => 1,
+                    "price" => $product->price,
+                    "photo" => $product->image_path1
+                ]
             ];
-   
+
             session()->put('cart', $cart);
             return back();
         }
 
-        if(isset($cart[$id])) {
+        if (isset($cart[$id])) {
 
             $cart[$id]['quantity']++;
             session()->put('cart', $cart); // this code put product of choose in cart
             return back();
-   
         }
 
         $cart[$id] = [
@@ -51,7 +50,6 @@ class CartController extends Controller
         ];
         session()->put('cart', $cart); // this code put product of choose in cart
         return back();
-
     }
 
     public function decQty(Request $request)
@@ -60,18 +58,16 @@ class CartController extends Controller
         $cart = session()->get('cart');
 
         $product = Product::find($id);
-        if(isset($cart[$id])) {
+        if (isset($cart[$id])) {
 
-            if($cart[$id]['quantity'] ==  1){
+            if ($cart[$id]['quantity'] ==  1) {
 
                 return back();
-            }
-            else
-            {
-            $cart[$id]['quantity']--;
-            session()->put('cart',$cart);
+            } else {
+                $cart[$id]['quantity']--;
+                session()->put('cart', $cart);
 
-            return back();
+                return back();
             }
         }
     }
@@ -82,36 +78,32 @@ class CartController extends Controller
         $cart = session()->get('cart');
 
         $product = Product::find($id);
-        if(isset($cart[$id])) {
+        if (isset($cart[$id])) {
 
-            if($cart[$id]['quantity'] >=  $product->qty){
+            if ($cart[$id]['quantity'] >=  $product->qty) {
 
                 return response()->json(['status' => 'これ以上は追加できません']);
-            }
-            else
-            {
-            $cart[$id]['quantity']++;
-            session()->put('cart',$cart);
+            } else {
+                $cart[$id]['quantity']++;
+                session()->put('cart', $cart);
 
-            return back();
-
+                return back();
             }
         }
     }
 
     public function deleteToCart(Request $request)
     {
-        if($request->product_id) {
+        if ($request->product_id) {
 
             $cart = session()->get('cart');
-   
-            if(isset($cart[$request->product_id])) {
-   
+
+            if (isset($cart[$request->product_id])) {
+
                 unset($cart[$request->product_id]);
                 session()->put('cart', $cart);
                 return back();
             }
         }
     }
-
 }

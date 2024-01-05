@@ -6,7 +6,6 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Mail\ContactSendMail;
 
 class ContactSendMail extends Mailable
 {
@@ -14,7 +13,8 @@ class ContactSendMail extends Mailable
 
 
     private $name;
-    private $emal;
+    private $email;
+    private $content;
     private $message;
 
 

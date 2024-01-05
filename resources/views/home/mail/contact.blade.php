@@ -1,12 +1,13 @@
-@extends('layouts.front')
+@extends('layouts.emailFrame')
 
 @section('content')
-    <form method="POST" action="{{ route('contact_confirm') }}" class="pt-5" >
+<div class="flex-1">
+    <form method="POST" action="{{ route('contact_confirm') }}" class="pt-5">
         @csrf
         @method('POST')
         <div class="flex justify-center  w-full">
             <div class=" max-w-xl w-full px-2">
-            <h1 class="text-2xl flex justify-center mt-5 mb-3 ">お問い合わせ</h1>
+                <h1 class="text-2xl flex justify-center mt-5 mb-3 ">お問い合わせ</h1>
                 <div class="mg-b_40 w-full">
                     <label for="name" class="required-tag">名前</label><br>
                     <input type="text" placeholder="山田太郎" id="name" name="name" value="{{ old('name') }}" class="w-full h-8 border-slate-600 ">
@@ -39,4 +40,5 @@
             </div>
         </div>
     </form>
+</div>
 @endsection

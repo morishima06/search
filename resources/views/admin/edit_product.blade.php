@@ -230,6 +230,127 @@
 
     <script src="{{asset('/js/upload/upload.js') }}"></script>
 
+    <script>
+            // ドラッグ&ドロップエリアの取得
+            var preview = document.getElementsByClassName('preview');
+            // input[type=file]の取得
+            var fileInput = document.getElementsByClassName('uploadfile');
+            //inputタグ含む文字等の取得
+            var inputArea = document.getElementsByClassName('inputArea');
+            //画像表示エリアの取得
+            var previewBox =  document.getElementsByClassName("previewBox");
+            //画像削除ボタンの取得
+            var removeImg = document.getElementsByClassName('removeImg');
+
+
+            //画像アップロードから削除までのループ
+            for(let i=0; i<preview.length; i++){
+
+            // ドラッグオーバー時の処理
+            preview[i].addEventListener('dragover', function(e){
+                e.preventDefault();
+                this.classList.add('dragover');
+            });
+
+            // ドラッグアウト時の処理
+            preview[i].addEventListener('dragleave', function(e){
+                e.preventDefault();
+                this.classList.remove('dragover');
+            });
+
+            // ドロップ時の処理
+            preview[i].addEventListener('drop', function(e){
+                e.preventDefault();
+                this.classList.remove('dragover');
+
+                var files = e.dataTransfer.files;
+
+                // 取得したファイルをinput[type=file]へ
+                fileInput[i].files = files;
+
+                files = files[0]
+
+                var reader = new FileReader();
+
+                if(!previewBox[i].innerHTML== ''){
+                    previewBox[i].innerHTML= ''
+                }
+           
+                reader.onload = function(event) {
+                var img = document.createElement("img");
+                img.setAttribute("src", event.target.result);
+                img.setAttribute("class", "previewImage");
+                previewBox[i].appendChild(img);
+                }
+                reader.readAsDataURL(files);
+
+                //削除ボタンの表示
+                if(removeImg[i].classList.contains('hidden')){
+                    removeImg[i].classList.remove('hidden')
+                    inputArea[i].classList.add('hidden')                   
+                }
+            })
+
+            //inputへの発火
+            preview[i].addEventListener('click', function(){
+            if (document.createEvent) {
+                var evt = document.createEvent('MouseEvents');
+                // イベントの初期化
+                evt.initEvent('click', false, true);
+                // イベントを発生させる
+                var elm = document.getElementsByClassName('uploadfile');
+                elm[i].dispatchEvent(evt);
+                }
+                 else {
+                // for IE8
+                document.getElementsByClassName('uploadfile').fireEvent('onclick');
+                }
+            })
+
+            //クリックからの画像プレヴュー
+            fileInput[i].addEventListener('change', function(e){
+
+                files = event.target.files[0];
+
+                if(!previewBox[i].innerHTML== ''){
+                    previewBox[i].innerHTML= ''
+                }
+
+                var reader = new FileReader();                
+           
+                reader.onload = function(event) {
+                var img = document.createElement("img");
+                img.setAttribute("src", event.target.result);
+                img.setAttribute("class", "previewImage");
+                previewBox[i].appendChild(img);
+                }
+                reader.readAsDataURL(files);
+
+                //削除ボタンの表示
+                if(removeImg[i].classList.contains('hidden')){
+                    removeImg[i].classList.remove('hidden')
+                    inputArea[i].classList.add('hidden')                   
+                }
+            })
+
+            ///画像と削除ボタンの削除
+            removeImg[i].addEventListener('click', function(){
+                if(fileInput[i].value != null){
+                    fileInput[i].value = '';
+                }
+                if(!previewBox[i].innerHTML== ''){
+                    previewBox[i].innerHTML= ''
+                }
+                if(!removeImg[i].classList.contains('hidden')){
+                    removeImg[i].classList.add('hidden') 
+                    inputArea[i].classList.remove('hidden')   
+                }
+            })
+        }//forの閉じタグ
+
+    </script>
+
+
 
 
 
