@@ -14,7 +14,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
 
-- name: Deploy
+
+# デプロイする
+     - name: Deploy
        run: |
 
 
