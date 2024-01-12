@@ -1,12 +1,8 @@
-name: workflow_dispatch sample 1
-
-on:
-  workflow_dispatch:
+name: Hello
+on: push
 
 jobs:
-  printLog:
+  hello:
     runs-on: ubuntu-latest
-
     steps:
-    - name: print log
-      run: echo "Hello!"
+      - run: echo "Hello"
