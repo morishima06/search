@@ -1,13 +1,8 @@
-name: World
-on:
-  workflow_run:
-    workflows:
-      - Hello
-    types:
-      - completed
+name: Hello
+on: push
 
 jobs:
-  world:
+  hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "World"
+      - run: echo "Hello"
