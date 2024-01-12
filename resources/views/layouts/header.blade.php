@@ -1,7 +1,7 @@
 <header  class="fixed w-full bg-white  pt-3    border-b border-black z-10    ">
     <div class=" flex items-center px-3">
 
-        <a href="{{route('home')}}"><h1 class="title text-4xl">EARCH</h1></a>
+        <a href="{{route('home')}}"><h1 class="title text-4xl">SEARCH</h1></a>
         <div class="ml-auto flex items-center">
             <!-- 検索ボタン -->
             <div class="search-header cursor-pointer transition flex  space-x-1  items-center h-14 mr-1 ">
