@@ -1,20 +1,11 @@
 @extends('layouts.front')
 
 @section('content')
-<<<<<<< HEAD
-    <!-- 表示アニmーション -->
-    <div class="loading w-screen h-screen  bg-white fixed z-40 flex justify-center items-center -mt-20">
-        <div class="w-20 ">
-            <div class="animate-loader border-slate-300 w-12 h-12 border-t border-r m-auto rounded-full"></div>
-            <p class="loading-content text-center text-slate-500 text-sm mt-3 m-auto ">Loading</p>
-        </div>
-=======
 <!-- ローディング処理 -->
 <div class="loading w-screen h-screen  bg-white fixed z-40 flex justify-center items-center -mt-20">
     <div class="w-20 ">
         <div class="animate-loader border-slate-300 w-12 h-12 border-t border-r m-auto rounded-full"></div>
         <p class="loading-content text-center text-slate-500 text-sm mt-3 m-auto ">Loading</p>
->>>>>>> 1725579bd9bb8ad34669f5ebffee49736599242c
     </div>
 </div>
 
