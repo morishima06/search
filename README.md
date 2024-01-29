@@ -1,16 +1,23 @@
-# ポートフォリオサイト
-https://sm-portfolio.net/
+# search
 
-# 使用環境
+# サ-ビス概要
+Ecサイト
 
-- Laravel 8.83.23
-- Javascript(jquery)
-- sass(css)
-- heroku
+# 主な使用技術・言語
 
-# 制作サイト一覧
-- search(Ecサイト)
-- location(アパレルショップ検索サイト)
+- Laravel8
+ - laravel breeze
+ - tailwind(css)
+- javascript(jquery)
+- Mysql
+- webpack(laravelmix)
 
-# 機能
-お問合せフォーム
+# 機能一覧
+  - キーワード検索
+  - ログイン機能
+  - 画像アップロード
+  - カート機能(session管理)
+  - 決済機能(stripe Api)
+  - お問合せフォーム
+  - lodaing画面
+  - レスポンシブ対応
