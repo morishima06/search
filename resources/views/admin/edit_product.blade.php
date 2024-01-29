@@ -31,7 +31,7 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="previewBox  w-full h-full">
+                                <div class="previewBox flex justify-center w-full h-full">
                                 @if($product->image_path1)
                                     <img src="{{asset($product->image_path1)}}" alt="">
                                     @endif
@@ -163,7 +163,7 @@
 
                     <div class="ml-8  mt-3 pr-8">
                         <label for="color" class="block text-slate-700">カラー</label>
-                        <select name="color" id="color" class=" border w-full border-gray-300 h-8 rounded-lg pl-3 focus:border-none">
+                        <select name="color" id="color" class=" border w-full border-gray-300 h-8 rounded-lg py-0 pl-3 focus:border-none">
                             <div><option class="bg-slate-300 text-xl" value="">色指定なし</option></div>
                             <option value="白色系" <?php if($product->color == "白色系"){echo 'selected="selected"';}?>>ホワイト(白)系</option>
                             <option value="黒色系" <?php if($product->color == "黒色系"){echo 'selected="selected"';}?>>ブラック(黒)系</option>
@@ -183,11 +183,22 @@
                     <div class="ml-8  mt-3 relative mr-8 mb-12 ">
                             <label for="price" class="block text-slate-700 ">価格</label>
                             <span class="absolute top-7 h-6 before:left-4 left-2 z-10">¥</span>
-                            <input type="text" id="price" name="price" placeholder="0"  class="absolute w-full pl-8 h-8 border border-gray-300 rounded-lg focus:border-none"  value="{{$product->price}}">
+                            <input type="text" id="price" name="price" placeholder="0"  class="absolute w-full pl-7 h-8 border border-gray-300 rounded-lg focus:border-none"  value="{{$product->price}}">
                             @if ($errors->first('price')) 
                                 <p class="text-orange-400 mt-8  text-sm font-semibold">※{{$errors->first('price')}}</p>
                             @endif
                     </div>
+
+                    <div class="mr-8 ml-8 mt-3 mb-12">
+                            <label for="qty" class="block text-slate-700 ">数量</label>
+                            <input type="number" id="qty" name="qty" placeholder="数量を入力してください"  class=" w-full pl-2 h-8 border border-gray-300 rounded-lg focus:border-none" value="{{$product->qty}}">
+                            @if ($errors->first('qty')) 
+                                <p class="text-orange-400 mt-1  text-sm font-semibold">※{{$errors->first('qty')}}</p>
+                            @endif
+                    </div>
+
+
+                    
 
                     <div class="flex justify-center py-7">
                     <button type="submit" class="hover:bg-zinc-500 border hover:text-white  border-gray-200 rounded mb-4 bg-white	w-48 h-10">変更</button>
@@ -216,6 +227,8 @@
         color:#fff;
     }
     </style>
+
+    <script src="{{asset('/js/upload/upload.js') }}"></script>
 
     <script>
             // ドラッグ&ドロップエリアの取得
@@ -336,6 +349,9 @@
         }//forの閉じタグ
 
     </script>
+
+
+
 
 
 </x-app-layout>

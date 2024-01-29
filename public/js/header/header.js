@@ -1,29 +1,34 @@
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!***************************************!*\
+  !*** ./resources/js/header/header.js ***!
+  \***************************************/
 hamburger = document.querySelector('.hamburger');
 hamburger_contents = document.querySelector('.hamburger_contents');
 
-hamburger.onclick=()=>{
-    hamburger_contents.classList.add('-translate-x-full')
-}
+hamburger.onclick = function () {
+  hamburger_contents.classList.add('-translate-x-full');
+};
 
 drop_button = document.querySelector('.drop_button');
-drop_button.onclick=()=>{
-    hamburger_contents.classList.remove('-translate-x-full')
-}
 
-const searchContent = document.querySelector(".search-content");
-const searchContent_child =  document.getElementById("search-content-child")
-const searchHeader= document.querySelector(".search-header");
+drop_button.onclick = function () {
+  hamburger_contents.classList.remove('-translate-x-full');
+};
 
-searchHeader.addEventListener('click',()=>{
-    let searchMaxHeight = searchContent.style.maxHeight;
+var searchContent = document.querySelector(".search-content");
+var searchContent_child = document.getElementById("search-content-child");
+var searchHeader = document.querySelector(".search-header");
+searchHeader.addEventListener('click', function () {
+  var searchMaxHeight = searchContent.style.maxHeight;
 
-    if (searchMaxHeight == "0px" || searchMaxHeight.length == 0) {
-    searchContent.style.maxHeight = `${searchContent.scrollHeight+32}px`;
+  if (searchMaxHeight == "0px" || searchMaxHeight.length == 0) {
+    searchContent.style.maxHeight = "".concat(searchContent.scrollHeight + 32, "px");
     searchContent_child.focus();
-
-    } else {
-    searchContent.style.maxHeight = `0px`;
+  } else {
+    searchContent.style.maxHeight = "0px";
     searchHeader.blur();
-
-    }
-})
+  }
+});
+/******/ })()
+;

@@ -7,7 +7,7 @@
                 <span class="inline-block  border-l rotate-45 border-white  h-6 top-3 ml-6 absolute"></span>
                 <span class="inline-block  border-r -rotate-45 border-white  h-6 top-3 ml-6 absolute"></span>
             </div>
-             {{'新規出品完了しました'}}
+             {{session('flash_message')}}
          </div>
 
     @endif
@@ -19,6 +19,7 @@
             <th class=" pb-1"><p class="text-sm">商品名</p></th>
             <th class=" pb-1"><p class="text-sm">商品ID</p></th>
             <th class=" pb-1"><p class="text-sm">価格</p></th>
+            <th class=" pb-1"><p class="text-sm">数量</p></th>
             <th class=" pb-1"><p class="text-sm">出品日</p></th>
             @foreach($products as $product)
                 <tr class="h-24 border-y hover:bg-slate-100 cursor-pointer px-1"  onclick="location.href='{{route('edit_product', ['id' => $product->id] )}}' ">
@@ -30,6 +31,8 @@
                         <p class="text-xs sm:text-base px-1">{{$product->id}}</p> 
                     </td>
                     <td class="px-1 text-center"><p class="text-xs sm:text-base">￥{{$product->price}}</p> </td>
+                    <td class="px-1 text-center"><p class="text-xs sm:text-base">{{$product->qty}}</p> </td>
+
                     <td class="px-1 text-center" > <p class="text-xs sm:text-base">{{$product->created_at}}</td></p>
                       <td ><button class="border-radious"><a href="{{route('delete_product_confirm', ['id' => $product->id])}}" class=" ml-1 sm:ml-2 text-sm sm:text-base text-blue-600  hover:text-blue-400 w-10 " >削除</a></button></td>
                 </tr>

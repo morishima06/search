@@ -12,7 +12,13 @@ const tailwindcss = require('tailwindcss');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').js( 'resources/js/jquery.js', 'public/js/jquery' ).autoload( {
+mix.js('resources/js/app.js', 'public/js').js('resources/js/accordion/accordion.js','public/js/accordion/accordion.js' )
+.js('resources/js/swiper1/swiper.js', 'public/js/swiper1/swiper.js')
+.js('resources/js/header/header.js','public/js/header/header.js')
+.js(['resources/js/input/submit.js', 'resources/js/input/disabled.js'],'public/js/input/input.js').js('resources/js/slide/responsive_slide.js','public/js/slide/responsive_slide.js')
+.js('resources/js/swiper/double_config.js','public/js/swiper/double_config.js').js('resources/js/swiper/single_config.js','public/js/swiper/single_config.js')
+.js('resources/js/upload/upload.js','public/js/upload/upload.js')
+.js( 'resources/js/jquery/jquery.js', 'public/js/jquery' ).autoload( {
     "jquery": [ '$', 'window.jQuery' ],
 } ).postCss("resources/css/app.css", "public/css").options({
     processCssUrls: false,

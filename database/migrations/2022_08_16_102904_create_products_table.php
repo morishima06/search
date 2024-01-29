@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
 
             $table->integer('price')->nullable();
             $table->integer('user_id')->nullable();
+            $table->integer('qty')->nullable();
 
 
             $table->string('image_path1')->nullable();

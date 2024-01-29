@@ -1,3 +1,39 @@
+/* 幅・高さを指定 */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 100px;
+  width: 100px;
+}
+
+ 
+/* 矢印を消す、画像に変更 */
+.swiper [class^="swiper-button-"]:after
+{
+  content:"";
+  border: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+}
+ 
+/* 前に戻る画像パス */
+.swiper-button-prev:after {
+  	background-image: url('../image/left_button.png');
+    height: 50px;
+    width: 50px;
+    position:relative;
+    left: 5px;
+
+}
+/* 次に進む画像パス */
+.swiper-button-next:after {
+  	background-image: url('../image/right_button.png');
+    height: 50px;
+    width: 50px;
+    position:relative;
+    right: 5px;
+}
+
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 *//*
@@ -710,6 +746,9 @@ select {
 .visible {
   visibility: visible;
 }
+.static {
+  position: static;
+}
 .fixed {
   position: fixed;
 }
@@ -718,6 +757,9 @@ select {
 }
 .relative {
   position: relative;
+}
+.sticky {
+  position: sticky;
 }
 .right-0 {
   right: 0px;
@@ -857,8 +899,8 @@ select {
 .mb-12 {
   margin-bottom: 3rem;
 }
-.mt-8 {
-  margin-top: 2rem;
+.mt-1 {
+  margin-top: 0.25rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -871,9 +913,6 @@ select {
 }
 .ml-1 {
   margin-left: 0.25rem;
-}
-.mt-1 {
-  margin-top: 0.25rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -889,6 +928,9 @@ select {
 }
 .mr-8 {
   margin-right: 2rem;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .ml-6 {
   margin-left: 1.5rem;
@@ -980,6 +1022,9 @@ select {
 .inline-block {
   display: inline-block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -989,6 +1034,12 @@ select {
 .table {
   display: table;
 }
+.table-caption {
+  display: table-caption;
+}
+.table-cell {
+  display: table-cell;
+}
 .grid {
   display: grid;
 }
@@ -997,6 +1048,9 @@ select {
 }
 .hidden {
   display: none;
+}
+.\!hidden {
+  display: none !important;
 }
 .aspect-square {
   aspect-ratio: 1 / 1;
@@ -1230,6 +1284,9 @@ select {
 .cursor-default {
   cursor: default;
 }
+.resize {
+  resize: both;
+}
 .list-inside {
   list-style-position: inside;
 }
@@ -1270,6 +1327,11 @@ select {
 }
 .overflow-y-auto {
   overflow-y: auto;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .break-all {
   word-break: break-all;
@@ -1562,23 +1624,20 @@ select {
 .pt-8 {
   padding-top: 2rem;
 }
-.pl-8 {
-  padding-left: 2rem;
-}
-.pr-2 {
-  padding-right: 0.5rem;
+.pl-7 {
+  padding-left: 1.75rem;
 }
 .pl-2 {
   padding-left: 0.5rem;
+}
+.pr-2 {
+  padding-right: 0.5rem;
 }
 .pl-1 {
   padding-left: 0.25rem;
 }
 .pr-1 {
   padding-right: 0.25rem;
-}
-.pl-7 {
-  padding-left: 1.75rem;
 }
 .pr-8 {
   padding-right: 2rem;
@@ -1624,6 +1683,9 @@ select {
 }
 .pt-28 {
   padding-top: 7rem;
+}
+.pl-8 {
+  padding-left: 2rem;
 }
 .pt-32 {
   padding-top: 8rem;
@@ -1696,6 +1758,9 @@ select {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .italic {
   font-style: italic;
@@ -1873,9 +1938,27 @@ select {
 .ring-opacity-5 {
   --tw-ring-opacity: 0.05;
 }
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .grayscale {
   --tw-grayscale: grayscale(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.invert {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.\!invert {
+  --tw-invert: invert(100%) !important;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.\!filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
 }
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
