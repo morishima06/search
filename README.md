@@ -1,15 +1,17 @@
 # search
+https://search-shops.com/
 
 # サ-ビス概要
 Ecサイト
+制作過程はこちらから
 
-# 主な使用技術・言語
+# 使用技術・言語
 
-- Laravel8
+- Laravel8.83.23
  - laravel breeze
- - tailwind(css)
+ - tailwind(css)3.1.0
 - javascript(jquery)
-- Mysql
+- Mysql5.7.3.4
 - webpack(laravelmix)
 
 # 機能一覧
@@ -21,3 +23,6 @@ Ecサイト
   - お問合せフォーム
   - lodaing画面
   - レスポンシブ対応
+
+  # ER図
+https://github.com/morishima06/search/issues/1#issue-2106136131
