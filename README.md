@@ -25,4 +25,4 @@ Ecサイト
   - レスポンシブ対応
 
   # ER図
-https://github.com/morishima06/search/issues/1#issue-2106136131
+![jkjk drawio](https://github.com/morishima06/search/assets/91010416/3e870e3b-9d03-4892-b6d3-97cc6517bc26)
