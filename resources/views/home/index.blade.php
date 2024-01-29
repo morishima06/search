@@ -102,42 +102,6 @@
                     </ul>
                 </div>
             </div>
-<<<<<<< HEAD
-            
-            <div class="px-3">
-                <h1 class="w-full text-lg text-black font-bold border-b pb mb-3 mt-12  border-black">ブランド</h1>
-                <!-- <h2 class="text-sm  text-slate-600 font-semibold  mb-2 line-through"><span class="  w-full h-wull border-b border-slate-600 pb-1 " href="">全てのブランド</span> </h2> -->
-            
-                <div class="flex mb-16">
-                    <div class="sm:flex w-1/2 inline-block">
-                        <div class="w-full sm:w-1/2">
-                            <span class="inline-block mb-1 text-sm font-bold">#</span>
-                            <ul class="mb-2">
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => '1017 ALYX 9SM'])}}">1017 ALYX 9SM</a></li>
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => '424'])}}">424</a></li>
-                            </ul>
-                            <span class="inline-block mb-1 text-sm font-bold">A</span>
-                            <ul class="mb-2">
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'APC'])}}">APC</a></li>
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'ADIDAS'])}}">ADIDAS</a></li>
-                            </ul>
-                            <span class="inline-block mb-1 text-sm font-bold">B</span>
-                            <ul class="mb-2">
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'BURBERRY'])}}">BURBERRY</a></li>
-                            </ul>
-                            <span class="inline-block mb-1 text-sm font-bold">C</span>
-                            <ul class="mb-2">
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'C.P COMPANY'])}}">C.P COMPANY</a></li>
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'CONVERSE'])}}">CONVERSE</a></li>
-                            </ul>
-                            <span class="inline-block mb-1 text-sm font-bold">E</span>
-                            <ul>
-                                <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'EAST PACK'])}}">EAST PACK</a></li>
-                            </ul>
-                        </div>
-=======
->>>>>>> 1725579bd9bb8ad34669f5ebffee49736599242c
-
             <div class="sm:flex w-1/2 inline-block">
                 <div class="w-full sm:w-1/2">
                     <span class="inline-block mb-1 text-sm font-bold">N</span>
