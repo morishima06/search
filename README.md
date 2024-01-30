@@ -2,12 +2,12 @@
 https://search-shops.com/
 
 # サ-ビス概要
-Ecサイト
+Ecサイト<br>
 制作過程はこちらから
 
 # 使用技術・言語・環境
 
-- Laravel8.83.23
+Laravel8.83.23
  - laravel breeze
  - tailwind(css)3.1.0
 - javascript(jquery)
