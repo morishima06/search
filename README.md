@@ -8,14 +8,14 @@ Ecサイト<br>
 # 使用技術・言語・環境
 
 - Laravel8.83.23
-    - laravel breeze
-    - tailwind(css)3.1.0
+ - laravel breeze
+- tailwind(css)3.1.0
 - javascript(jquery)
 - Mysql5.7.3.4
 - webpack(laravelmix)
 - AWS
-- VPC(IAM/RDS/s3/elb/Route53)
-- EC2(NGINX)
+ - VPC(IAM/RDS/s3/elb/Route53)
+ - EC2(NGINX)
 
 # 機能一覧
 - キーワード検索
