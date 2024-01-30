@@ -5,7 +5,7 @@ https://search-shops.com/
 Ecサイト
 制作過程はこちらから
 
-# 使用技術・言語
+# 使用技術・言語・環境
 
 - Laravel8.83.23
  - laravel breeze
@@ -13,6 +13,9 @@ Ecサイト
 - javascript(jquery)
 - Mysql5.7.3.4
 - webpack(laravelmix)
+- AWS
+ - VPC(IAM/RDS/s3/elb/Route53)
+ - EC2(NGINX)
 
 # 機能一覧
   - キーワード検索
