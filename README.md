@@ -14,8 +14,8 @@ Ecサイト<br>
 - Mysql5.7.3.4
 - webpack(laravelmix)
 - AWS
-  - VPC(IAM/RDS/s3/elb/Route53)
-  - EC2(NGINX)
+  - VPC(EC2(NGINX)IAM/RDS/s3/elb/Route53)
+  
 
 # 機能一覧
 - キーワード検索
