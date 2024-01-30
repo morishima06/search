@@ -28,4 +28,5 @@ Laravel8.83.23
   - レスポンシブ対応
 
   # ER図
-![jkjk drawio](https://github.com/morishima06/search/assets/91010416/3e870e3b-9d03-4892-b6d3-97cc6517bc26)
+![search_er drawio](https://github.com/morishima06/search/assets/91010416/bcd65dc9-ee06-48c9-8c39-f4dbd4e9d147)
+
