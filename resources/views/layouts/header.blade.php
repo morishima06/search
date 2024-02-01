@@ -104,11 +104,11 @@
             </a>
 
             <!-- ゲストログイン -->
-            <button class="mr-1 ml-1 bg-gray-400 rounded  px-1">
+            <!-- <button class="mr-1 ml-1 bg-gray-400 rounded  px-1">
                 <a href="{{ route('login.guest') }}" class="text-white text-sm">
                     ゲストログイン
                 </a>
-            </button>
+            </button> -->
             <!-- responsiveハンバーガー -->
             <div class="flex items-center h-10  md:hidden ">
                 <div class="hamburger relative z-10 w-4  h-4 ml-1">
