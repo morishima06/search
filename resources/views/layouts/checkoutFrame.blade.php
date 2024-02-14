@@ -14,7 +14,6 @@
     <script src="{{ asset('/js/jquery/jquery.js') }}"></script>
     <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
 
-
 </head>
 
 <body class="antialiased font-sans min-h-screen flex-col flex   ">

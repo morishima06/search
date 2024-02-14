@@ -1275,8 +1275,8 @@ select {
   }
 }
 .animate-loader {
-  -webkit-animation: loader 1.3s linear infinite;
-          animation: loader 1.3s linear infinite;
+  -webkit-animation: loader 2.3s linear infinite;
+          animation: loader 2.3s linear infinite;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -2003,29 +2003,21 @@ select {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.after\:h-12::after {
-  content: var(--tw-content);
-  height: 3rem;
-}
 .after\:h-8::after {
   content: var(--tw-content);
   height: 2rem;
 }
-.after\:w-12::after {
+.after\:h-12::after {
   content: var(--tw-content);
-  width: 3rem;
+  height: 3rem;
 }
 .after\:w-8::after {
   content: var(--tw-content);
   width: 2rem;
 }
-.after\:bg-\[url\(\'\/image\/left_button\.png\'\)\]::after {
+.after\:w-12::after {
   content: var(--tw-content);
-  background-image: url('/image/left_button.png');
-}
-.after\:bg-\[url\(\'\/image\/right_button\.png\'\)\]::after {
-  content: var(--tw-content);
-  background-image: url('/image/right_button.png');
+  width: 3rem;
 }
 .after\:bg-\[url\(\'\.\.\/image\/left_button\.png\'\)\]::after {
   content: var(--tw-content);
@@ -2034,6 +2026,14 @@ select {
 .after\:bg-\[url\(\'\.\.\/image\/right_button\.png\'\)\]::after {
   content: var(--tw-content);
   background-image: url('../image/right_button.png');
+}
+.after\:bg-\[url\(\'\/image\/left_button\.png\'\)\]::after {
+  content: var(--tw-content);
+  background-image: url('/image/left_button.png');
+}
+.after\:bg-\[url\(\'\/image\/right_button\.png\'\)\]::after {
+  content: var(--tw-content);
+  background-image: url('/image/right_button.png');
 }
 .after\:bg-contain::after {
   content: var(--tw-content);

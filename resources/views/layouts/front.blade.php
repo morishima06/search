@@ -12,8 +12,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 
-    <!-- <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script> -->
-    <!-- <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" > -->
+    <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}" >
     <script src="{{ asset('js/jquery/jquery.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 

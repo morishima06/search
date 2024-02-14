@@ -14,7 +14,7 @@ module.exports = {
                         sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                     },
                     animation: {
-                        loader: "loader 1.3s linear infinite",
+                        loader: "loader 2.3s linear infinite",
                       },
                     keyframes: {
                         loader: {
