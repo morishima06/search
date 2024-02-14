@@ -27,7 +27,7 @@ class CheckoutController extends Controller
     public function pay()
     {
 
-        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        \Stripe\Stripe::setApiKey(config('stripe.STRIPE_SECRET'));
 
         foreach (session('cart') as $id => $details) {
             $lineItems[] = [
