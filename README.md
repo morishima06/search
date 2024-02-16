@@ -13,16 +13,25 @@
 
 
 # サ-ビス概要
+<p>
 Ecサイト<br>
-制作過程はこちらから
+<strong><a href="https://sm-portfolio.net/search_dt"></a>制作詳細はこちらから閲覧ください。</strong>
+</p>
+
 
 # 使用技術・言語・環境
+- PHP8.08
 - Laravel8.83.23
-  - laravel breeze
+  - laravel breeze(ログイン機能)
 - tailwind(css)3.1.0
 - javascript(jquery)
+  - ajax
 - Mysql5.7.3.4
-- webpack(laravelmix)
+  - php myadmin
+- Stripe API
+- webpack/laravelmix(ビルドツール)
+- mail trap(メールテスト)
+- Git hub actions(ci/cd)
 - AWS
   - VPC(EC2(NGINX)/IAM/RDS/S3/ELB/Route53)
   
