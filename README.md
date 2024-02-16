@@ -13,8 +13,9 @@
 # サ-ビス概要
 
 Ecサイト
+<p>
 <a href="https://sm-portfolio.net/search_dt">制作詳細はこちらから閲覧ください。</a>
-
+</p>
 
 # 使用技術・言語・環境
 - PHP8.08
