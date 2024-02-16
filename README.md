@@ -26,7 +26,7 @@ Ecサイト
   - ajax
 - Mysql5.7.3.4
   - php myadmin
-- Stripe API
+- Stripe API(決済機能)
 - webpack/laravelmix(ビルドツール)
 - mail trap(メールテスト)
 - Git hub actions(ci/cd)
