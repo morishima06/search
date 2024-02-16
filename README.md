@@ -11,10 +11,10 @@
 </p>
 
 # サ-ビス概要
-<p>
-Ecサイト<br>
-<strong><a href="https://sm-portfolio.net/search_dt"></a>制作詳細はこちらから閲覧ください。</strong>
-</p>
+
+Ecサイト
+<a href="https://sm-portfolio.net/search_dt">制作詳細はこちらから閲覧ください。</a>
+
 
 # 使用技術・言語・環境
 - PHP8.08
