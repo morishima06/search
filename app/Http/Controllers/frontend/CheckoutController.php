@@ -26,7 +26,6 @@ class CheckoutController extends Controller
 
     public function pay()
     {
-
         \Stripe\Stripe::setApiKey(config('stripe.STRIPE_SECRET'));
 
         foreach (session('cart') as $id => $details) {
@@ -42,18 +41,14 @@ class CheckoutController extends Controller
                 'quantity' => $details['quantity'],
             ];
         }
-
         $session = \Stripe\Checkout\Session::create([
             'line_items' =>  $lineItems,
             'mode' => 'payment',
             'success_url' => route('success'),
             'cancel_url' => route('cart'),
         ]);
-
         return redirect()->away($session->url);
     }
-
-
 
     public function success()
     {
