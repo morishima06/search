@@ -9,7 +9,7 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper  ">
                         <!-- Slides -->
-                        <div class="swiper-slide flex justify-center "><img src="{{asset($product->image_path1)}}" alt="" class="   sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
+                        <div class="swiper-slide flex justify-center "><img src="{{asset($product->image_path1)}}" alt="" class=" w-full  sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
                         <div class="swiper-slide  {{ $product->image_path2 == null ? 'hidden':''}}"><img src="{{asset($product->image_path2)}}" alt="" class="w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
                         <div class="swiper-slide  {{ $product->image_path3 == null ? 'hidden':''}}"><img src="{{asset($product->image_path3)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96"></div>
                         <div class="swiper-slide  {{ $product->image_path4 == null ? 'hidden':''}}"><img src="{{asset($product->image_path4)}}" alt="" class=" w-full h-full sm:w-80 sm:h-80 lg:w-96 lg:h-96 "></div>
@@ -23,7 +23,7 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper   sm:h-20  lg:h-24 ">
                     <!-- Slides -->
-                    <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path1 == null ? 'hidden':''}} "><img src="{{asset($product->image_path1)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
+                    <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path2 == null ? 'hidden':''}} "><img src="{{asset($product->image_path1)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
                     <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path2 == null ? 'hidden':''}} "><img src="{{asset($product->image_path2)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
                     <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path3 == null ? 'hidden':''}} "><img src="{{asset($product->image_path3)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
                     <div class="swiper-slide  cursor-pointer before:my-2  sm:w-20 sm:h-20 lg:w-24 lg:h-24 {{ $product->image_path4 == null ? 'hidden':''}} "><img src="{{asset($product->image_path4)}}" alt="" class="w-full h-full aspect-square sm:w-20 sm:h-20 lg:w-24 lg:h-24"></div>
