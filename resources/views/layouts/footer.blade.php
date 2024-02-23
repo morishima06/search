@@ -11,6 +11,6 @@
     </div>
 
     <div class="text-center  my-2">
-        <p>copyright2023</p>
+        <p>copyright2024</p>
     </div>
 </footer>
