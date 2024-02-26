@@ -11136,13 +11136,15 @@ $(document).ready(function () {
 $(window).on('load', function () {
   endLoading();
 });
-setTimeout('endLoading()', 100000);
 
 function endLoading() {
   $('.loading').fadeOut(1500);
   $('.load-content').fadeIn(2200);
 }
+setTimeout(endLoading, 8000);
+
 })();
+
 
 /******/ })()
 ;

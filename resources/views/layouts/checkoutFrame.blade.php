@@ -11,7 +11,7 @@
     <script src="{{ asset('/js/swiper/swiper-bundle.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('/css/swiper-bundle.min.css')  }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('/js/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('/js/jquery/jquery.js') }}" defer></script>
     <script src="https://kit.fontawesome.com/1badf6b7f8.js" crossorigin="anonymous"></script>
 
 </head>
