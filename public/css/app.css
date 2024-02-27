@@ -1104,6 +1104,18 @@ select {
 .max-h-0 {
   max-height: 0px;
 }
+.max-h-\[100px\] {
+  max-height: 100px;
+}
+.max-h-\[50pxpx\] {
+  max-height: 50pxpx;
+}
+.max-h-\[50px\] {
+  max-height: 50px;
+}
+.max-h-\[300px\] {
+  max-height: 300px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
