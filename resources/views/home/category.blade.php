@@ -70,7 +70,7 @@
                             <div class="accordion-content  pt-0 overflow-hidden ">
                                 <p class="leading-6 font-light pl-9 text-justify">
 
-                                <div class="w-full max-h-[300px] overflow-scroll">
+                                <div class="w-full max-h-[200px] overflow-scroll">
                                     @foreach($group_brands as $group_brand)
                                     <div class="">
                                         <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name[]" class=" ml-2 my-0.5" <?php if (isset($brand_name)) {

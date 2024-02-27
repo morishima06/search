@@ -72,7 +72,7 @@
                             <!-- Content -->
                             <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                                 <p class="leading-6 font-light pl-9 text-justify">
-                                <div class="w-full ">
+                                <div class="w-full max-h-[200px] overflow-scroll">
                                     @foreach($group_brands as $group_brand)
                                     <div>
                                         <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name[]" class=" ml-2 my-0.5" <?php if (isset($brand_name)) {
@@ -188,7 +188,7 @@
                     <!-- Content -->
                     <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                         <p class="leading-6 font-light pl-9 text-justify">
-                        <div class="w-full ">
+                        <div class="w-full max-h-[300px] overflow-scroll">
                             @foreach($group_brands as $group_brand)
                             <div>
                                 <input type="checkbox" id="{{$group_brand->brand_name}}" name="brand_name[]" class="selector ml-2 my-0.5" <?php if (isset($brand_name)) {
