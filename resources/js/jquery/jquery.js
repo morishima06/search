@@ -11138,10 +11138,10 @@ $(window).on('load', function () {
 });
 
 function endLoading() {
-  $('.loading').fadeOut(1500);
-  $('.load-content').fadeIn(2200);
+  $('.loading').fadeOut(2000);
+  $('.load-content').fadeIn(2000);
 }
-setTimeout(endLoading, 8000);
+setTimeout(endLoading, 4000);
 
 })();
 

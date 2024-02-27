@@ -1110,9 +1110,6 @@ select {
 .max-h-\[300px\] {
   max-height: 300px;
 }
-.max-h-\[50px\] {
-  max-height: 50px;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1227,6 +1224,30 @@ select {
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@-webkit-keyframes loader {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-loader {
+  -webkit-animation: loader 2.3s linear infinite;
+          animation: loader 2.3s linear infinite;
 }
 .cursor-pointer {
   cursor: pointer;

@@ -67,7 +67,7 @@
                                 <span class="mt-1 border-gray-700 border-solid border-r-2 border-b-2 w-3 h-3 mr-3 rotate-45  inline-block "></span>
                             </div>
                             <!-- Content -->
-                            <div class="accordion-content  pt-0 overflow-hidden ">
+                            <div class="accordion-content  pt-0 overflow-hidden max-h-0">
                                 <p class="leading-6 font-light pl-9 text-justify">
 
                                 <div class="w-full max-h-[200px] overflow-scroll">
