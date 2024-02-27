@@ -147,6 +147,7 @@
                         <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="ADIDAS" tabindex="-1">ADIDAS</li>
                         <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="BURBERRY" tabindex="-1">BURBERRY</li>
                         <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="C.PCOMPANY" tabindex="-1">C.PCOMPANY</li>
+                        <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="CONVERSE" tabindex="-1">CONVERSE</li>
                         <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="EAST PACK" tabindex="-1">EAST PACK</li>
                         <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="FEAR OF GOD" tabindex="-1">FEAR OF GOD</li>
                         <li class="item bg-white hover:bg-blue-200 hidden pl-3 py-1 cursor-pointer " data-set="FOLK" tabindex="-1">FOLK</li>
