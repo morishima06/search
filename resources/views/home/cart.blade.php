@@ -77,7 +77,7 @@
                     <p class="ml-auto"><strong>¥{{ $total }}</strong></p>
                 </div>
                 <div class="mt-3">
-                    <button type="button" class="bg-zinc-900 text-white w-full mt-1 py-1 px-2 "><a href="{{route('checkout')}}">購入手続きへ</a></button>
+                    <button type="button" class="bg-zinc-900 text-white w-full mt-1 py-1 px-2 " onclick="location.href='{{route('checkout')}}'">購入手続きへ</button>
                 </div>
             </div>
         </div>
