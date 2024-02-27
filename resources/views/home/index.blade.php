@@ -118,7 +118,7 @@
                     </ul>
                     <span class="inline-block mb-1 text-sm font-bold">P</span>
                     <ul>
-                        <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'PALM ANGLES'])}}">PALM ANGLES</a></li>
+                        <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'PALM ANGELES'])}}">PALM ANGLES</a></li>
                         <li class="text-xs font-bold"><a href="{{route('brands',['brand' => 'PRADA'])}}">PRADA</a></li>
                     </ul>
                 </div>
